@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Akaduo&#39;s Blog</title>
+  
+  <subtitle>happy hometown</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://akaduo2019.github.io/"/>
+  <updated>2019-11-23T13:19:05.683Z</updated>
+  <id>http://akaduo2019.github.io/</id>
+  
+  <author>
+    <name>FengLC</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hello-world</title>
+    <link href="http://akaduo2019.github.io/2019/11/23/hello-world/"/>
+    <id>http://akaduo2019.github.io/2019/11/23/hello-world/</id>
+    <published>2019-11-23T13:16:35.000Z</published>
+    <updated>2019-11-23T13:19:05.683Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">test</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Hello-world&quot;&gt;&lt;a href=&quot;#Hello-world&quot; class=&quot;headerlink&quot; title=&quot;Hello world&quot;&gt;&lt;/a&gt;Hello world&lt;/h1&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="test" scheme="http://akaduo2019.github.io/categories/test/"/>
+    
+    
+      <category term="test" scheme="http://akaduo2019.github.io/tags/test/"/>
+    
+  </entry>
+  
+</feed>
