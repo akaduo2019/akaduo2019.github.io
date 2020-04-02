@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2019-11-24T11:00:00.690Z</updated>
+  <updated>2020-04-02T16:16:23.936Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://akaduo2019.github.io/2019/11/23/hello-world/"/>
     <id>http://akaduo2019.github.io/2019/11/23/hello-world/</id>
     <published>2019-11-23T13:16:35.000Z</published>
-    <updated>2019-11-24T11:00:00.690Z</updated>
+    <updated>2020-04-02T16:16:23.936Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h1>]]></content>
+    <content type="html"><![CDATA[<h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h2>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Hello-world&quot;&gt;&lt;a href=&quot;#Hello-world&quot; class=&quot;headerlink&quot; title=&quot;Hello world&quot;&gt;&lt;/a&gt;Hello world&lt;/h1&gt;
+        &lt;h2 id=&quot;Hello-world&quot;&gt;&lt;a href=&quot;#Hello-world&quot; class=&quot;headerlink&quot; title=&quot;Hello world&quot;&gt;&lt;/a&gt;Hello world&lt;/h2&gt;
       
     
     </summary>
