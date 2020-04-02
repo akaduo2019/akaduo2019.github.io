@@ -50,13 +50,13 @@
   <meta name="description" content="我们登上并非我们所选择的舞台，演出并非我们所选择的剧本">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Akaduo&#39;s Blog">
-<meta property="og:url" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;categories&#x2F;test&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;archives&#x2F;2020&#x2F;04&#x2F;index.html">
 <meta property="og:site_name" content="Akaduo&#39;s Blog">
 <meta property="og:description" content="我们登上并非我们所选择的舞台，演出并非我们所选择的剧本">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://akaduo2019.github.io/categories/test/">
+<link rel="canonical" href="http://akaduo2019.github.io/archives/2020/04/">
 
 
 <script id="page-configurations">
@@ -66,11 +66,11 @@
     isHome: false,
     isPost: false,
     isPage: false,
-    isArchive: false
+    isArchive: true
   };
 </script>
 
-  <title>分类: test | Akaduo's Blog</title>
+  <title>归档 | Akaduo's Blog</title>
   
 
 
@@ -186,9 +186,7 @@
   <div class="post-block">
     <div class="posts-collapse">
       <div class="collection-title">
-        <h1 class="collection-header">test
-          <small>分类</small>
-        </h1>
+        <span class="collection-header">嗯..! 目前共计 2 篇日志。 继续努力。</span>
       </div>
 
       
@@ -215,29 +213,7 @@
 
     </header>
   </article>
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-11-23T21:16:35+08:00"
-              content="2019-11-23">
-          11-23
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/11/23/hello-world/" itemprop="url">
-            <span itemprop="name">hello-world</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
 
     </div>
   </div>
@@ -385,6 +361,16 @@
   
 
   
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout: 3000,
+        priority: true,
+        ignores: [uri => uri.includes('#'),uri => uri == 'http://akaduo2019.github.io/archives/2020/04/',]
+      });
+      });
+  </script>
 
 </body>
 </html>
