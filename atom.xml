@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Akaduo&#39;s Blog</title>
+  <title>TTTTTempest</title>
   
-  <subtitle>happy hometown</subtitle>
+  <subtitle>无名之辈</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2020-08-30T02:40:38.845Z</updated>
+  <updated>2020-08-30T02:42:33.234Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
-    <name>FengLC</name>
+    <name>akaduo</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>异常处理</title>
+    <link href="http://akaduo2019.github.io/2020/08/30/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
+    <id>http://akaduo2019.github.io/2020/08/30/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</id>
+    <published>2020-08-30T02:42:33.234Z</published>
+    <updated>2020-08-30T02:42:33.234Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>c++中的new与delete</title>
