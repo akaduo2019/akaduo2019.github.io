@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2020-08-30T01:44:53.270Z</updated>
+  <updated>2020-08-30T02:11:10.591Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -17,11 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>new与delete</title>
+    <link href="http://akaduo2019.github.io/2020/08/30/new%E4%B8%8Edelete/"/>
+    <id>http://akaduo2019.github.io/2020/08/30/new%E4%B8%8Edelete/</id>
+    <published>2020-08-30T02:11:10.591Z</published>
+    <updated>2020-08-30T02:11:10.591Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>c++中的string类型</title>
     <link href="http://akaduo2019.github.io/2020/04/03/string%E7%B1%BB%E5%9E%8B/"/>
     <id>http://akaduo2019.github.io/2020/04/03/string%E7%B1%BB%E5%9E%8B/</id>
     <published>2020-04-02T16:32:27.315Z</published>
-    <updated>2020-08-30T01:44:53.270Z</updated>
+    <updated>2020-08-30T02:12:39.118Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s1;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s2</span><span class="params">(<span class="string">"student"</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; s1; <span class="comment">//可用getline(cin,s1)读入待空格的串</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s2.length() &lt;&lt;<span class="built_in">endl</span>;<span class="comment">//string 串名.length() 求串长</span></span><br><span class="line"></span><br><span class="line">s2.insert(<span class="number">7</span>,<span class="string">"&amp;Teacher"</span>);<span class="comment">//向串s2下标为7处中插入 &amp;Teacher</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s2&lt;&lt; <span class="built_in">endl</span>;<span class="comment">//输出结果为student&amp;Teacher</span></span><br><span class="line"></span><br><span class="line">s2.replace(<span class="number">2</span>,<span class="number">4</span>,<span class="string">"ar"</span>);<span class="comment">//将串s2的 以下标2处为起始位置,长度为4的子串  替换成ar</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s2&lt;&lt; <span class="built_in">endl</span>;<span class="comment">//输出结果为start&amp;Teacher</span></span><br><span class="line"></span><br><span class="line">s1=s2.substr(<span class="number">6</span>,<span class="number">7</span>);<span class="comment">//提取串s2中 从下标6开始，长度为7的子串 ，并赋值给s1</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s1 &lt;&lt; <span class="built_in">endl</span>;<span class="comment">//输出结果为Teacher</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> pos =s2.<span class="built_in">find</span>(s1);<span class="comment">//在串s2中寻找s1串是否存在,若存在则返回s1串的第一个字符在s3中的下标</span></span><br><span class="line"></span><br><span class="line">s2.erase(<span class="number">5</span>,<span class="number">8</span>);<span class="comment">//删除串s2的从5下标开始的长度为8的子串</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -35,10 +50,10 @@
     </summary>
     
     
-      <category term="test" scheme="http://akaduo2019.github.io/categories/test/"/>
+      <category term="notes" scheme="http://akaduo2019.github.io/categories/notes/"/>
     
     
-      <category term="test" scheme="http://akaduo2019.github.io/tags/test/"/>
+      <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
     
   </entry>
   
