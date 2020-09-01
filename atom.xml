@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2020-09-01T06:45:20.928Z</updated>
+  <updated>2020-09-01T08:05:52.209Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://akaduo2019.github.io/2020/09/01/%E6%97%A0%E9%A2%981/"/>
     <id>http://akaduo2019.github.io/2020/09/01/%E6%97%A0%E9%A2%981/</id>
     <published>2020-09-01T06:42:32.426Z</published>
-    <updated>2020-09-01T06:45:20.928Z</updated>
+    <updated>2020-09-01T08:05:52.209Z</updated>
     
-    <content type="html"><![CDATA[<p>在定义一个派生类对象时，构造函数的调用顺序如下：<br>1、基类的构造函数<br>2、派生类对象成员的构造函数(按定义顺序)<br>3、派生类构造函数</p><hr><p>析构函数的调用次序正好与构造函数的调用次序相反</p><hr>]]></content>
+    <content type="html"><![CDATA[<p>在定义一个派生类对象时，构造函数的调用顺序如下：<br>1、虚基类的构造函数<br>2、非虚基类的构造函数<br>3、派生类对象成员的构造函数(按定义顺序)<br>4、派生类构造函数</p><hr><p>析构函数的调用次序正好与构造函数的调用次序相反</p><hr>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;在定义一个派生类对象时，构造函数的调用顺序如下：&lt;br&gt;1、基类的构造函数&lt;br&gt;2、派生类对象成员的构造函数(按定义顺序)&lt;br&gt;3、派生类构造函数&lt;/p&gt;
+        &lt;p&gt;在定义一个派生类对象时，构造函数的调用顺序如下：&lt;br&gt;1、虚基类的构造函数&lt;br&gt;2、非虚基类的构造函数&lt;br&gt;3、派生类对象成员的构造函数(按定义顺序)&lt;br&gt;4、派生类构造函数&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;析构函数的调用次序正好与构造函数的调用次序相反&lt;/p&gt;
 &lt;hr&gt;
