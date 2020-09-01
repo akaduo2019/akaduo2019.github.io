@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2020-08-30T08:43:57.815Z</updated>
+  <updated>2020-09-01T06:45:20.928Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>临时对象的产生</title>
+    <link href="http://akaduo2019.github.io/2020/09/01/%E6%97%A0%E9%A2%981/"/>
+    <id>http://akaduo2019.github.io/2020/09/01/%E6%97%A0%E9%A2%981/</id>
+    <published>2020-09-01T06:42:32.426Z</published>
+    <updated>2020-09-01T06:45:20.928Z</updated>
+    
+    <content type="html"><![CDATA[<p>在定义一个派生类对象时，构造函数的调用顺序如下：<br>1、基类的构造函数<br>2、派生类对象成员的构造函数(按定义顺序)<br>3、派生类构造函数</p><hr><p>析构函数的调用次序正好与构造函数的调用次序相反</p><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在定义一个派生类对象时，构造函数的调用顺序如下：&lt;br&gt;1、基类的构造函数&lt;br&gt;2、派生类对象成员的构造函数(按定义顺序)&lt;br&gt;3、派生类构造函数&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;析构函数的调用次序正好与构造函数的调用次序相反&lt;/p&gt;
+&lt;hr&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="notes-c++" scheme="http://akaduo2019.github.io/categories/notes-c/"/>
+    
+    
+      <category term="notes-c++" scheme="http://akaduo2019.github.io/tags/notes-c/"/>
+    
+  </entry>
   
   <entry>
     <title>const与指针</title>
