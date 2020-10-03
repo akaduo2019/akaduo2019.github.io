@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2020-09-17T12:28:57.749Z</updated>
+  <updated>2020-10-03T03:21:32.935Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -17,11 +17,60 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>操作列表</title>
+    <link href="http://akaduo2019.github.io/2020/10/03/%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/"/>
+    <id>http://akaduo2019.github.io/2020/10/03/%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/</id>
+    <published>2020-10-03T02:49:06.563Z</published>
+    <updated>2020-10-03T03:21:32.935Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、遍历列表<br>for tempest in list:<br>    代码块</p><p>注:注意缩进</p><hr><p>二、创建数值列表<br>①range()  </p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">5</span>):</span><br><span class="line">    print(value)</span><br></pre></td></tr></table></figure><p>输出：1 2 3 4</p><p>range()可指定步长<br>例子，打印1~10内的偶数</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">even_numbers=list(range(<span class="number">2</span>,<span class="number">11</span>,<span class="number">2</span>))</span><br><span class="line">print(even_numbers)</span><br></pre></td></tr></table></figure><p>输出：[2,4,6,8,10]<br>②可使用list()range()的结果直接转换为列表。如果将range()作为list()的参数，<br>输出将为一个数字列表。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">numbers=list(range(<span class="number">1</span>,<span class="number">6</span>))</span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure><p>输出：[1,2,3,4,5]</p><p>③min() max() sum() 简单处理数字列表的python函数</p><p>④列表解析<br><img src="E:/%E5%9B%BE%E7%89%87%E4%BD%8D%E7%BD%AE/%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8.png" alt="avatar"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;一、遍历列表&lt;br&gt;for tempest in list:&lt;br&gt;    代码块&lt;/p&gt;
+&lt;p&gt;注:注意缩进&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;二、创建数值列表&lt;br&gt;①range()  &lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;t
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://akaduo2019.github.io/categories/python/"/>
+    
+    
+      <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>操作列表</title>
+    <link href="http://akaduo2019.github.io/2020/09/17/python3%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/"/>
+    <id>http://akaduo2019.github.io/2020/09/17/python3%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/</id>
+    <published>2020-09-17T12:33:20.787Z</published>
+    <updated>2020-09-18T11:20:05.656Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://akaduo2019.github.io/categories/python/"/>
+    
+    
+      <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
+    
+  </entry>
+  
+  <entry>
     <title>列表初入</title>
-    <link href="http://akaduo2019.github.io/2020/09/17/python3.1%E5%88%97%E8%A1%A8%E5%88%9D%E5%85%A5/"/>
-    <id>http://akaduo2019.github.io/2020/09/17/python3.1%E5%88%97%E8%A1%A8%E5%88%9D%E5%85%A5/</id>
+    <link href="http://akaduo2019.github.io/2020/09/17/python2%E5%88%97%E8%A1%A8%E5%88%9D%E5%85%A5/"/>
+    <id>http://akaduo2019.github.io/2020/09/17/python2%E5%88%97%E8%A1%A8%E5%88%9D%E5%85%A5/</id>
     <published>2020-09-17T12:00:37.924Z</published>
-    <updated>2020-09-17T12:28:57.749Z</updated>
+    <updated>2020-10-03T02:50:48.587Z</updated>
     
     <content type="html"><![CDATA[<p>一、增删列表元素怒</p><p>在列表中添加元素</p><ol><li><p>list.append(‘Tempest’) 在列表末尾添加元素</p></li><li><p>list.insert(num,’Tempest’) 在列表任何位置添加新元素</p></li></ol><hr><p>在列表中删除元素</p><ol><li><p>del list[num]   使用del语句可删除任何位置处列表元素，条件时知道其索引</p></li><li><p>list.pop()    删除列表末尾的元素<br>list.pop(num) 删除列表任何位置元素<br>message=list.pop() 可以在删除元素的同时保存它</p></li></ol><p>注:如果你不确定该使用del 语句还是pop() 方法，下面是一个简单的判断标准：如果你要从列表中删除一个元素，且不再以任何方式使用它，就使用del 语句；如果你要在删除元素后还能继续使用它，就使用方法pop()<br>3. list.remove(‘Tempest’) 根据值删除元素<br>   注:①可在删除元素前保存它，再进行删除操作<br>      ②remove()方法只删除第一个指定的值(一个要删除的值可能在列表中出现多次)</p><p>二、组织列表</p><ol><li><p>list.sort() 对列表进行永久性排序<br>list.sort(reverse=True)  反向 永久性排序</p></li><li><p>sorted(list) 对列表进行临时排序，返回值是临时排序的列表</p></li><li><p>list.reverse() 反转列表元素的排列顺序<br>注:①reverse() 不是指按与字母顺序相反的顺序排列列表元素，而只是反转列表元素的排列顺序<br>   ②reverse() 永久性地修改列表元素的排列顺序，但可随时恢复到原来的排列顺序，为此只需对列表再次调用reverse() 即可</p></li><li><p>len(list) 函数len()可快速获取列表的长度</p></li></ol><p>三、补充</p><p>需要访问最后一个列表元素时，都可使用所以-1，例：list[-1]<br>仅当列表为空时，这种访问最后一个元素的方式才会报错</p>]]></content>
     
@@ -77,10 +126,10 @@
   
   <entry>
     <title>字符串</title>
-    <link href="http://akaduo2019.github.io/2020/09/14/python2.3%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    <id>http://akaduo2019.github.io/2020/09/14/python2.3%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
+    <link href="http://akaduo2019.github.io/2020/09/14/python2%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://akaduo2019.github.io/2020/09/14/python2%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
     <published>2020-09-14T02:56:36.371Z</published>
-    <updated>2020-09-17T12:11:43.145Z</updated>
+    <updated>2020-09-17T12:33:34.108Z</updated>
     
     <content type="html"><![CDATA[<p>一、修改字符串大小写</p><ol><li>string.title()  令首字母大写</li><li>string.upper()  令字符串字母全部改为大写</li><li>string.lower()  令字符串字母全部改为小写</li></ol><hr><p>二、删除空白(泛指任何非打印字符,如空格、制表符和换行符)</p><ol><li>string.rstrip() 删除字符串末尾空白</li><li>string.lstrip() 删除字符串开头空白</li><li>string.strip()  同时删除字符串两端的空白<br>注:但这种删除只是暂时的，接下来再次访问sting的值时会发现仍包含多余空白。若需要永久删除整个字符串中的空白，必须将删除操作的结果存回变量中<br>如:string=string.rstrip()</li></ol>]]></content>
     
