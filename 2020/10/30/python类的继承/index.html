@@ -47,18 +47,18 @@
   };
 </script>
 
-  <meta name="description" content="在定义一个派生类对象时，构造函数的调用顺序如下：1、虚基类的构造函数2、非虚基类的构造函数3、派生类对象成员的构造函数(按定义顺序)4、派生类构造函数  析构函数的调用次序正好与构造函数的调用次序相反">
+  <meta name="description" content="***创建子类的实例时，Python首先要完成的任务时给父类所有属性赋值。为此，子类的方法init()需要父类施以援手： 1234567class Father():    def __init__(self,height,weight,age):        --snip--class Son(Father):    def __init__(self,height,weight,age):">
 <meta name="keywords" content="notes">
 <meta property="og:type" content="article">
-<meta property="og:title" content="无题">
-<meta property="og:url" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2020&#x2F;09&#x2F;01&#x2F;%E6%97%A0%E9%A2%981&#x2F;index.html">
+<meta property="og:title" content="类的继承">
+<meta property="og:url" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2020&#x2F;10&#x2F;30&#x2F;python%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF&#x2F;index.html">
 <meta property="og:site_name" content="TTTTTempest">
-<meta property="og:description" content="在定义一个派生类对象时，构造函数的调用顺序如下：1、虚基类的构造函数2、非虚基类的构造函数3、派生类对象成员的构造函数(按定义顺序)4、派生类构造函数  析构函数的调用次序正好与构造函数的调用次序相反">
+<meta property="og:description" content="***创建子类的实例时，Python首先要完成的任务时给父类所有属性赋值。为此，子类的方法init()需要父类施以援手： 1234567class Father():    def __init__(self,height,weight,age):        --snip--class Son(Father):    def __init__(self,height,weight,age):">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-17T11:48:22.244Z">
+<meta property="og:updated_time" content="2020-10-30T11:06:05.423Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://akaduo2019.github.io/2020/09/01/%E6%97%A0%E9%A2%981/">
+<link rel="canonical" href="http://akaduo2019.github.io/2020/10/30/python%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF/">
 
 
 <script id="page-configurations">
@@ -72,7 +72,7 @@
   };
 </script>
 
-  <title>无题 | TTTTTempest</title>
+  <title>类的继承 | TTTTTempest</title>
   
 
 
@@ -187,7 +187,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://akaduo2019.github.io/2020/09/01/%E6%97%A0%E9%A2%981/">
+    <link itemprop="mainEntityOfPage" href="http://akaduo2019.github.io/2020/10/30/python%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E7%A2%87%E7%9C%9F%E5%97%A3.jpg">
@@ -200,7 +200,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          无题
+          类的继承
         </h1>
 
         <div class="post-meta">
@@ -209,24 +209,18 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-09-01 14:42:32" itemprop="dateCreated datePublished" datetime="2020-09-01T14:42:32+08:00">2020-09-01</time>
+              <time title="创建时间：2020-10-30 18:36:33 / 修改时间：19:06:05" itemprop="dateCreated datePublished" datetime="2020-10-30T18:36:33+08:00">2020-10-30</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-17 19:48:22" itemprop="dateModified" datetime="2020-09-17T19:48:22+08:00">2020-09-17</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/c/" itemprop="url" rel="index">
-                    <span itemprop="name">c++</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
             </span>
@@ -242,10 +236,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>在定义一个派生类对象时，构造函数的调用顺序如下：<br>1、虚基类的构造函数<br>2、非虚基类的构造函数<br>3、派生类对象成员的构造函数(按定义顺序)<br>4、派生类构造函数</p>
+        <p>***创建子类的实例时，Python首先要完成的任务时给父类所有属性赋值。为此，子类的方法<strong>init</strong>()需要父类施以援手：</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Father</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,height,weight,age)</span>:</span></span><br><span class="line">        --snip--</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son</span><span class="params">(Father)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,height,weight,age)</span>:</span></span><br><span class="line">        super().__init__(height,weight,age)</span><br><span class="line">        --snip--</span><br></pre></td></tr></table></figure>
+
+<p>创建子类时，父类必须包含在当前文件中，且位于子类前面。<br>定义子类时，必须在括号内指定父类名称。<br>super()是一个特殊函数，帮助Python将父类和子类关联起来：这行代码让Python调用父类的方法<strong>init</strong>(),让子类实例包含父类的所有属性。</p>
+<p>***私有属性和私有方法</p>
+<p>在属性名或方法名前加上__</p>
 <hr>
-<p>析构函数的调用次序正好与构造函数的调用次序相反</p>
-<hr>
+<p>1.直接调用父类属性和方法<br>2.重写父类属性和方法<br>3.强制调用父类私有属性方法<br>4.调用父类的<strong>init</strong>方法<br>5.继承父类初始化过程中的参数</p>
+<blockquote>
+<p>详见<a href="https://blog.csdn.net/yilulvxing/article/details/85374142" target="_blank" rel="noopener">https://blog.csdn.net/yilulvxing/article/details/85374142</a></p>
+</blockquote>
 
     </div>
 
@@ -264,13 +265,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/08/30/const%E4%B8%8E%E6%8C%87%E9%92%88/" rel="prev" title="const与指针">
-      <i class="fa fa-chevron-left"></i> const与指针
+    <a href="/2020/10/29/%E7%A6%BB%E6%95%A3%E5%AE%9E%E9%AA%8C2/" rel="prev" title="集合上二元关系性质的判断">
+      <i class="fa fa-chevron-left"></i> 集合上二元关系性质的判断
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/09/14/python%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="next" title="字符串">
-      字符串 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
