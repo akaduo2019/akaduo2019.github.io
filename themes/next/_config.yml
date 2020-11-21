@@ -49,7 +49,7 @@ favicon:
 
 # hexo-generator-feed required for rss support. Leave rss as blank to use site's feed link.
 # Set rss to false to disable feed link. Set rss to specific value if you have burned your feed already.
-rss: /atom.xml
+rss:
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
@@ -174,9 +174,9 @@ avatar:
   # You can also use other linking images.
   url: /images/碇真嗣.jpg
   # If true, the avatar would be dispalyed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar would be rotated with the cursor.
-  rotated: false
+  rotated: true
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -188,7 +188,8 @@ site_state: true
 # Value after `||` delimiter is the name of Font Awesome icon. If icon (with or without delimiter) is not specified, globe icon will be loaded.
 social:
   GitHub: https://github.com/akaduo2019 || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+  Rss: /atom.xml || rss
+  E-Mail: mailto:a1360189116@outlook.com || envelope
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -203,7 +204,6 @@ social_icons:
   enable: true
   icons_only: false
   transition: false
-  GitHub: github
 
 # Blog rolls
 links_settings:
@@ -674,7 +674,7 @@ livere_uid: # <your_uid>
 # For more information: https://github.com/gitalk/gitalk
 gitalk:
   enable: false
-  github_id: # GitHub repo owner
+  github_id: # GitHub repo ownerrss
   repo: # Repository name to store issues
   client_id: # GitHub Application Client ID
   client_secret: # GitHub Application Client Secret

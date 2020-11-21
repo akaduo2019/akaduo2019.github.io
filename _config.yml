@@ -4,9 +4,9 @@
 ## hexo版本：hexo-cli: 1.1.0
  
 # 网站
-title: TTTTTempest # 网站标题
-subtitle: 无名之辈 # 网站副标题
-description: 越是掩饰，它越是显露得清楚。 # 网站描述(SEO)
+title: Akaduo Blog # 网站标题
+subtitle: TEMPEST-12 # 网站副标题
+description: 越是掩饰，它显露越是得清楚。 # 网站描述(SEO)
 author: akaduo # 您的名字
 language: zh-Hans # 网站使用的语言
 timezone: Asia/Shanghai # 网站时区
@@ -118,15 +118,33 @@ lazyload:
   
 # Extensions
 plugins:
-    hexo-generator-feed
+    
 #Feed Atom
 feed:
-    type: atom
-    path: atom.xml
-    limit: 20
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: " "
+  order_by: -date
+  icon: icon.png
 # 启用文章搜索功能
 search:
   path: search.xml
   field: post
   format: html
   limit: 10000
+# 发布字数统计
+# https://github.com/theme-next/hexo-symbols-count-time
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  # 允许排除代码块内的所有内容，以实现更准确的字数统计。
+  exclude_codeblock: false
+  awl: 2
+  wpm: 300
+  suffix: "mins."
