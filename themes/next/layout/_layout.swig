@@ -8,7 +8,6 @@
   {{ partial('_third-party/analytics/index.swig', {}, {cache: theme.cache.enable}) }}
   {{ partial('_scripts/noscript.swig', {}, {cache: theme.cache.enable}) }}
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container{%- if theme.motion.enable %} use-motion{%- endif %}">
     <div class="headband"></div>
@@ -58,5 +57,8 @@
   {%- if theme.pjax %}
     </div>
   {%- endif %}
+  {% if theme.canvas_nest %}
+    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  {% endif %}
 </body>
 </html>
