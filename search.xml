@@ -1,49 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>C++中的for循环的语法</title>
-    <url>/2020/11/21/C++%E4%B8%AD%E7%9A%84for%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<p>C++ 中 for 循环的语法：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ( init; condition; increment )</span><br><span class="line">&#123;</span><br><span class="line">   statement(s);</span><br></pre></td></tr></table></figure>
-
-<p>下面是 for 循环的控制流：</p>
-<p>init 会首先被执行，且只会执行一次。这一步允许您声明并初始化任何循环控制变量。您也可以不在这里写任何语句，只要有一个分号出现即可。<br>接下来，会判断 condition。如果为真，则执行循环主体。如果为假，则不执行循环主体，且控制流会跳转到紧接着 for 循环的下一条语句。<br>在执行完 for 循环主体后，控制流会跳回上面的 increment 语句。该语句允许您更新循环控制变量。该语句可以留空，只要在条件后有一个分号出现即可。<br>条件再次被判断。如果为真，则执行循环，这个过程会不断重复（循环主体，然后增加步值，再然后重新判断条件）。在条件变为假时，for 循环终止。</p>
-]]></content>
-      <categories>
-        <category>c++</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>const与指针</title>
     <url>/2020/08/30/const%E4%B8%8E%E6%8C%87%E9%92%88/</url>
     <content><![CDATA[<p>1.常指针<br>语法: void(基类型名) *const 指针名=地址值;</p>
 <p>2.指向常量的指针<br>语法：void const <em>指针名; || const void</em>指针名;</p>
 <p>3.指向常量的常指针<br>语法: const void *const 指针名=地址值;</p>
-]]></content>
-      <categories>
-        <category>c++</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>c++中的new与delete</title>
-    <url>/2020/11/21/new%E4%B8%8Edelete/</url>
-    <content><![CDATA[<p>new与delte都为运算符而非库函数</p>
-<hr>
-<p>new</p>
-<p>定义符号常量 const int N=…; const int M=…;<br>定义变量 int型指针p，二级指针q，int型i，j;</p>
-<p>申请一个int型动态变量:p=new int;</p>
-<p>申请N个元素的动态一维数组:p=new int[N];</p>
-<p>申请N行M列的动态二维数组：q=new int[N];<br>                         for (i=0;i&lt;N;i++)<br>                          q[i]=new int[M];<br>数组元素可用q[i][j]调用</p>
-<p>注:1.new申请的动态内存空间中存放的为随机值<br>   2.p=new int(10); 相当于 p=new int;*p=10;</p>
-<hr>
-<p>delete</p>
-<p>释放一个int型的动态变量：deelte p;<br>释放N个元素的动态一维数组: delete[]p;<br>释放N行M列的动态二维数组：for(i=0;i&lt;N;i++)<br>                            delete []q[i];<br>                        delete []q;</p>
 ]]></content>
       <categories>
         <category>c++</category>
@@ -105,24 +67,38 @@
       </tags>
   </entry>
   <entry>
-    <title>字符串</title>
-    <url>/2020/11/21/python%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
-    <content><![CDATA[<p>一、修改字符串大小写</p>
-<ol>
-<li>string.title()  令首字母大写</li>
-<li>string.upper()  令字符串字母全部改为大写</li>
-<li>string.lower()  令字符串字母全部改为小写</li>
-</ol>
+    <title>c++中的new与delete</title>
+    <url>/2020/11/21/new%E4%B8%8Edelete/</url>
+    <content><![CDATA[<p>new与delte都为运算符而非库函数</p>
 <hr>
-<p>二、删除空白(泛指任何非打印字符,如空格、制表符和换行符)</p>
-<ol>
-<li>string.rstrip() 删除字符串末尾空白</li>
-<li>string.lstrip() 删除字符串开头空白</li>
-<li>string.strip()  同时删除字符串两端的空白<br>注:但这种删除只是暂时的，接下来再次访问sting的值时会发现仍包含多余空白。若需要永久删除整个字符串中的空白，必须将删除操作的结果存回变量中<br>如:string=string.rstrip()</li>
-</ol>
+<p>new</p>
+<p>定义符号常量 const int N=…; const int M=…;<br>定义变量 int型指针p，二级指针q，int型i，j;</p>
+<p>申请一个int型动态变量:p=new int;</p>
+<p>申请N个元素的动态一维数组:p=new int[N];</p>
+<p>申请N行M列的动态二维数组：q=new int[N];<br>                         for (i=0;i&lt;N;i++)<br>                          q[i]=new int[M];<br>数组元素可用q[i][j]调用</p>
+<p>注:1.new申请的动态内存空间中存放的为随机值<br>   2.p=new int(10); 相当于 p=new int;*p=10;</p>
+<hr>
+<p>delete</p>
+<p>释放一个int型的动态变量：deelte p;<br>释放N个元素的动态一维数组: delete[]p;<br>释放N行M列的动态二维数组：for(i=0;i&lt;N;i++)<br>                            delete []q[i];<br>                        delete []q;</p>
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++中的for循环的语法</title>
+    <url>/2020/11/21/C++%E4%B8%AD%E7%9A%84for%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<p>C++ 中 for 循环的语法：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ( init; condition; increment )</span><br><span class="line">&#123;</span><br><span class="line">   statement(s);</span><br></pre></td></tr></table></figure>
+
+<p>下面是 for 循环的控制流：</p>
+<p>init 会首先被执行，且只会执行一次。这一步允许您声明并初始化任何循环控制变量。您也可以不在这里写任何语句，只要有一个分号出现即可。<br>接下来，会判断 condition。如果为真，则执行循环主体。如果为假，则不执行循环主体，且控制流会跳转到紧接着 for 循环的下一条语句。<br>在执行完 for 循环主体后，控制流会跳回上面的 increment 语句。该语句允许您更新循环控制变量。该语句可以留空，只要在条件后有一个分号出现即可。<br>条件再次被判断。如果为真，则执行循环，这个过程会不断重复（循环主体，然后增加步值，再然后重新判断条件）。在条件变为假时，for 循环终止。</p>
+]]></content>
+      <categories>
+        <category>c++</category>
       </categories>
       <tags>
         <tag>notes</tag>
@@ -143,6 +119,30 @@
 <blockquote>
 <p>详见<a href="https://blog.csdn.net/yilulvxing/article/details/85374142" target="_blank" rel="noopener">https://blog.csdn.net/yilulvxing/article/details/85374142</a></p>
 </blockquote>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>字符串</title>
+    <url>/2020/11/21/python%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    <content><![CDATA[<p>一、修改字符串大小写</p>
+<ol>
+<li>string.title()  令首字母大写</li>
+<li>string.upper()  令字符串字母全部改为大写</li>
+<li>string.lower()  令字符串字母全部改为小写</li>
+</ol>
+<hr>
+<p>二、删除空白(泛指任何非打印字符,如空格、制表符和换行符)</p>
+<ol>
+<li>string.rstrip() 删除字符串末尾空白</li>
+<li>string.lstrip() 删除字符串开头空白</li>
+<li>string.strip()  同时删除字符串两端的空白<br>注:但这种删除只是暂时的，接下来再次访问sting的值时会发现仍包含多余空白。若需要永久删除整个字符串中的空白，必须将删除操作的结果存回变量中<br>如:string=string.rstrip()</li>
+</ol>
 ]]></content>
       <categories>
         <category>python</category>
@@ -183,33 +183,6 @@
       </tags>
   </entry>
   <entry>
-    <title>分支备份测试</title>
-    <url>/2020/11/21/%E5%88%86%E6%94%AF%E5%A4%87%E4%BB%BD%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p>test</p>
-]]></content>
-      <categories>
-        <category>test</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>无题</title>
-    <url>/2020/11/21/%E6%97%A0%E9%A2%981/</url>
-    <content><![CDATA[<p>在定义一个派生类对象时，构造函数的调用顺序如下：<br>1、虚基类的构造函数<br>2、非虚基类的构造函数<br>3、派生类对象成员的构造函数(按定义顺序)<br>4、派生类构造函数</p>
-<hr>
-<p>析构函数的调用次序正好与构造函数的调用次序相反</p>
-<hr>
-]]></content>
-      <categories>
-        <category>c++</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>中缀表达式转后缀表达式</title>
     <url>/2020/11/21/%E4%B8%AD%E7%BC%80to%E5%90%8E%E7%BC%80/</url>
     <content><![CDATA[<p>将中缀表达式转换为后缀表达式:<br>Ⅰ.从左向右遍历</p>
@@ -240,6 +213,33 @@
       </categories>
       <tags>
         <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>无题</title>
+    <url>/2020/11/21/%E6%97%A0%E9%A2%981/</url>
+    <content><![CDATA[<p>在定义一个派生类对象时，构造函数的调用顺序如下：<br>1、虚基类的构造函数<br>2、非虚基类的构造函数<br>3、派生类对象成员的构造函数(按定义顺序)<br>4、派生类构造函数</p>
+<hr>
+<p>析构函数的调用次序正好与构造函数的调用次序相反</p>
+<hr>
+]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分支备份测试</title>
+    <url>/2020/11/21/%E5%88%86%E6%94%AF%E5%A4%87%E4%BB%BD%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>test</p>
+]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
       </tags>
   </entry>
   <entry>
