@@ -124,3 +124,9 @@ feed:
     type: atom
     path: atom.xml
     limit: 20
+# 启用文章搜索功能
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000

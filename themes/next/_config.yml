@@ -1120,3 +1120,7 @@ vendors:
 css: css
 js: js
 images: images
+
+#启功文章搜索功能
+local_search:
+  enable: true
