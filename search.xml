@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>const与指针</title>
-    <url>/2020/08/30/const%E4%B8%8E%E6%8C%87%E9%92%88/</url>
-    <content><![CDATA[<p>1.常指针<br>语法: void(基类型名) *const 指针名=地址值;</p>
-<p>2.指向常量的指针<br>语法：void const <em>指针名; || const void</em>指针名;</p>
-<p>3.指向常量的常指针<br>语法: const void *const 指针名=地址值;</p>
+    <title>C++中的for循环的语法</title>
+    <url>/2020/11/21/C++%E4%B8%AD%E7%9A%84for%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<p>C++ 中 for 循环的语法：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ( init; condition; increment )</span><br><span class="line">&#123;</span><br><span class="line">   statement(s);</span><br></pre></td></tr></table></figure>
+
+<p>下面是 for 循环的控制流：</p>
+<p>init 会首先被执行，且只会执行一次。这一步允许您声明并初始化任何循环控制变量。您也可以不在这里写任何语句，只要有一个分号出现即可。<br>接下来，会判断 condition。如果为真，则执行循环主体。如果为假，则不执行循环主体，且控制流会跳转到紧接着 for 循环的下一条语句。<br>在执行完 for 循环主体后，控制流会跳回上面的 increment 语句。该语句允许您更新循环控制变量。该语句可以留空，只要在条件后有一个分号出现即可。<br>条件再次被判断。如果为真，则执行循环，这个过程会不断重复（循环主体，然后增加步值，再然后重新判断条件）。在条件变为假时，for 循环终止。</p>
 ]]></content>
       <categories>
         <category>c++</category>
@@ -15,14 +17,25 @@
       </tags>
   </entry>
   <entry>
-    <title>hello-world</title>
-    <url>/2019/11/23/hello-world/</url>
-    <content><![CDATA[<h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h2>]]></content>
+    <title>c++中的new与delete</title>
+    <url>/2020/11/21/new%E4%B8%8Edelete/</url>
+    <content><![CDATA[<p>new与delte都为运算符而非库函数</p>
+<hr>
+<p>new</p>
+<p>定义符号常量 const int N=…; const int M=…;<br>定义变量 int型指针p，二级指针q，int型i，j;</p>
+<p>申请一个int型动态变量:p=new int;</p>
+<p>申请N个元素的动态一维数组:p=new int[N];</p>
+<p>申请N行M列的动态二维数组：q=new int[N];<br>                         for (i=0;i&lt;N;i++)<br>                          q[i]=new int[M];<br>数组元素可用q[i][j]调用</p>
+<p>注:1.new申请的动态内存空间中存放的为随机值<br>   2.p=new int(10); 相当于 p=new int;*p=10;</p>
+<hr>
+<p>delete</p>
+<p>释放一个int型的动态变量：deelte p;<br>释放N个元素的动态一维数组: delete[]p;<br>释放N行M列的动态二维数组：for(i=0;i&lt;N;i++)<br>                            delete []q[i];<br>                        delete []q;</p>
+]]></content>
       <categories>
-        <category>test</category>
+        <category>c++</category>
       </categories>
       <tags>
-        <tag>test</tag>
+        <tag>notes</tag>
       </tags>
   </entry>
   <entry>
@@ -67,16 +80,48 @@
       </tags>
   </entry>
   <entry>
-    <title>C++中的for循环的语法</title>
-    <url>/2020/11/21/C++%E4%B8%AD%E7%9A%84for%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<p>C++ 中 for 循环的语法：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ( init; condition; increment )</span><br><span class="line">&#123;</span><br><span class="line">   statement(s);</span><br></pre></td></tr></table></figure>
-
-<p>下面是 for 循环的控制流：</p>
-<p>init 会首先被执行，且只会执行一次。这一步允许您声明并初始化任何循环控制变量。您也可以不在这里写任何语句，只要有一个分号出现即可。<br>接下来，会判断 condition。如果为真，则执行循环主体。如果为假，则不执行循环主体，且控制流会跳转到紧接着 for 循环的下一条语句。<br>在执行完 for 循环主体后，控制流会跳回上面的 increment 语句。该语句允许您更新循环控制变量。该语句可以留空，只要在条件后有一个分号出现即可。<br>条件再次被判断。如果为真，则执行循环，这个过程会不断重复（循环主体，然后增加步值，再然后重新判断条件）。在条件变为假时，for 循环终止。</p>
+    <title>const与指针</title>
+    <url>/2020/08/30/const%E4%B8%8E%E6%8C%87%E9%92%88/</url>
+    <content><![CDATA[<p>1.常指针<br>语法: void(基类型名) *const 指针名=地址值;</p>
+<p>2.指向常量的指针<br>语法：void const <em>指针名; || const void</em>指针名;</p>
+<p>3.指向常量的常指针<br>语法: const void *const 指针名=地址值;</p>
 ]]></content>
       <categories>
         <category>c++</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hello-world</title>
+    <url>/2019/11/23/hello-world/</url>
+    <content><![CDATA[<h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h2>]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>类的继承</title>
+    <url>/2020/11/21/python%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF/</url>
+    <content><![CDATA[<p>创建子类的实例时，Python首先要完成的任务时给父类所有属性赋值。为此，子类的方法<strong>init</strong>()需要父类施以援手：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Father</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,height,weight,age)</span>:</span></span><br><span class="line">        --snip--</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son</span><span class="params">(Father)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,height,weight,age)</span>:</span></span><br><span class="line">        super().__init__(height,weight,age)</span><br><span class="line">        --snip--</span><br></pre></td></tr></table></figure>
+
+<p>创建子类时，父类必须包含在当前文件中，且位于子类前面。<br>定义子类时，必须在括号内指定父类名称。<br>super()是一个特殊函数，帮助Python将父类和子类关联起来：这行代码让Python调用父类的方法<strong>init</strong>(),让子类实例包含父类的所有属性。</p>
+<hr>
+<p>私有属性和私有方法</p>
+<p>在属性名或方法名前加上__</p>
+<hr>
+<p>1.直接调用父类属性和方法<br>2.重写父类属性和方法<br>3.强制调用父类私有属性方法<br>4.调用父类的<strong>init</strong>方法<br>5.继承父类初始化过程中的参数</p>
+<blockquote>
+<p>详见<a href="https://blog.csdn.net/yilulvxing/article/details/85374142" target="_blank" rel="noopener">https://blog.csdn.net/yilulvxing/article/details/85374142</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>python</category>
       </categories>
       <tags>
         <tag>notes</tag>
@@ -101,40 +146,6 @@
 ]]></content>
       <categories>
         <category>python</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>c++中的new与delete</title>
-    <url>/2020/11/21/new%E4%B8%8Edelete/</url>
-    <content><![CDATA[<p>new与delte都为运算符而非库函数</p>
-<hr>
-<p>new</p>
-<p>定义符号常量 const int N=…; const int M=…;<br>定义变量 int型指针p，二级指针q，int型i，j;</p>
-<p>申请一个int型动态变量:p=new int;</p>
-<p>申请N个元素的动态一维数组:p=new int[N];</p>
-<p>申请N行M列的动态二维数组：q=new int[N];<br>                         for (i=0;i&lt;N;i++)<br>                          q[i]=new int[M];<br>数组元素可用q[i][j]调用</p>
-<p>注:1.new申请的动态内存空间中存放的为随机值<br>   2.p=new int(10); 相当于 p=new int;*p=10;</p>
-<hr>
-<p>delete</p>
-<p>释放一个int型的动态变量：deelte p;<br>释放N个元素的动态一维数组: delete[]p;<br>释放N行M列的动态二维数组：for(i=0;i&lt;N;i++)<br>                            delete []q[i];<br>                        delete []q;</p>
-]]></content>
-      <categories>
-        <category>c++</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>临时对象的产生</title>
-    <url>/2020/11/21/%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<p>  1.以值的方式给函数传参；//以引用的方式传递时不会产生临时对象<br>  2.类型转换；<br>  3.函数需要返回一个对象时;</p>
-]]></content>
-      <categories>
-        <category>c++</category>
       </categories>
       <tags>
         <tag>notes</tag>
@@ -172,29 +183,6 @@
       </tags>
   </entry>
   <entry>
-    <title>类的继承</title>
-    <url>/2020/11/21/python%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF/</url>
-    <content><![CDATA[<p>创建子类的实例时，Python首先要完成的任务时给父类所有属性赋值。为此，子类的方法<strong>init</strong>()需要父类施以援手：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Father</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,height,weight,age)</span>:</span></span><br><span class="line">        --snip--</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son</span><span class="params">(Father)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,height,weight,age)</span>:</span></span><br><span class="line">        super().__init__(height,weight,age)</span><br><span class="line">        --snip--</span><br></pre></td></tr></table></figure>
-
-<p>创建子类时，父类必须包含在当前文件中，且位于子类前面。<br>定义子类时，必须在括号内指定父类名称。<br>super()是一个特殊函数，帮助Python将父类和子类关联起来：这行代码让Python调用父类的方法<strong>init</strong>(),让子类实例包含父类的所有属性。</p>
-<hr>
-<p>私有属性和私有方法</p>
-<p>在属性名或方法名前加上__</p>
-<hr>
-<p>1.直接调用父类属性和方法<br>2.重写父类属性和方法<br>3.强制调用父类私有属性方法<br>4.调用父类的<strong>init</strong>方法<br>5.继承父类初始化过程中的参数</p>
-<blockquote>
-<p>详见<a href="https://blog.csdn.net/yilulvxing/article/details/85374142" target="_blank" rel="noopener">https://blog.csdn.net/yilulvxing/article/details/85374142</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>中缀表达式转后缀表达式</title>
     <url>/2020/11/21/%E4%B8%AD%E7%BC%80to%E5%90%8E%E7%BC%80/</url>
     <content><![CDATA[<p>将中缀表达式转换为后缀表达式:<br>Ⅰ.从左向右遍历</p>
@@ -216,33 +204,6 @@
       </tags>
   </entry>
   <entry>
-    <title>无题</title>
-    <url>/2020/11/21/%E6%97%A0%E9%A2%981/</url>
-    <content><![CDATA[<p>在定义一个派生类对象时，构造函数的调用顺序如下：<br>1、虚基类的构造函数<br>2、非虚基类的构造函数<br>3、派生类对象成员的构造函数(按定义顺序)<br>4、派生类构造函数</p>
-<hr>
-<p>析构函数的调用次序正好与构造函数的调用次序相反</p>
-<hr>
-]]></content>
-      <categories>
-        <category>c++</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>置顶测试</title>
-    <url>/2020/11/21/%E7%BD%AE%E9%A1%B6%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p>test set-top</p>
-]]></content>
-      <categories>
-        <category>test</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>分支备份测试</title>
     <url>/2020/11/21/%E5%88%86%E6%94%AF%E5%A4%87%E4%BB%BD%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<p>test</p>
@@ -252,6 +213,18 @@
       </categories>
       <tags>
         <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>临时对象的产生</title>
+    <url>/2020/11/21/%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<p>  1.以值的方式给函数传参；//以引用的方式传递时不会产生临时对象<br>  2.类型转换；<br>  3.函数需要返回一个对象时;</p>
+]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
       </tags>
   </entry>
   <entry>
@@ -270,6 +243,21 @@
       </tags>
   </entry>
   <entry>
+    <title>无题</title>
+    <url>/2020/11/21/%E6%97%A0%E9%A2%981/</url>
+    <content><![CDATA[<p>在定义一个派生类对象时，构造函数的调用顺序如下：<br>1、虚基类的构造函数<br>2、非虚基类的构造函数<br>3、派生类对象成员的构造函数(按定义顺序)<br>4、派生类构造函数</p>
+<hr>
+<p>析构函数的调用次序正好与构造函数的调用次序相反</p>
+<hr>
+]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>集合上二元关系性质的判断</title>
     <url>/2020/11/21/%E7%A6%BB%E6%95%A3%E5%AE%9E%E9%AA%8C2/</url>
     <content><![CDATA[<p>编程实现集合上二元关系性质的判断，并求自反闭包，对称闭包和传递闭包(warshall算法)</p>
@@ -282,6 +270,18 @@
       </categories>
       <tags>
         <tag>experiment</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>置顶测试</title>
+    <url>/2020/11/21/%E7%BD%AE%E9%A1%B6%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>test set-top</p>
+]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
       </tags>
   </entry>
   <entry>
