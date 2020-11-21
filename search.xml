@@ -17,6 +17,17 @@
       </tags>
   </entry>
   <entry>
+    <title>hello-world</title>
+    <url>/2019/11/23/hello-world/</url>
+    <content><![CDATA[<h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h2>]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>const与指针</title>
     <url>/2020/08/30/const%E4%B8%8E%E6%8C%87%E9%92%88/</url>
     <content><![CDATA[<p>1.常指针<br>语法: void(基类型名) *const 指针名=地址值;</p>
@@ -28,63 +39,6 @@
       </categories>
       <tags>
         <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>c++中的new与delete</title>
-    <url>/2020/11/21/new%E4%B8%8Edelete/</url>
-    <content><![CDATA[<p>new与delte都为运算符而非库函数</p>
-<hr>
-<p>new</p>
-<p>定义符号常量 const int N=…; const int M=…;<br>定义变量 int型指针p，二级指针q，int型i，j;</p>
-<p>申请一个int型动态变量:p=new int;</p>
-<p>申请N个元素的动态一维数组:p=new int[N];</p>
-<p>申请N行M列的动态二维数组：q=new int[N];<br>                         for (i=0;i&lt;N;i++)<br>                          q[i]=new int[M];<br>数组元素可用q[i][j]调用</p>
-<p>注:1.new申请的动态内存空间中存放的为随机值<br>   2.p=new int(10); 相当于 p=new int;*p=10;</p>
-<hr>
-<p>delete</p>
-<p>释放一个int型的动态变量：deelte p;<br>释放N个元素的动态一维数组: delete[]p;<br>释放N行M列的动态二维数组：for(i=0;i&lt;N;i++)<br>                            delete []q[i];<br>                        delete []q;</p>
-]]></content>
-      <categories>
-        <category>c++</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字符串</title>
-    <url>/2020/11/21/python%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
-    <content><![CDATA[<p>一、修改字符串大小写</p>
-<ol>
-<li>string.title()  令首字母大写</li>
-<li>string.upper()  令字符串字母全部改为大写</li>
-<li>string.lower()  令字符串字母全部改为小写</li>
-</ol>
-<hr>
-<p>二、删除空白(泛指任何非打印字符,如空格、制表符和换行符)</p>
-<ol>
-<li>string.rstrip() 删除字符串末尾空白</li>
-<li>string.lstrip() 删除字符串开头空白</li>
-<li>string.strip()  同时删除字符串两端的空白<br>注:但这种删除只是暂时的，接下来再次访问sting的值时会发现仍包含多余空白。若需要永久删除整个字符串中的空白，必须将删除操作的结果存回变量中<br>如:string=string.rstrip()</li>
-</ol>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hello-world</title>
-    <url>/2019/11/23/hello-world/</url>
-    <content><![CDATA[<h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h2>]]></content>
-      <categories>
-        <category>test</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
       </tags>
   </entry>
   <entry>
@@ -123,6 +77,28 @@
 ]]></content>
       <categories>
         <category>python</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>c++中的new与delete</title>
+    <url>/2020/11/21/new%E4%B8%8Edelete/</url>
+    <content><![CDATA[<p>new与delte都为运算符而非库函数</p>
+<hr>
+<p>new</p>
+<p>定义符号常量 const int N=…; const int M=…;<br>定义变量 int型指针p，二级指针q，int型i，j;</p>
+<p>申请一个int型动态变量:p=new int;</p>
+<p>申请N个元素的动态一维数组:p=new int[N];</p>
+<p>申请N行M列的动态二维数组：q=new int[N];<br>                         for (i=0;i&lt;N;i++)<br>                          q[i]=new int[M];<br>数组元素可用q[i][j]调用</p>
+<p>注:1.new申请的动态内存空间中存放的为随机值<br>   2.p=new int(10); 相当于 p=new int;*p=10;</p>
+<hr>
+<p>delete</p>
+<p>释放一个int型的动态变量：deelte p;<br>释放N个元素的动态一维数组: delete[]p;<br>释放N行M列的动态二维数组：for(i=0;i&lt;N;i++)<br>                            delete []q[i];<br>                        delete []q;</p>
+]]></content>
+      <categories>
+        <category>c++</category>
       </categories>
       <tags>
         <tag>notes</tag>
@@ -183,12 +159,24 @@
       </tags>
   </entry>
   <entry>
-    <title>临时对象的产生</title>
-    <url>/2020/11/21/%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<p>  1.以值的方式给函数传参；//以引用的方式传递时不会产生临时对象<br>  2.类型转换；<br>  3.函数需要返回一个对象时;</p>
+    <title>字符串</title>
+    <url>/2020/11/21/python%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    <content><![CDATA[<p>一、修改字符串大小写</p>
+<ol>
+<li>string.title()  令首字母大写</li>
+<li>string.upper()  令字符串字母全部改为大写</li>
+<li>string.lower()  令字符串字母全部改为小写</li>
+</ol>
+<hr>
+<p>二、删除空白(泛指任何非打印字符,如空格、制表符和换行符)</p>
+<ol>
+<li>string.rstrip() 删除字符串末尾空白</li>
+<li>string.lstrip() 删除字符串开头空白</li>
+<li>string.strip()  同时删除字符串两端的空白<br>注:但这种删除只是暂时的，接下来再次访问sting的值时会发现仍包含多余空白。若需要永久删除整个字符串中的空白，必须将删除操作的结果存回变量中<br>如:string=string.rstrip()</li>
+</ol>
 ]]></content>
       <categories>
-        <category>c++</category>
+        <category>python</category>
       </categories>
       <tags>
         <tag>notes</tag>
@@ -225,6 +213,18 @@
       </categories>
       <tags>
         <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>临时对象的产生</title>
+    <url>/2020/11/21/%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<p>  1.以值的方式给函数传参；//以引用的方式传递时不会产生临时对象<br>  2.类型转换；<br>  3.函数需要返回一个对象时;</p>
+]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
       </tags>
   </entry>
   <entry>
