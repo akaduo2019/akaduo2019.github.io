@@ -6,7 +6,7 @@
   <link href="http://akaduo2019.github.io/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2020-11-21T13:10:48.669Z</updated>
+  <updated>2020-11-22T07:41:55.851Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -21,14 +21,15 @@
     <link href="http://akaduo2019.github.io/2020/11/21/%E7%BD%AE%E9%A1%B6%E6%B5%8B%E8%AF%95/"/>
     <id>http://akaduo2019.github.io/2020/11/21/%E7%BD%AE%E9%A1%B6%E6%B5%8B%E8%AF%95/</id>
     <published>2020-11-21T13:10:00.000Z</published>
-    <updated>2020-11-21T13:10:48.669Z</updated>
+    <updated>2020-11-22T07:41:55.851Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;test</summary>
+    <summary type="html">&lt;p&gt;😄&lt;/p&gt;
+</summary>
         
       
     
@@ -49,7 +50,7 @@
     <updated>2020-11-21T17:24:17.581Z</updated>
     
     
-    <summary type="html">&lt;p&gt;app.py&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;http://app.py&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;app.py&lt;/a&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight py&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; sys&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; PyQt5 &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; sip&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; PyQt5.QtWidgets &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; *&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; runlogin &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Login&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; __name__ == &lt;span class=&quot;string&quot;&gt;&#39;__main__&#39;&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    app = QApplication(sys.argv)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    login = Login()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    login.show()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    sys.exit(app.exec_())&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
@@ -88,7 +89,9 @@
     <updated>2020-11-21T13:25:04.036Z</updated>
     
     
-    <summary type="html">&lt;p&gt;编程实现用真值表法求取含n个变元的合式公式所对应的主析取范式和主合取范式。&lt;br&gt;要求：&lt;br&gt;能够列出合式公式的真值表并给出相应主析取和主合取范式。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;编程实现用真值表法求取含n个变元的合式公式所对应的主析取范式和主合取范式。&lt;br&gt;
+要求：&lt;br&gt;
+能够列出合式公式的真值表并给出相应主析取和主合取范式。&lt;/p&gt;</summary>
     
     
     
@@ -111,11 +114,14 @@
       
         
         
-    <summary type="html">&lt;p&gt;在定义一个派生类对象时，构造函数的调用顺序如下：&lt;br&gt;1、虚基类的构造函数&lt;br&gt;2、非虚基类的构造函数&lt;br&gt;3、派生类对象成员的构造函数(按定义顺序)&lt;br&gt;4、派生类构造函数&lt;/p&gt;
+    <summary type="html">&lt;p&gt;在定义一个派生类对象时，构造函数的调用顺序如下：&lt;br&gt;
+1、虚基类的构造函数&lt;br&gt;
+2、非虚基类的构造函数&lt;br&gt;
+3、派生类对象成员的构造函数(按定义顺序)&lt;br&gt;
+4、派生类构造函数&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;析构函数的调用次序正好与构造函数的调用次序相反&lt;/p&gt;
-&lt;hr&gt;
-</summary>
+&lt;</summary>
         
       
     
@@ -140,7 +146,10 @@
       
         
         
-    <summary type="html">&lt;p&gt;1.以值的方式给函数传参；//以引用的方式传递时不会产生临时对象&lt;br&gt;  2.类型转换；&lt;br&gt; </summary>
+    <summary type="html">&lt;p&gt;1.以值的方式给函数传参；//以引用的方式传递时不会产生临时对象&lt;br&gt;
+2.类型转换；&lt;br&gt;
+3.函数需要返回一个对象时;&lt;/p&gt;
+</summary>
         
       
     
@@ -165,10 +174,11 @@
       
         
         
-    <summary type="html">&lt;p&gt;将中缀表达式转换为后缀表达式:&lt;br&gt;Ⅰ.从左向右遍历&lt;/p&gt;
+    <summary type="html">&lt;p&gt;将中缀表达式转换为后缀表达式:&lt;br&gt;
+Ⅰ.从左向右遍历&lt;/p&gt;
 &lt;p&gt;Ⅱ.遇到运算数直接输出&lt;/p&gt;
 &lt;p&gt;Ⅲ.遇到左括号，直接压入堆栈（入栈前，左括号优先级最高，入栈后，优先级降到最低，确保其他符号正常入栈）&lt;/p&gt;
-&lt;p&gt;Ⅳ.遇到右括号，不但弹出栈顶运算符并输出，直到遇</summary>
+&lt;p&gt;Ⅳ.遇到右括号，不但弹出栈顶运算符并输出，直到</summary>
         
       
     
@@ -218,8 +228,8 @@
       
         
         
-    <summary type="html">&lt;p&gt;创建子类的实例时，Python首先要完成的任务时给父类所有属性赋值。为此，子类的方法&lt;strong&gt;init&lt;/strong&gt;()需要父类施以援手：&lt;/p&gt;
-&lt;figure class=&quot;highlight py&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+    <summary type="html">&lt;p&gt;创建子类的实例时，Python首先要完成的任务时给父类所有属性赋值。为此，子类的方法__init__()需要父类施以援手：&lt;/p&gt;
+&lt;figure class=&quot;highlight py&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
         
       
     
@@ -276,9 +286,11 @@
     <summary type="html">&lt;p&gt;一、增删列表元素怒&lt;/p&gt;
 &lt;p&gt;在列表中添加元素&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;list.append(‘Tempest’) 在列表末尾添加元素&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;list.append(‘Tempest’) 在列表末尾添加元素&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;list.insert(num,’Tempest’)</summary>
+&lt;li&gt;
+&lt;p&gt;list.insert(num,‘Tempest’)</summary>
         
       
     
@@ -306,8 +318,8 @@
     <summary type="html">&lt;p&gt;new与delte都为运算符而非库函数&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;new&lt;/p&gt;
-&lt;p&gt;定义符号常量 const int N=…; const int M=…;&lt;br&gt;定义变量 int型指针p，二级指针q，int型i，j;&lt;/p&gt;
-&lt;p&gt;申请一个int型动态变量:p=new</summary>
+&lt;p&gt;定义符号常量 const int N=…; const int M=…;&lt;br&gt;
+定义变量</summary>
         
       
     
@@ -358,9 +370,12 @@
       
         
         
-    <summary type="html">&lt;p&gt;1.常指针&lt;br&gt;语法: void(基类型名) *const 指针名=地址值;&lt;/p&gt;
-&lt;p&gt;2.指向常量的指针&lt;br&gt;语法：void const &lt;em&gt;指针名; || const void&lt;/em&gt;指针名;&lt;/p&gt;
-&lt;p&gt;3.指向常量的常指针&lt;br&gt;语法: const</summary>
+    <summary type="html">&lt;p&gt;1.常指针&lt;br&gt;
+语法: void(基类型名) *const 指针名=地址值;&lt;/p&gt;
+&lt;p&gt;2.指向常量的指针&lt;br&gt;
+语法：void const &lt;em&gt;指针名; || const void&lt;/em&gt;指针名;&lt;/p&gt;
+&lt;p&gt;3.指向常量的常指针&lt;br&gt;
+语法:</summary>
         
       
     

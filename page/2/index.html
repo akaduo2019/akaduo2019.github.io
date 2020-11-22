@@ -286,33 +286,50 @@
           <p>一、增删列表元素怒</p>
 <p>在列表中添加元素</p>
 <ol>
-<li><p>list.append(‘Tempest’) 在列表末尾添加元素</p>
+<li>
+<p>list.append(‘Tempest’) 在列表末尾添加元素</p>
 </li>
-<li><p>list.insert(num,’Tempest’) 在列表任何位置添加新元素</p>
+<li>
+<p>list.insert(num,‘Tempest’) 在列表任何位置添加新元素</p>
 </li>
 </ol>
 <hr>
 <p>在列表中删除元素</p>
 <ol>
-<li><p>del list[num]   使用del语句可删除任何位置处列表元素，条件时知道其索引</p>
+<li>
+<p>del list[num]   使用del语句可删除任何位置处列表元素，条件时知道其索引</p>
 </li>
-<li><p>list.pop()    删除列表末尾的元素<br>list.pop(num) 删除列表任何位置元素<br>message=list.pop() 可以在删除元素的同时保存它</p>
+<li>
+<p>list.pop()    删除列表末尾的元素<br>
+list.pop(num) 删除列表任何位置元素<br>
+message=list.pop() 可以在删除元素的同时保存它</p>
 </li>
 </ol>
-<p>注:如果你不确定该使用del 语句还是pop() 方法，下面是一个简单的判断标准：如果你要从列表中删除一个元素，且不再以任何方式使用它，就使用del 语句；如果你要在删除元素后还能继续使用它，就使用方法pop()<br>3. list.remove(‘Tempest’) 根据值删除元素<br>   注:①可在删除元素前保存它，再进行删除操作<br>      ②remove()方法只删除第一个指定的值(一个要删除的值可能在列表中出现多次)</p>
+<p>注:如果你不确定该使用del 语句还是pop() 方法，下面是一个简单的判断标准：如果你要从列表中删除一个元素，且不再以任何方式使用它，就使用del 语句；如果你要在删除元素后还能继续使用它，就使用方法pop()<br>
+3. list.remove(‘Tempest’) 根据值删除元素<br>
+注:①可在删除元素前保存它，再进行删除操作<br>
+②remove()方法只删除第一个指定的值(一个要删除的值可能在列表中出现多次)</p>
 <p>二、组织列表</p>
 <ol>
-<li><p>list.sort() 对列表进行永久性排序<br>list.sort(reverse=True)  反向 永久性排序</p>
+<li>
+<p>list.sort() 对列表进行永久性排序<br>
+list.sort(reverse=True)  反向 永久性排序</p>
 </li>
-<li><p>sorted(list) 对列表进行临时排序，返回值是临时排序的列表</p>
+<li>
+<p>sorted(list) 对列表进行临时排序，返回值是临时排序的列表</p>
 </li>
-<li><p>list.reverse() 反转列表元素的排列顺序<br>注:①reverse() 不是指按与字母顺序相反的顺序排列列表元素，而只是反转列表元素的排列顺序<br>   ②reverse() 永久性地修改列表元素的排列顺序，但可随时恢复到原来的排列顺序，为此只需对列表再次调用reverse() 即可</p>
+<li>
+<p>list.reverse() 反转列表元素的排列顺序<br>
+注:①reverse() 不是指按与字母顺序相反的顺序排列列表元素，而只是反转列表元素的排列顺序<br>
+②reverse() 永久性地修改列表元素的排列顺序，但可随时恢复到原来的排列顺序，为此只需对列表再次调用reverse() 即可</p>
 </li>
-<li><p>len(list) 函数len()可快速获取列表的长度</p>
+<li>
+<p>len(list) 函数len()可快速获取列表的长度</p>
 </li>
 </ol>
 <p>三、补充</p>
-<p>需要访问最后一个列表元素时，都可使用所以-1，例：list[-1]<br>仅当列表为空时，这种访问最后一个元素的方式才会报错</p>
+<p>需要访问最后一个列表元素时，都可使用所以-1，例：list[-1]<br>
+仅当列表为空时，这种访问最后一个元素的方式才会报错</p>
 
       
     </div>
@@ -406,14 +423,23 @@
           <p>new与delte都为运算符而非库函数</p>
 <hr>
 <p>new</p>
-<p>定义符号常量 const int N=…; const int M=…;<br>定义变量 int型指针p，二级指针q，int型i，j;</p>
+<p>定义符号常量 const int N=…; const int M=…;<br>
+定义变量 int型指针p，二级指针q，int型i，j;</p>
 <p>申请一个int型动态变量:p=new int;</p>
 <p>申请N个元素的动态一维数组:p=new int[N];</p>
-<p>申请N行M列的动态二维数组：q=new int[N];<br>                         for (i=0;i&lt;N;i++)<br>                          q[i]=new int[M];<br>数组元素可用q[i][j]调用</p>
-<p>注:1.new申请的动态内存空间中存放的为随机值<br>   2.p=new int(10); 相当于 p=new int;*p=10;</p>
+<p>申请N行M列的动态二维数组：q=new int[N];<br>
+for (i=0;i&lt;N;i++)<br>
+q[i]=new int[M];<br>
+数组元素可用q[i][j]调用</p>
+<p>注:1.new申请的动态内存空间中存放的为随机值<br>
+2.p=new int(10); 相当于 p=new int;*p=10;</p>
 <hr>
 <p>delete</p>
-<p>释放一个int型的动态变量：deelte p;<br>释放N个元素的动态一维数组: delete[]p;<br>释放N行M列的动态二维数组：for(i=0;i&lt;N;i++)<br>                            delete []q[i];<br>                        delete []q;</p>
+<p>释放一个int型的动态变量：deelte p;<br>
+释放N个元素的动态一维数组: delete[]p;<br>
+释放N行M列的动态二维数组：for(i=0;i&lt;N;i++)<br>
+delete []q[i];<br>
+delete []q;</p>
 
       
     </div>
@@ -506,9 +532,11 @@
       
           <p>C++ 中 for 循环的语法：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ( init; condition; increment )</span><br><span class="line">&#123;</span><br><span class="line">   statement(s);</span><br></pre></td></tr></table></figure>
-
 <p>下面是 for 循环的控制流：</p>
-<p>init 会首先被执行，且只会执行一次。这一步允许您声明并初始化任何循环控制变量。您也可以不在这里写任何语句，只要有一个分号出现即可。<br>接下来，会判断 condition。如果为真，则执行循环主体。如果为假，则不执行循环主体，且控制流会跳转到紧接着 for 循环的下一条语句。<br>在执行完 for 循环主体后，控制流会跳回上面的 increment 语句。该语句允许您更新循环控制变量。该语句可以留空，只要在条件后有一个分号出现即可。<br>条件再次被判断。如果为真，则执行循环，这个过程会不断重复（循环主体，然后增加步值，再然后重新判断条件）。在条件变为假时，for 循环终止。</p>
+<p>init 会首先被执行，且只会执行一次。这一步允许您声明并初始化任何循环控制变量。您也可以不在这里写任何语句，只要有一个分号出现即可。<br>
+接下来，会判断 condition。如果为真，则执行循环主体。如果为假，则不执行循环主体，且控制流会跳转到紧接着 for 循环的下一条语句。<br>
+在执行完 for 循环主体后，控制流会跳回上面的 increment 语句。该语句允许您更新循环控制变量。该语句可以留空，只要在条件后有一个分号出现即可。<br>
+条件再次被判断。如果为真，则执行循环，这个过程会不断重复（循环主体，然后增加步值，再然后重新判断条件）。在条件变为假时，for 循环终止。</p>
 
       
     </div>
@@ -599,9 +627,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>1.常指针<br>语法: void(基类型名) *const 指针名=地址值;</p>
-<p>2.指向常量的指针<br>语法：void const <em>指针名; || const void</em>指针名;</p>
-<p>3.指向常量的常指针<br>语法: const void *const 指针名=地址值;</p>
+          <p>1.常指针<br>
+语法: void(基类型名) *const 指针名=地址值;</p>
+<p>2.指向常量的指针<br>
+语法：void const <em>指针名; || const void</em>指针名;</p>
+<p>3.指向常量的常指针<br>
+语法: const void *const 指针名=地址值;</p>
 
       
     </div>
@@ -673,7 +704,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>10</span>
+              <span>11</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -693,6 +724,7 @@
 
       
           <h2><span id="hello-world">Hello world</span></h2>
+
       
     </div>
 
