@@ -5,8 +5,8 @@
  
 # 网站
 title: Akaduo Blog # 网站标题
-subtitle: TEMPEST-12 # 网站副标题
-description: 越是掩饰，它显露越是得清楚。 # 网站描述(SEO)
+subtitle: 它们锦上添花<br>它们落井下石 # 网站副标题
+description: 越是掩饰，它显露越是得清楚。<br>       ——TEMPEST # 网站描述(SEO)
 author: akaduo # 您的名字
 language: zh-Hans # 网站使用的语言
 timezone: Asia/Shanghai # 网站时区
@@ -148,3 +148,29 @@ symbols_count_time:
   awl: 2
   wpm: 300
   suffix: "mins."
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+    - markdown-it-emoji  ## add emoji
+  anchors:
+    level: 1
+    collisionSuffix: 'v'
+    # If `true`, creates an anchor tag with a permalink besides the heading.
+    permalink: true  
+    permalinkClass: header-anchor
+    # The symbol used to make the permalink
+    permalinkSymbol: ¶
+  

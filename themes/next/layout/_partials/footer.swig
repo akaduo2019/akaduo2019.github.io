@@ -50,7 +50,7 @@
 {%- endif %}
 
 {%- if theme.footer.powered.enable and theme.footer.theme.enable %}
-  <span class="post-meta-divider">|</span>
+  <span class="post-meta-divider">❤</span>
 {%- endif %}
 
 {%- if theme.footer.theme.enable %}
