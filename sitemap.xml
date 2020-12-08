@@ -137,13 +137,6 @@
 
   
   <url>
-    <loc>http://akaduo2019.github.io/tags/notes/</loc>
-    <lastmod>2020-12-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://akaduo2019.github.io/tags/test/</loc>
     <lastmod>2020-12-08</lastmod>
     <changefreq>daily</changefreq>
@@ -151,7 +144,7 @@
   </url>
   
   <url>
-    <loc>http://akaduo2019.github.io/tags/experiment/</loc>
+    <loc>http://akaduo2019.github.io/tags/notes/</loc>
     <lastmod>2020-12-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -159,6 +152,13 @@
   
   <url>
     <loc>http://akaduo2019.github.io/tags/other/</loc>
+    <lastmod>2020-12-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://akaduo2019.github.io/tags/experiment/</loc>
     <lastmod>2020-12-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -174,14 +174,14 @@
 
   
   <url>
-    <loc>http://akaduo2019.github.io/categories/c/</loc>
+    <loc>http://akaduo2019.github.io/categories/test/</loc>
     <lastmod>2020-12-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://akaduo2019.github.io/categories/test/</loc>
+    <loc>http://akaduo2019.github.io/categories/c/</loc>
     <lastmod>2020-12-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
