@@ -6,7 +6,7 @@
   <link href="http://akaduo2019.github.io/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2020-12-10T10:18:57.921Z</updated>
+  <updated>2020-12-21T05:39:50.819Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>偏序关系中盖住关系的求取及格论中有补格的判定</title>
+    <link href="http://akaduo2019.github.io/2020/12/21/%E7%A6%BB%E6%95%A3%E5%AE%9E%E9%AA%8C3/"/>
+    <id>http://akaduo2019.github.io/2020/12/21/%E7%A6%BB%E6%95%A3%E5%AE%9E%E9%AA%8C3/</id>
+    <published>2020-12-21T04:43:19.985Z</published>
+    <updated>2020-12-21T05:39:50.819Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;编程实现整除关系这一偏序关系上所有盖住关系的求取，并判断其对应的偏序集是否为有补格&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="python" scheme="http://akaduo2019.github.io/categories/python/"/>
+    
+    
+    <category term="experiment" scheme="http://akaduo2019.github.io/tags/experiment/"/>
+    
+  </entry>
   
   <entry>
     <title>异乎我者未必即非，而同乎我者未必即是</title>
