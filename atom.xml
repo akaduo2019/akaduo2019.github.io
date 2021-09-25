@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Akaduo Blog</title>
+  <title>For record only</title>
   <icon>http://akaduo2019.github.io/icon.png</icon>
-  <subtitle>它们锦上添花&lt;br&gt;它们落井下石</subtitle>
+  <subtitle>一回生 &lt;br&gt; 二回熟</subtitle>
   <link href="http://akaduo2019.github.io/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2020-12-21T05:57:39.074Z</updated>
+  <updated>2021-09-25T01:04:46.460Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Django-1</title>
+    <link href="http://akaduo2019.github.io/2021/09/25/Django/"/>
+    <id>http://akaduo2019.github.io/2021/09/25/Django/</id>
+    <published>2021-09-25T01:10:00.000Z</published>
+    <updated>2021-09-25T01:04:46.460Z</updated>
+    
+    
+    
+    
+    <category term="python" scheme="http://akaduo2019.github.io/categories/python/"/>
+    
+    
+    <category term="Django" scheme="http://akaduo2019.github.io/tags/Django/"/>
+    
+  </entry>
   
   <entry>
     <title>偏序关系中盖住关系的求取及格论中有补格的判定</title>

@@ -14,6 +14,17 @@
       </tags>
   </entry>
   <entry>
+    <title>Django-1</title>
+    <url>/2021/09/25/Django/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>Django</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>偏序关系中盖住关系的求取及格论中有补格的判定</title>
     <url>/2020/12/21/%E7%A6%BB%E6%95%A3%E5%AE%9E%E9%AA%8C3/</url>
     <content><![CDATA[<p>编程实现整除关系这一偏序关系上所有盖住关系的求取，并判断其对应的偏序集是否为有补格</p>
