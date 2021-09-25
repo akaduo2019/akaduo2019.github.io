@@ -158,13 +158,6 @@
   </url>
   
   <url>
-    <loc>http://akaduo2019.github.io/tags/Django/</loc>
-    <lastmod>2021-09-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://akaduo2019.github.io/tags/test/</loc>
     <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
@@ -202,14 +195,14 @@
   </url>
   
   <url>
-    <loc>http://akaduo2019.github.io/categories/python/</loc>
+    <loc>http://akaduo2019.github.io/categories/test/</loc>
     <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://akaduo2019.github.io/categories/test/</loc>
+    <loc>http://akaduo2019.github.io/categories/python/</loc>
     <lastmod>2021-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -6,7 +6,7 @@
   <link href="http://akaduo2019.github.io/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2021-09-25T01:04:46.460Z</updated>
+  <updated>2021-09-25T02:56:18.613Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -17,19 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Django-1</title>
+    <title>Django</title>
     <link href="http://akaduo2019.github.io/2021/09/25/Django/"/>
     <id>http://akaduo2019.github.io/2021/09/25/Django/</id>
     <published>2021-09-25T01:10:00.000Z</published>
-    <updated>2021-09-25T01:04:46.460Z</updated>
+    <updated>2021-09-25T02:56:18.613Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2&gt;&lt;span id=&quot;实现一个请求&quot;&gt;实现一个请求&lt;/span&gt;&lt;/h2&gt;
+&lt;h3&gt;&lt;span id=&quot;注册一个路由&quot;&gt;注册一个路由&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;在urls中&lt;/p&gt;
+&lt;figure class=&quot;highlight py&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
     
     
     
     <category term="python" scheme="http://akaduo2019.github.io/categories/python/"/>
     
     
-    <category term="Django" scheme="http://akaduo2019.github.io/tags/Django/"/>
+    <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
     
   </entry>
   
