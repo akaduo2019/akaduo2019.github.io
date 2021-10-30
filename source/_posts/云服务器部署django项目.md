@@ -1,6 +1,6 @@
 ---
 title: 宝塔快速部署Django项目
-date: 2021-10-14 17:00
+date: 2021-10-30 23:00
 tags:
 - notes
 categories:
