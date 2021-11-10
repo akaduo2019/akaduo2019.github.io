@@ -6,7 +6,7 @@
   <link href="http://akaduo2019.github.io/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2021-10-30T15:35:13.861Z</updated>
+  <updated>2021-11-10T05:57:18.520Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>中期汇报</title>
+    <link href="http://akaduo2019.github.io/2021/11/10/%E4%B8%AD%E6%9C%9F%E6%B1%87%E6%8A%A5/"/>
+    <id>http://akaduo2019.github.io/2021/11/10/%E4%B8%AD%E6%9C%9F%E6%B1%87%E6%8A%A5/</id>
+    <published>2021-11-10T05:00:00.000Z</published>
+    <updated>2021-11-10T05:57:18.520Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;1revealjs编写ppt播放页面&quot;&gt;1.reveal.js编写ppt播放页面&lt;/span&gt;&lt;/h1&gt;
+&lt;h2&gt;&lt;span id=&quot;11-revealjs&quot;&gt;1.1</summary>
+        
+      
+    
+    
+    
+    <category term="杂项" scheme="http://akaduo2019.github.io/categories/%E6%9D%82%E9%A1%B9/"/>
+    
+    
+    <category term="中期总结" scheme="http://akaduo2019.github.io/tags/%E4%B8%AD%E6%9C%9F%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>宝塔快速部署Django项目</title>
@@ -527,31 +553,6 @@
     
     
     <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hello-world</title>
-    <link href="http://akaduo2019.github.io/2019/11/23/hello-world/"/>
-    <id>http://akaduo2019.github.io/2019/11/23/hello-world/</id>
-    <published>2019-11-23T13:16:35.000Z</published>
-    <updated>2020-04-02T16:16:23.936Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2&gt;&lt;span id=&quot;hello-world&quot;&gt;Hello</summary>
-        
-      
-    
-    
-    
-    <category term="test" scheme="http://akaduo2019.github.io/categories/test/"/>
-    
-    
-    <category term="test" scheme="http://akaduo2019.github.io/tags/test/"/>
     
   </entry>
   
