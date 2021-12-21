@@ -14,6 +14,167 @@
       </tags>
   </entry>
   <entry>
+    <title>操作系统实验3 内存管理</title>
+    <url>/2021/12/21/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/</url>
+    <content><![CDATA[<h1><span id="第一章-概述">第一章 概述</span></h1>
+<h2><span id="一-计算机网络的概念">一、计算机网络的概念</span></h2>
+<p>计算机网络概括为一个由通信子网和终端系统组成的通信系统。</p>
+<h2><span id="二-计算机网络在逻辑上的组成及其各自的作用">二、计算机网络在逻辑上的组成及其各自的作用</span></h2>
+<ol>
+<li>
+<p>计算机网络在逻辑上由终端系统和通信子网组成。</p>
+</li>
+<li>
+<p>①终端系统：终端系统由计算机、终端控制器和计算机上所能提供共享的软件资源和数据源(如数据库和应用程序)构成。</p>
+</li>
+</ol>
+<p>​      ②终端系统的作用：负责信息的处理。</p>
+<p>​      ③通信子网：通信子网是由用作信息交换的网络节点和通信线路组成的独立的数据通信系统。</p>
+<p>​      ④通信子网的作用：承担全网的数据传输、转接、加工和变换等通信处理工作。</p>
+<h2><span id="三-网络的类型网络的拓扑结构-网络覆盖范围">三、网络的类型(网络的拓扑结构、网络覆盖范围)</span></h2>
+<ol>
+<li>网络的拓扑结构(知道长什么样)</li>
+</ol>
+<p><img src="E:%5CBolgImg%5C%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84.jpg" alt></p>
+<ul>
+<li>星型结构</li>
+<li>树形结构</li>
+<li>总线型结构</li>
+<li>环形结构</li>
+<li>网络型结构</li>
+</ul>
+<ol start="2">
+<li>网络的覆盖范围
+<ul>
+<li>有线网络
+<ul>
+<li>个人区域网(Personal Area Network)</li>
+<li>局域网(Local Area Network)</li>
+<li>城域网(Metropolitan Area Network)</li>
+<li>广域网(Wide Area Network)</li>
+<li>因特网(Internet)</li>
+</ul>
+</li>
+<li>无线网络
+<ul>
+<li>无线个域网</li>
+<li>无线局域网</li>
+<li>无线城域网</li>
+<li>无线广域网</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2><span id="四-协议的概念和协议三要素的名称-含义">四、协议的概念和协议三要素的名称、含义</span></h2>
+<ol>
+<li>协议的概念：<strong>协议是指通信双方必须遵循的、控制信息交换的规则的集合</strong>，是一套语义和语法规则、用来规定有关功能部件在通信过程中的操作，他定义了数据发送和接受工作中必经的过程。</li>
+<li>协议三要素
+<ul>
+<li>语法：指数据与控制信息的结构或格式(怎么讲)</li>
+<li>语义：指对构成协议的协议元素含义的解释(讲什么)</li>
+<li>同步：规定了事件的执行顺序</li>
+</ul>
+</li>
+</ol>
+<h2><span id="五-网络体系结构的概念">五、网络体系结构的概念</span></h2>
+<p>计算机网络体系结构是计算机网络的<strong>分层</strong>及其<strong>服务和协议的集合</strong>。(体系结构是一个抽象的概念，它<strong>只从功能上描述计算机网络的结构</strong>，而<strong>不涉及每层的具体组成和实现细节</strong>)</p>
+<h2><span id="六-osirm体系结构">六、OSI/RM体系结构</span></h2>
+<img src="E:\BolgImg\OSIRM.jpg" style="zoom:25%;">
+<ol>
+<li>
+<p>物理层：利用传输介质为通信的网络节点之间、维护和释放物理连接，实现<strong>比特流</strong>(bit)的透明传输，进而<strong>为数据链路层提供数据传输服务</strong>。(传输线路一般算第0层，物理层一般指接口)</p>
+</li>
+<li>
+<p>数据链路层：在物理层提供服务的基础上，在通信的实体间建立数据链路连接，传输以<strong>帧</strong>(frame)为单位的数据包，并采用差错控制和流量控制的方法，使得有差错的物理线路变成无差错的数据链路。(网卡就工作在数据链路层，属于数据链路层设备)</p>
+</li>
+<li>
+<p>网络层：为分组交换数据上的不同主机提供通信服务，为以<strong>分组</strong>为单位的数据包通过通信子网选择适当的路由并实现拥塞控制、网络互连等功能。</p>
+</li>
+<li>
+<p>传输层：向用户提供<strong>端到端</strong>的数据传输服务，实现为上层屏蔽低层的数据传输问题。</p>
+</li>
+<li>
+<p>会话层：负责维护通信中连个节点之间的会话连接的建立、维护和断开，以及数据的交换。</p>
+<p>表示层：用于处理在两个通信系统中交换信息的表示方式，主要包括数据格式变换、数据的加密与解密、数据的压缩和恢复等功能。(直接为应用层提供服务)</p>
+<p>应用层：为应用程序通过网络服务，它包含了各种用户使用的协议</p>
+</li>
+</ol>
+<img src="E:\BolgImg\数据传递的过程.jpg" style="zoom: 25%;">
+<p>​                                    数据从封装再到解包的过程，H1~H7统称为报头</p>
+<h2><span id="七-tcpip体系结构">七、TCP/IP体系结构</span></h2>
+<img src="E:\BolgImg\TPCIP协议层次模型和协议簇.jpg" style="zoom: 25%;">
+<img src="E:\BolgImg\OSI和TCPIP对应.jpg" style="zoom: 25%;">
+<p>IP over everything： IP通过网络接入层运行在不同物理网络之上。</p>
+<p>Everything over IP： TCP/IP体系结构下，各种网络应用均是建立在IP基础之上。</p>
+<h1><span id="第二章-数据通信技术基础">第二章 数据通信技术基础</span></h1>
+<img src="E:\BolgImg\信息信号数据.png" style="zoom: 67%;">
+<p>​                                                                                                                        <strong>信息、信号、数据</strong></p>
+<h2><span id="一-数据通信系统计数指标的计算传信率-传码率-信带宽度-时延-误码率-信道容量-香农公式-奈式第一准则">一、数据通信系统计数指标的计算(传信率、传码率、信带宽度、时延、误码率、信道容量、香农公式、奈式第一准则)</span></h2>
+<ol>
+<li>
+<p>数据传输速率：衡量数据通信系统能力的主要指标，主要包括传信速率和传码速率。</p>
+<ul>
+<li>
+<p>传码速率：又称调制速率、波特率，记作$N_{Bd}$，是指在数据通信系统中，每秒钟传输信号码元的个数，单位是波特(Baud)。</p>
+</li>
+<li>
+<p>传信速率：又称比特率，记作$R_b$，是指在数据通信系统中，每秒传输二进制码元的个数，单位是比特/秒。</p>
+<p>若T为信号码元持续时间，传送M电平的信号，则:<br>
+$$<br>
+N_{Bd}=1/T\<br>
+R_b=N_{Bd}log_2M<br>
+$$</p>
+</li>
+</ul>
+</li>
+<li></li>
+</ol>
+<h2><span id="二-各种传输介质的名称">二、各种传输介质的名称</span></h2>
+<ul>
+<li>有线传输介质(媒体)
+<ul>
+<li>双绞线</li>
+<li>同轴电缆</li>
+<li>光缆</li>
+</ul>
+</li>
+<li>无线传输介质
+<ul>
+<li>无线电波(无线电波是一个广义的术语，从含义上，无线电波是全向传播，而微波则是定向传播)</li>
+<li>地面微波</li>
+<li>卫星微波</li>
+<li>红外线技术</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>cn</category>
+      </categories>
+      <tags>
+        <tag>note</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>操作系统实验3 内存管理</title>
+    <url>/2021/11/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C3/</url>
+    <content><![CDATA[<h1><span id="实验要求">实验要求</span></h1>
+<p>1、随机生成一个进程访问的逻辑页号列表，要求不少于100个页号，把这些页号存入文件page.txt。</p>
+<p>2、编程分别实现FIFO、LRU和CLOCK算法，每次调用算法前要求用户输入页框数量，每种算法最后都需要给出页面的置换顺序以及缺页中断次数。</p>
+<p>3、不断地改变页框数，完成这张曲线图，并且做出简短的小结，用于分析页框数对缺页率的影响。</p>
+<p>程序最好能集成成一个，首先能分行输出显示随机生成的100个页号；然后让用户选择页框数，以页框数作为参数调用三个页面替换策略，记录、输出、比较它们的缺页中断次数、缺页中断率。结果不一定以曲线图形式显示，但要能保存在文件中并能在屏幕上以字符方式输出。</p>
+<h1><span id="实现代码">实现代码</span></h1>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    FILE *fp;</span><br><span class="line">    FILE *fp1;</span><br><span class="line">    FILE *fp2;</span><br><span class="line">    <span class="keyword">int</span> request[<span class="number">100</span>];</span><br><span class="line">    <span class="keyword">char</span> input[<span class="number">100</span>];</span><br><span class="line">    <span class="keyword">int</span> i,j,s=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> page_table_count = <span class="number">0</span>;<span class="comment">//记录文件中的页表数</span></span><br><span class="line">    <span class="keyword">int</span> page_frame_count = <span class="number">0</span>;<span class="comment">//页框数</span></span><br><span class="line">    <span class="keyword">int</span> page_missing_count;<span class="comment">//缺页数</span></span><br><span class="line">    <span class="keyword">float</span> page_fault_rate;<span class="comment">//缺页率</span></span><br><span class="line">    srand(time(<span class="literal">NULL</span>));<span class="comment">//随机种子</span></span><br><span class="line">    </span><br><span class="line">    fp = fopen('page.txt','w');</span><br><span class="line">    <span class="keyword">if</span> (fp == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    fp2 = fopen('result.txt','a++');</span><br><span class="line">    <span class="comment">//生成100个20以内的随机数</span></span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;<span class="number">100</span>;i++)&#123;</span><br><span class="line">        j = rand % <span class="number">20</span>;</span><br><span class="line">        <span class="built_in">fprintf</span>(fp,<span class="string">"%d"</span>,j);</span><br><span class="line">        <span class="built_in">fprintf</span>(fp2,<span class="string">"%d"</span>,j);</span><br><span class="line">    &#125;</span><br><span class="line">    fclose(fp);</span><br><span class="line">    <span class="comment">//fp1只读，fp只写</span></span><br><span class="line">    fp1 = fopen('page.txt','r');</span><br><span class="line">    <span class="keyword">if</span> (fp1 == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="comment">//读取page.txt中的请求队列</span></span><br><span class="line">    while(fscanf(fp1,'%d',&amp;request[page_table_count]) != EOF)&#123;</span><br><span class="line">        page_table_count++;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">'\n'</span>); </span><br><span class="line">        printf('================================================================================\n')</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"请求队列长度(页表数):%d\n"</span>,page_table_count)；</span><br><span class="line">        <span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;page_table_count;i++)&#123;</span><br><span class="line">            print('%d',request[i]);//具体展示请求队列页表号顺序</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'\n'</span>);</span><br><span class="line">         printf('================================================================================\n')</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"请输入分配给进程的页框数:"</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;page_frame_count);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">'\n'</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"页框数:%d\n"</span>,page_frame_count);</span><br><span class="line">        printf('================================================================================\n')</span><br><span class="line">        <span class="comment">//保存请求队列长度(页表数)和页框数到result.txt</span></span><br><span class="line">        <span class="built_in">fprintf</span>(fp2,<span class="string">"页表数:%d\n"</span>,page_table_count);</span><br><span class="line">        <span class="built_in">fprintf</span>(fp2,<span class="string">"页框数:%d\n"</span>,page_frame_count);</span><br><span class="line">        </span><br><span class="line">        page_missing_count=FIFO(request,page_table_count,page_frame_count);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"FIFOFIFO:\n缺页数:%d\n"</span>,page_missing_count);</span><br><span class="line">        <span class="built_in">fprintf</span>(fp2, <span class="string">"FIFO: %d \n"</span>, page_missing_count);</span><br><span class="line">        page_fault_rate = (<span class="keyword">float</span>)page_missing_count/page_table_count;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"缺页率: %.2f\n"</span>, page_fault_rate);</span><br><span class="line">        <span class="built_in">fprintf</span>(fp2, <span class="string">"缺页率: %.2f\n"</span>, page_fault_rate);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"==================================================================================\n"</span>);</span><br><span class="line"></span><br><span class="line">        page_missing_count =LRU(request,page_table_count,page_frame_count);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"LRU:\n缺页数:%d\n"</span>,page_missing_count);</span><br><span class="line">        <span class="built_in">fprintf</span>(fp2, <span class="string">"LRU: %d \n"</span>, page_missing_count);</span><br><span class="line">        page_fault_rate = (<span class="keyword">float</span>)page_missing_count/page_table_count;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"缺页率: %.2f\n"</span>, page_fault_rate);</span><br><span class="line">        <span class="built_in">fprintf</span>(fp2, <span class="string">"缺页率: %.2f\n"</span>, page_fault_rate);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"==================================================================================\n"</span>);</span><br><span class="line"></span><br><span class="line">        page_missing_count =CLO(request,page_table_count,page_frame_count);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"CLOCK:\n缺页数:%d\n"</span>,page_missing_count);</span><br><span class="line">        <span class="built_in">fprintf</span>(fp2, <span class="string">"CLOCK: %d \n"</span>, page_missing_count);</span><br><span class="line">        rate = (<span class="keyword">float</span>)count/M;</span><br><span class="line">        page_fault_rate = (<span class="keyword">float</span>)page_missing_count/page_table_count;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"缺页率: %.2f\n"</span>, page_fault_rate);</span><br><span class="line">        <span class="built_in">fprintf</span>(fp2, <span class="string">"缺页率: %.2f\n"</span>, page_fault_rate);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"===================================================================================\n"</span>);</span><br><span class="line">        <span class="built_in">fprintf</span>(fp2, <span class="string">"===================================================================================\n"</span>);</span><br><span class="line"></span><br><span class="line">         <span class="comment">//关闭文件指针</span></span><br><span class="line">        fclose(fp1);</span><br><span class="line">        fclose(fp2);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;	       </span><br><span class="line">&#125;</span><br><span class="line"><span class="string">""</span><span class="string">"给数组赋值"</span><span class="string">""</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setarray</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> num, <span class="keyword">int</span> val)</span> </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; num; i++)   </span><br><span class="line">		arr[i] = val; </span><br><span class="line">&#125;</span><br><span class="line"><span class="string">""</span><span class="string">"声明一个二维数组用来存储内存中页面变化情况"</span><span class="string">""</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">initarr</span><span class="params">(<span class="keyword">int</span> **arr, <span class="keyword">int</span> rnum, <span class="keyword">int</span> cnum)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> r, c;</span><br><span class="line">    <span class="keyword">for</span>(r = <span class="number">0</span>; r &lt; rnum; r++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(c = <span class="number">0</span>; c &lt; cnum; c++)</span><br><span class="line">            arr[r][c] = <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="string">""</span><span class="string">"查找内存 mem 中是否存在页面 page"</span><span class="string">""</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findexist</span><span class="params">(<span class="keyword">int</span> mem[], <span class="keyword">int</span> mnum, <span class="keyword">int</span> page)</span> </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; mnum; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span> (mem[i] == page)</span><br><span class="line">			<span class="keyword">return</span> i;  </span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">""</span><span class="string">"查找内存 mem 中是否存空的位置"</span><span class="string">""</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findempty</span><span class="params">(<span class="keyword">int</span> mem[], <span class="keyword">int</span> mnum)</span> </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">	<span class="keyword">int</span> i; </span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; mnum; i++)&#123;   </span><br><span class="line">		<span class="keyword">if</span> (mem[i] == <span class="number">-1</span>)</span><br><span class="line">			<span class="keyword">return</span> i;  </span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="string">""</span><span class="string">"打印内存中页面的变化"</span><span class="string">""</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span> **a, <span class="keyword">int</span> rnum, <span class="keyword">int</span> mnum)</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	</span><br><span class="line">    <span class="keyword">while</span>(i &lt; mnum)</span><br><span class="line">    &#123;</span><br><span class="line">		<span class="keyword">for</span>(j = <span class="number">10</span> * k; j &lt; rnum; j++)</span><br><span class="line">		&#123;	</span><br><span class="line">				<span class="keyword">if</span>(j != <span class="number">10</span> * (k+<span class="number">1</span>))</span><br><span class="line">				   <span class="built_in">printf</span>(<span class="string">"%d\t"</span>, a[i][j]);</span><br><span class="line">			   </span><br><span class="line">				<span class="keyword">if</span>(j % <span class="number">10</span> == <span class="number">0</span> &amp;&amp; j != <span class="number">10</span> * k &amp;&amp; i == mnum<span class="number">-1</span>)</span><br><span class="line">				&#123;   </span><br><span class="line">					i=<span class="number">-1</span>;</span><br><span class="line">					k++;</span><br><span class="line">					<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				<span class="keyword">if</span>(j%<span class="number">10</span>==<span class="number">0</span>&amp;&amp;j!=k*<span class="number">10</span>&amp;&amp;i!=mnum<span class="number">-1</span>)</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">				i++;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">""</span><span class="string">"先进先出页面置换算法FIFO"</span><span class="string">""</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">FIFO</span><span class="params">(<span class="keyword">int</span> req[], <span class="keyword">int</span> rnum, <span class="keyword">int</span> mnum)</span> </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">	<span class="keyword">int</span> c ount;  </span><br><span class="line">	<span class="keyword">int</span> i, j;  </span><br><span class="line">	<span class="keyword">int</span> pos;     </span><br><span class="line"></span><br><span class="line">	<span class="comment">/*分配内存空间，通常初始化为-1*/</span></span><br><span class="line">    <span class="keyword">int</span> *mem = (<span class="keyword">int</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span> ) * mnum);</span><br><span class="line">    setarray(mem, mnum, <span class="number">-1</span>);</span><br><span class="line">	</span><br><span class="line">    <span class="comment">/*time记录内存中每个页面进入的时间*/</span></span><br><span class="line">    <span class="keyword">int</span> *time = (<span class="keyword">int</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>) * mnum);</span><br><span class="line">    setarray(time, mnum, rnum);</span><br><span class="line">	</span><br><span class="line">    <span class="comment">/*a记录内存中存放的页面*/</span></span><br><span class="line">    <span class="keyword">int</span> **a;</span><br><span class="line">    a = (<span class="keyword">int</span> **)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span> *) * mnum);</span><br><span class="line">    a[<span class="number">0</span>] = (<span class="keyword">int</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>) * rnum * mnum);</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt; mnum; i++)</span><br><span class="line">        a[i] = a[<span class="number">0</span>] + i * rnum;</span><br><span class="line">    initarr(a, mnum, rnum);</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*缺页次数初始时为 0*/</span>  </span><br><span class="line">	count = <span class="number">0</span>; </span><br><span class="line"> </span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; rnum; i++)&#123;   </span><br><span class="line">	</span><br><span class="line">		<span class="comment">/*发现页面请求是否存在内存中*/</span>   </span><br><span class="line">		pos = findexist(mem, mnum, req[i]); </span><br><span class="line">	</span><br><span class="line">		<span class="comment">/*如果内存中存在页面请求*/</span>   </span><br><span class="line">		<span class="keyword">if</span> (pos != <span class="number">-1</span>)&#123;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; mnum; j++)&#123;</span><br><span class="line">				a[j][i+<span class="number">1</span>] = a[j][i];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">/*	</span></span><br><span class="line"><span class="comment">				a[0][i+1] = a[0][i];</span></span><br><span class="line"><span class="comment">				a[1][i+1] = a[1][i];</span></span><br><span class="line"><span class="comment">				a[2][i+1] = a[2][i];	*/</span></span><br><span class="line">			</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*如果内存中不存在缺页次数加一*/</span>   </span><br><span class="line">		count++; </span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*内存中是否存在空位置可以存放新页面*/</span>   </span><br><span class="line">		pos = findempty(mem, mnum); </span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*存在空位置，直接存入新页面，不做置换*/</span>   </span><br><span class="line">		<span class="keyword">if</span> (pos != <span class="number">-1</span>)&#123;</span><br><span class="line">			mem[pos] = req[i];</span><br><span class="line">			time[pos] = i;</span><br><span class="line">			</span><br><span class="line">			a[pos][i] = req[i];</span><br><span class="line">			<span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; mnum; j++)&#123;</span><br><span class="line">				a[j][i+<span class="number">1</span>] = a[j][i];</span><br><span class="line">			&#125;</span><br><span class="line">            <span class="comment">/*	a[0][i+1] = a[0][i];</span></span><br><span class="line"><span class="comment">				a[1][i+1] = a[1][i];</span></span><br><span class="line"><span class="comment">				a[2][i+1] = a[2][i];	*/</span></span><br><span class="line"></span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">		<span class="comment">/*不存在空位置，寻找要置换的页面，fifo*/</span></span><br><span class="line">		pos = <span class="number">0</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">1</span>; j &lt; mnum; j++)&#123;</span><br><span class="line">			<span class="keyword">if</span> (time[j] &lt; time[pos])&#123;</span><br><span class="line">				pos = j;</span><br><span class="line">				&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		mem[pos] = req[i];</span><br><span class="line">		time[pos] = i;</span><br><span class="line">		a[pos][i] = req[i];</span><br><span class="line">        <span class="keyword">if</span>(i &lt; rnum<span class="number">-1</span>)	<span class="comment">//防止数组越界</span></span><br><span class="line">        &#123;</span><br><span class="line">			<span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; mnum; j++)&#123;</span><br><span class="line">				a[j][i+<span class="number">1</span>] = a[j][i];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">/*	a[0][i+1] = a[0][i];</span></span><br><span class="line"><span class="comment">				a[1][i+1] = a[1][i];</span></span><br><span class="line"><span class="comment">				a[2][i+1] = a[2][i];	*/</span></span><br><span class="line">        &#125;</span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(j = <span class="number">1</span>; j &lt; mnum; j++)&#123;</span><br><span class="line">		a[j][<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/*打印内存中页面的变化*/</span></span><br><span class="line">	<span class="built_in">print</span>(a, rnum, mnum);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">free</span>(time);		<span class="comment">//释放内存空间</span></span><br><span class="line">	<span class="built_in">free</span>(mem);</span><br><span class="line">	<span class="built_in">free</span>(a);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> count;	<span class="comment">//返回缺页次数</span></span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>experiment</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>中期汇报</title>
     <url>/2021/11/10/%E4%B8%AD%E6%9C%9F%E6%B1%87%E6%8A%A5/</url>
     <content><![CDATA[<h1><span id="1revealjs编写ppt播放页面">1.reveal.js编写ppt播放页面</span></h1>

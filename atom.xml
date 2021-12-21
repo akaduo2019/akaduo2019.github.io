@@ -6,7 +6,7 @@
   <link href="http://akaduo2019.github.io/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2021-11-10T05:57:18.520Z</updated>
+  <updated>2021-12-21T13:52:24.763Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>操作系统实验3 内存管理</title>
+    <link href="http://akaduo2019.github.io/2021/12/21/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/"/>
+    <id>http://akaduo2019.github.io/2021/12/21/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/</id>
+    <published>2021-12-21T12:12:13.200Z</published>
+    <updated>2021-12-21T13:52:24.763Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;第一章-概述&quot;&gt;第一章 概述&lt;/span&gt;&lt;/h1&gt;
+&lt;h2&gt;&lt;span id=&quot;一-计算机网络的概念&quot;&gt;一、计算机网络的概念&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;计算机网络概括为一个由通信子网和终端系统组成的通信系统。&lt;/p&gt;
+&lt;h2&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="cn" scheme="http://akaduo2019.github.io/categories/cn/"/>
+    
+    
+    <category term="note" scheme="http://akaduo2019.github.io/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>操作系统实验3 内存管理</title>
+    <link href="http://akaduo2019.github.io/2021/11/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C3/"/>
+    <id>http://akaduo2019.github.io/2021/11/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C3/</id>
+    <published>2021-11-23T06:18:22.513Z</published>
+    <updated>2021-11-23T07:15:53.747Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="c++" scheme="http://akaduo2019.github.io/categories/c/"/>
+    
+    
+    <category term="experiment" scheme="http://akaduo2019.github.io/tags/experiment/"/>
+    
+  </entry>
   
   <entry>
     <title>中期汇报</title>
@@ -488,62 +541,6 @@
 &lt;p&gt;new&lt;/p&gt;
 &lt;p&gt;定义符号常量 const int N=…; const int M=…;&lt;br&gt;
 定义变量</summary>
-        
-      
-    
-    
-    
-    <category term="c++" scheme="http://akaduo2019.github.io/categories/c/"/>
-    
-    
-    <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++中的for循环的语法</title>
-    <link href="http://akaduo2019.github.io/2020/11/21/C++%E4%B8%AD%E7%9A%84for%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%AF%AD%E6%B3%95/"/>
-    <id>http://akaduo2019.github.io/2020/11/21/C++%E4%B8%AD%E7%9A%84for%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%AF%AD%E6%B3%95/</id>
-    <published>2020-11-21T07:54:22.107Z</published>
-    <updated>2020-09-17T11:48:02.049Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;C++ 中 for 循环的语法：&lt;/p&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="c++" scheme="http://akaduo2019.github.io/categories/c/"/>
-    
-    
-    <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>const与指针</title>
-    <link href="http://akaduo2019.github.io/2020/08/30/const%E4%B8%8E%E6%8C%87%E9%92%88/"/>
-    <id>http://akaduo2019.github.io/2020/08/30/const%E4%B8%8E%E6%8C%87%E9%92%88/</id>
-    <published>2020-08-30T08:38:00.000Z</published>
-    <updated>2020-09-17T11:48:04.599Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.常指针&lt;br&gt;
-语法: void(基类型名) *const 指针名=地址值;&lt;/p&gt;
-&lt;p&gt;2.指向常量的指针&lt;br&gt;
-语法：void const &lt;em&gt;指针名; || const void&lt;/em&gt;指针名;&lt;/p&gt;
-&lt;p&gt;3.指向常量的常指针&lt;br&gt;
-语法:</summary>
         
       
     
