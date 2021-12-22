@@ -6,7 +6,7 @@
 # 网站
 title: Akaduo Blog # 网站标题
 subtitle: 知识、思想、信仰 # 网站副标题
-description: 还不到绝望的时候 # 网站描述(SEO)
+description: 克服惰性 # 网站描述(SEO)
 author: akaduo # 您的名字
 language: zh-Hans # 网站使用的语言
 timezone: Asia/Shanghai # 网站时区
@@ -36,7 +36,10 @@ titlecase: false # 将标题转换为title case
 external_link: true # 在新标签中打开外部链接
 filename_case: 0 # 把文件名称转换为 (1) 小写或 (2) 大写
 render_drafts: false # 显示草稿
-post_asset_folder: false # 启动asset文件夹
+post_asset_folder: true # 启动asset文件夹
+marked:
+  prependRoot: true
+  postAsset: true
 relative_link: false # 把链接改为与根目录的相对位址
 future: true # 显示未来的文章
 highlight: # 代码块的设置
@@ -173,4 +176,4 @@ markdown:
     permalinkClass: header-anchor
     # The symbol used to make the permalink
     permalinkSymbol: ¶
-  
+
