@@ -286,18 +286,13 @@
       
         <p>创建子类的实例时，Python首先要完成的任务时给父类所有属性赋值。为此，子类的方法__init__()需要父类施以援手：</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Father</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,height,weight,age)</span>:</span></span><br><span class="line">        --snip--</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son</span><span class="params">(Father)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,height,weight,age)</span>:</span></span><br><span class="line">        super().__init__(height,weight,age)</span><br><span class="line">        --snip--</span><br></pre></td></tr></table></figure>
-<p>创建子类时，父类必须包含在当前文件中，且位于子类前面。<br>
-定义子类时，必须在括号内指定父类名称。<br>
-super()是一个特殊函数，帮助Python将父类和子类关联起来：这行代码让Python调用父类的方法__init__(),让子类实例包含父类的所有属性。</p>
+
+<p>创建子类时，父类必须包含在当前文件中，且位于子类前面。<br>定义子类时，必须在括号内指定父类名称。<br>super()是一个特殊函数，帮助Python将父类和子类关联起来：这行代码让Python调用父类的方法__init__(),让子类实例包含父类的所有属性。</p>
 <hr>
 <p>私有属性和私有方法</p>
 <p>在属性名或方法名前加上__</p>
 <hr>
-<p>1.直接调用父类属性和方法<br>
-2.重写父类属性和方法<br>
-3.强制调用父类私有属性方法<br>
-4.调用父类的__init__方法<br>
-5.继承父类初始化过程中的参数</p>
+<p>1.直接调用父类属性和方法<br>2.重写父类属性和方法<br>3.强制调用父类私有属性方法<br>4.调用父类的__init__方法<br>5.继承父类初始化过程中的参数</p>
 <blockquote>
 <p>详见<a href="https://blog.csdn.net/yilulvxing/article/details/85374142" target="_blank" rel="noopener">https://blog.csdn.net/yilulvxing/article/details/85374142</a></p>
 </blockquote>
