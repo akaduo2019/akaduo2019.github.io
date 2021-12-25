@@ -24,7 +24,9 @@
     <updated>2021-12-25T08:51:55.318Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;第一章-概述&quot;&gt;&lt;a href=&quot;#第一章-概述&quot; class=&quot;headerlink&quot; title=&quot;第一章 概述&quot;&gt;&lt;/a&gt;第一章 概述&lt;/h1&gt;&lt;h2 id=&quot;一、计算机网络的概念&quot;&gt;&lt;a href=&quot;#一、计算机网络的概念&quot; class=&quot;headerlink&quot; title=&quot;一、计算机网络的概念&quot;&gt;&lt;/a&gt;一、计算机网络的概念&lt;/h2&gt;&lt;p&gt;计算机网络概括为一个由通信子网和终端系统组成的通信系统。&lt;/p&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;第一章-概述&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#第一章-概述&quot;&gt;¶&lt;/a&gt;第一章 概述&lt;/h1&gt;
+&lt;h2 id=&quot;一、计算机网络的概念&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#一、计算机网络的概念&quot;&gt;¶&lt;/a&gt;一、计算机网络的概念&lt;/h2&gt;
+&lt;p&gt;计算机网络概括为一个由通信子网和终端系统组成的通信系统。&lt;/p&gt;</summary>
     
     
     
@@ -43,9 +45,10 @@
     <updated>2021-12-24T07:43:00.604Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;实验要求&quot;&gt;&lt;a href=&quot;#实验要求&quot; class=&quot;headerlink&quot; title=&quot;实验要求&quot;&gt;&lt;/a&gt;实验要求&lt;/h1&gt;&lt;p&gt;1、随机生成一个进程访问的逻辑页号列表，要求不少于100个页号，把这些页号存入文件page.txt。&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;实验要求&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#实验要求&quot;&gt;¶&lt;/a&gt;实验要求&lt;/h1&gt;
+&lt;p&gt;1、随机生成一个进程访问的逻辑页号列表，要求不少于100个页号，把这些页号存入文件page.txt。&lt;/p&gt;
 &lt;p&gt;2、编程分别实现FIFO、LRU和CLOCK算法，每次调用算法前要求用户输入页框数量，每种算法最后都需要给出页面的置换顺序以及缺页中断次数。&lt;/p&gt;
-&lt;p&gt; 3、不断地改变页框数，完成这张曲线图，并且做出简短的小结，用于分析页框数对缺页率的影响。&lt;/p&gt;
+&lt;p&gt;3、不断地改变页框数，完成这张曲线图，并且做出简短的小结，用于分析页框数对缺页率的影响。&lt;/p&gt;
 &lt;p&gt;程序最好能集成成一个，首先能分行输出显示随机生成的100个页号；然后让用户选择页框数，以页框数作为参数调用三个页面替换策略，记录、输出、比较它们的缺页中断次数、缺页中断率。结果不一定以曲线图形式显示，但要能保存在文件中并能在屏幕上以字符方式输出。&lt;/p&gt;</summary>
     
     
@@ -65,17 +68,24 @@
     <updated>2021-12-24T07:43:30.294Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;1-reveal-js编写ppt播放页面&quot;&gt;&lt;a href=&quot;#1-reveal-js编写ppt播放页面&quot; class=&quot;headerlink&quot; title=&quot;1.reveal.js编写ppt播放页面&quot;&gt;&lt;/a&gt;1.reveal.js编写ppt播放页面&lt;/h1&gt;&lt;h2 id=&quot;1-1-reveal-js&quot;&gt;&lt;a href=&quot;#1-1-reveal-js&quot; class=&quot;headerlink&quot; title=&quot;1.1 reveal.js&quot;&gt;&lt;/a&gt;1.1 reveal.js&lt;/h2&gt;&lt;p&gt;reveal.js是一个展示内容的框架，可以理解为WEB版的ppt。&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;1-reveal-js编写ppt播放页面&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#1-reveal-js编写ppt播放页面&quot;&gt;¶&lt;/a&gt;1.reveal.js编写ppt播放页面&lt;/h1&gt;
+&lt;h2 id=&quot;1-1-reveal-js&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#1-1-reveal-js&quot;&gt;¶&lt;/a&gt;1.1 reveal.js&lt;/h2&gt;
+&lt;p&gt;reveal.js是一个展示内容的框架，可以理解为WEB版的ppt。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;和传统的ppt相比，reveal.js的优势体现在：&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;和传统的ppt相比，reveal.js的优势体现在：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;UI风格简洁优美，对数学公式、代码、多媒体扩展支持&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;UI风格简洁优美，对数学公式、代码、多媒体扩展支持&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;制作灵活、不限应用，只需修改HTML文件&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;制作灵活、不限应用，只需修改HTML文件&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;丰富的特性，支持过渡动画、代码高亮、markdown语法等&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;丰富的特性，支持过渡动画、代码高亮、markdown语法等&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;极度轻量，占用空间和内存小&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;极度轻量，占用空间和内存小&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -98,7 +108,8 @@
     <updated>2021-12-24T07:43:12.241Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot; class=&quot;headerlink&quot; title=&quot;环境&quot;&gt;&lt;/a&gt;环境&lt;/h1&gt;&lt;ul&gt;
+    <summary type="html">&lt;h1 id=&quot;环境&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#环境&quot;&gt;¶&lt;/a&gt;环境&lt;/h1&gt;
+&lt;ul&gt;
 &lt;li&gt;BT-Panel 7.5.1&lt;/li&gt;
 &lt;li&gt;CentOS 7.9&lt;/li&gt;
 &lt;li&gt;Django 2&lt;/li&gt;
@@ -126,7 +137,8 @@
       
         
         
-    <summary type="html">&lt;h2&gt;&lt;span id=&quot;settingspy数据库连接配置&quot;&gt;settings.py数据库连接配置&lt;/span&gt;&lt;/h2&gt;&lt;figure class=&quot;highlight py&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+    <summary type="html">&lt;h2&gt;&lt;span id=&quot;settingspy数据库连接配置&quot;&gt;settings.py数据库连接配置&lt;/span&gt;&lt;/h2&gt;
+&lt;figure class=&quot;highlight py&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
         
       
     
@@ -152,12 +164,14 @@
         
         
     <summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;control + shift + enter&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;control + shift + enter&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;万能键&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;control +</summary>
+&lt;li&gt;
+&lt;p&gt;control +</summary>
         
       
     
@@ -182,10 +196,13 @@
       
         
         
-    <summary type="html">&lt;h2&gt;&lt;span id=&quot;创建一个django项目&quot;&gt;创建一个Django项目&lt;/span&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;cd 对应的python虚拟环境文件夹&lt;/p&gt;
+    <summary type="html">&lt;h2&gt;&lt;span id=&quot;创建一个django项目&quot;&gt;创建一个Django项目&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;cd 对应的python虚拟环境文件夹&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;workon</summary>
+&lt;li&gt;
+&lt;p&gt;workon</summary>
         
       
     
@@ -242,7 +259,7 @@
     <updated>2020-11-21T17:24:17.581Z</updated>
     
     
-    <summary type="html">&lt;p&gt;app.py&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;http://app.py&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;app.py&lt;/a&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight py&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; sys&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; PyQt5 &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; sip&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; PyQt5.QtWidgets &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; *&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; runlogin &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Login&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; __name__ == &lt;span class=&quot;string&quot;&gt;&#39;__main__&#39;&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    app = QApplication(sys.argv)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    login = Login()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    login.show()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    sys.exit(app.exec_())&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
@@ -281,7 +298,9 @@
     <updated>2020-11-21T13:25:04.036Z</updated>
     
     
-    <summary type="html">&lt;p&gt;编程实现用真值表法求取含n个变元的合式公式所对应的主析取范式和主合取范式。&lt;br&gt;要求：&lt;br&gt;能够列出合式公式的真值表并给出相应主析取和主合取范式。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;编程实现用真值表法求取含n个变元的合式公式所对应的主析取范式和主合取范式。&lt;br&gt;
+要求：&lt;br&gt;
+能够列出合式公式的真值表并给出相应主析取和主合取范式。&lt;/p&gt;</summary>
     
     
     
@@ -304,11 +323,14 @@
       
         
         
-    <summary type="html">&lt;p&gt;在定义一个派生类对象时，构造函数的调用顺序如下：&lt;br&gt;1、虚基类的构造函数&lt;br&gt;2、非虚基类的构造函数&lt;br&gt;3、派生类对象成员的构造函数(按定义顺序)&lt;br&gt;4、派生类构造函数&lt;/p&gt;
+    <summary type="html">&lt;p&gt;在定义一个派生类对象时，构造函数的调用顺序如下：&lt;br&gt;
+1、虚基类的构造函数&lt;br&gt;
+2、非虚基类的构造函数&lt;br&gt;
+3、派生类对象成员的构造函数(按定义顺序)&lt;br&gt;
+4、派生类构造函数&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;析构函数的调用次序正好与构造函数的调用次序相反&lt;/p&gt;
-&lt;hr&gt;
-</summary>
+&lt;</summary>
         
       
     
@@ -333,7 +355,10 @@
       
         
         
-    <summary type="html">&lt;p&gt;1.以值的方式给函数传参；//以引用的方式传递时不会产生临时对象&lt;br&gt;  2.类型转换；&lt;br&gt; </summary>
+    <summary type="html">&lt;p&gt;1.以值的方式给函数传参；//以引用的方式传递时不会产生临时对象&lt;br&gt;
+2.类型转换；&lt;br&gt;
+3.函数需要返回一个对象时;&lt;/p&gt;
+</summary>
         
       
     
@@ -358,10 +383,11 @@
       
         
         
-    <summary type="html">&lt;p&gt;将中缀表达式转换为后缀表达式:&lt;br&gt;Ⅰ.从左向右遍历&lt;/p&gt;
+    <summary type="html">&lt;p&gt;将中缀表达式转换为后缀表达式:&lt;br&gt;
+Ⅰ.从左向右遍历&lt;/p&gt;
 &lt;p&gt;Ⅱ.遇到运算数直接输出&lt;/p&gt;
 &lt;p&gt;Ⅲ.遇到左括号，直接压入堆栈（入栈前，左括号优先级最高，入栈后，优先级降到最低，确保其他符号正常入栈）&lt;/p&gt;
-&lt;p&gt;Ⅳ.遇到右括号，不但弹出栈顶运算符并输出，直到遇</summary>
+&lt;p&gt;Ⅳ.遇到右括号，不但弹出栈顶运算符并输出，直到</summary>
         
       
     
@@ -469,9 +495,11 @@
     <summary type="html">&lt;p&gt;一、增删列表元素怒&lt;/p&gt;
 &lt;p&gt;在列表中添加元素&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;list.append(‘Tempest’) 在列表末尾添加元素&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;list.append(‘Tempest’) 在列表末尾添加元素&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;list.insert(num,’Tempest’)</summary>
+&lt;li&gt;
+&lt;p&gt;list.insert(num,‘Tempest’)</summary>
         
       
     
@@ -499,8 +527,8 @@
     <summary type="html">&lt;p&gt;new与delte都为运算符而非库函数&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;new&lt;/p&gt;
-&lt;p&gt;定义符号常量 const int N=…; const int M=…;&lt;br&gt;定义变量 int型指针p，二级指针q，int型i，j;&lt;/p&gt;
-&lt;p&gt;申请一个int型动态变量:p=new</summary>
+&lt;p&gt;定义符号常量 const int N=…; const int M=…;&lt;br&gt;
+定义变量</summary>
         
       
     
