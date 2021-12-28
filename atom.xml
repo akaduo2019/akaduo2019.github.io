@@ -6,7 +6,7 @@
   <link href="http://akaduo2019.github.io/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2021-12-26T14:13:06.574Z</updated>
+  <updated>2021-12-27T10:57:18.818Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2021毛概复习</title>
+    <link href="http://akaduo2019.github.io/2021/12/27/2021%E6%AF%9B%E6%A6%82%E5%A4%8D%E4%B9%A0/"/>
+    <id>http://akaduo2019.github.io/2021/12/27/2021%E6%AF%9B%E6%A6%82%E5%A4%8D%E4%B9%A0/</id>
+    <published>2021-12-27T05:34:07.000Z</published>
+    <updated>2021-12-27T10:57:18.818Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;名词解释&quot;&gt;名词解释&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="Mao" scheme="http://akaduo2019.github.io/categories/Mao/"/>
+    
+    
+    <category term="note" scheme="http://akaduo2019.github.io/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
     <title>计算机网络期末复习总汇</title>
     <link href="http://akaduo2019.github.io/2021/12/24/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/"/>
     <id>http://akaduo2019.github.io/2021/12/24/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/</id>
     <published>2021-12-24T05:55:50.371Z</published>
-    <updated>2021-12-26T14:13:06.574Z</updated>
+    <updated>2021-12-27T15:16:56.069Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;第一章-概述&quot;&gt;&lt;a href=&quot;#第一章-概述&quot; class=&quot;headerlink&quot; title=&quot;第一章 概述&quot;&gt;&lt;/a&gt;第一章 概述&lt;/h1&gt;&lt;h2 id=&quot;一、计算机网络在逻辑上的组成及其各自的作用&quot;&gt;&lt;a href=&quot;#一、计算机网络在逻辑上的组成及其各自的作用&quot; class=&quot;headerlink&quot; title=&quot;一、计算机网络在逻辑上的组成及其各自的作用&quot;&gt;&lt;/a&gt;一、计算机网络在逻辑上的组成及其各自的作用&lt;/h2&gt;&lt;ol&gt;
@@ -36,7 +61,7 @@
 &lt;li&gt;以太网交换机、帧中继交换机，路由器、网桥、集线器&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;通信子网的作用：负责信息的传输。&lt;/li&gt;
+&lt;li&gt;通信子网的作用：负责信息的传输。。/ &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;</summary>
@@ -493,35 +518,6 @@
     
     
     <category term="python" scheme="http://akaduo2019.github.io/categories/python/"/>
-    
-    
-    <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>c++中的new与delete</title>
-    <link href="http://akaduo2019.github.io/2020/11/21/new%E4%B8%8Edelete/"/>
-    <id>http://akaduo2019.github.io/2020/11/21/new%E4%B8%8Edelete/</id>
-    <published>2020-11-21T07:54:22.116Z</published>
-    <updated>2020-09-17T11:48:37.673Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;new与delte都为运算符而非库函数&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;new&lt;/p&gt;
-&lt;p&gt;定义符号常量 const int N=…; const int M=…;&lt;br&gt;定义变量 int型指针p，二级指针q，int型i，j;&lt;/p&gt;
-&lt;p&gt;申请一个int型动态变量:p=new</summary>
-        
-      
-    
-    
-    
-    <category term="c++" scheme="http://akaduo2019.github.io/categories/c/"/>
     
     
     <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
