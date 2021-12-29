@@ -6,7 +6,7 @@
   <link href="http://akaduo2019.github.io/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2021-12-27T10:57:18.818Z</updated>
+  <updated>2021-12-29T11:49:27.672Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -21,16 +21,17 @@
     <link href="http://akaduo2019.github.io/2021/12/27/2021%E6%AF%9B%E6%A6%82%E5%A4%8D%E4%B9%A0/"/>
     <id>http://akaduo2019.github.io/2021/12/27/2021%E6%AF%9B%E6%A6%82%E5%A4%8D%E4%B9%A0/</id>
     <published>2021-12-27T05:34:07.000Z</published>
-    <updated>2021-12-27T10:57:18.818Z</updated>
+    <updated>2021-12-29T11:49:27.672Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;&lt;span id=&quot;名词解释&quot;&gt;名词解释&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;名词解释&quot;&gt;&lt;a href=&quot;#名词解释&quot; class=&quot;headerlink&quot; title=&quot;名词解释&quot;&gt;&lt;/a&gt;名词解释&lt;/h1&gt;&lt;h2 id=&quot;1-毛泽东思想&quot;&gt;&lt;a href=&quot;#1-毛泽东思想&quot; class=&quot;headerlink&quot; title=&quot;1.毛泽东思想&quot;&gt;&lt;/a&gt;1.毛泽东思想&lt;/h2&gt;&lt;p&gt;毛泽东思想是&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;马克思主义中国化的第一个重大理论成果&lt;/li&gt;
+&lt;li&gt;马克思列宁主义在中国的运用和发展&lt;/li&gt;
+&lt;li&gt;被实践证明了的关于中国革命建设的正确的理论原则和经验总结&lt;/li&gt;
+&lt;li&gt;中国共产党集体智慧的结晶&lt;/li&gt;
+&lt;li&gt;党长期坚持的指导思想&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -46,7 +47,7 @@
     <link href="http://akaduo2019.github.io/2021/12/24/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/"/>
     <id>http://akaduo2019.github.io/2021/12/24/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/</id>
     <published>2021-12-24T05:55:50.371Z</published>
-    <updated>2021-12-28T14:42:08.429Z</updated>
+    <updated>2021-12-28T14:43:26.133Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;第一章-概述&quot;&gt;&lt;a href=&quot;#第一章-概述&quot; class=&quot;headerlink&quot; title=&quot;第一章 概述&quot;&gt;&lt;/a&gt;第一章 概述&lt;/h1&gt;&lt;h2 id=&quot;一、计算机网络在逻辑上的组成及其各自的作用&quot;&gt;&lt;a href=&quot;#一、计算机网络在逻辑上的组成及其各自的作用&quot; class=&quot;headerlink&quot; title=&quot;一、计算机网络在逻辑上的组成及其各自的作用&quot;&gt;&lt;/a&gt;一、计算机网络在逻辑上的组成及其各自的作用&lt;/h2&gt;&lt;ol&gt;
@@ -72,28 +73,6 @@
     
     
     <category term="note" scheme="http://akaduo2019.github.io/tags/note/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>操作系统实验3 内存管理</title>
-    <link href="http://akaduo2019.github.io/2021/11/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C3/"/>
-    <id>http://akaduo2019.github.io/2021/11/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C3/</id>
-    <published>2021-11-23T06:18:22.513Z</published>
-    <updated>2021-12-24T07:43:00.604Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;实验要求&quot;&gt;&lt;a href=&quot;#实验要求&quot; class=&quot;headerlink&quot; title=&quot;实验要求&quot;&gt;&lt;/a&gt;实验要求&lt;/h1&gt;&lt;p&gt;1、随机生成一个进程访问的逻辑页号列表，要求不少于100个页号，把这些页号存入文件page.txt。&lt;/p&gt;
-&lt;p&gt;2、编程分别实现FIFO、LRU和CLOCK算法，每次调用算法前要求用户输入页框数量，每种算法最后都需要给出页面的置换顺序以及缺页中断次数。&lt;/p&gt;
-&lt;p&gt; 3、不断地改变页框数，完成这张曲线图，并且做出简短的小结，用于分析页框数对缺页率的影响。&lt;/p&gt;
-&lt;p&gt;程序最好能集成成一个，首先能分行输出显示随机生成的100个页号；然后让用户选择页框数，以页框数作为参数调用三个页面替换策略，记录、输出、比较它们的缺页中断次数、缺页中断率。结果不一定以曲线图形式显示，但要能保存在文件中并能在屏幕上以字符方式输出。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="c++" scheme="http://akaduo2019.github.io/categories/c/"/>
-    
-    
-    <category term="experiment" scheme="http://akaduo2019.github.io/tags/experiment/"/>
     
   </entry>
   
@@ -518,6 +497,35 @@
     
     
     <category term="python" scheme="http://akaduo2019.github.io/categories/python/"/>
+    
+    
+    <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>c++中的new与delete</title>
+    <link href="http://akaduo2019.github.io/2020/11/21/new%E4%B8%8Edelete/"/>
+    <id>http://akaduo2019.github.io/2020/11/21/new%E4%B8%8Edelete/</id>
+    <published>2020-11-21T07:54:22.116Z</published>
+    <updated>2020-09-17T11:48:37.673Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;new与delte都为运算符而非库函数&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;new&lt;/p&gt;
+&lt;p&gt;定义符号常量 const int N=…; const int M=…;&lt;br&gt;定义变量 int型指针p，二级指针q，int型i，j;&lt;/p&gt;
+&lt;p&gt;申请一个int型动态变量:p=new</summary>
+        
+      
+    
+    
+    
+    <category term="c++" scheme="http://akaduo2019.github.io/categories/c/"/>
     
     
     <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
