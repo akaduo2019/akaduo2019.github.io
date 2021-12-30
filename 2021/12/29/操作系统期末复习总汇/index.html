@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="Akaduo Blog" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://akaduo2019.github.io').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="第一章 操作系统概论1.什么是操作系统1.2操作系统的作用和定义 作用  服务用户观点——操作系统作为用户接口和公共服务程序  进程交互观点——操作系统作为进程执行的控制者和协调者  系统实现观点——操作系统作为扩展机或虚拟机 裸机提供的是机器语言接口  资源管理观点——操作系统作为资源的管理者和控制者    定义 操作系统是一组有效管理和控制计算机硬件和软件资源，合理组织计算机工作流程和为用户有">
+<meta name="keywords" content="note">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统期末复习总汇">
+<meta property="og:url" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;index.html">
+<meta property="og:site_name" content="Akaduo Blog">
+<meta property="og:description" content="第一章 操作系统概论1.什么是操作系统1.2操作系统的作用和定义 作用  服务用户观点——操作系统作为用户接口和公共服务程序  进程交互观点——操作系统作为进程执行的控制者和协调者  系统实现观点——操作系统作为扩展机或虚拟机 裸机提供的是机器语言接口  资源管理观点——操作系统作为资源的管理者和控制者    定义 操作系统是一组有效管理和控制计算机硬件和软件资源，合理组织计算机工作流程和为用户有">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BC%95%E5%AF%BC%E8%BF%87%E7%A8%8B.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E5%B9%B6%E8%A1%8C%E5%B9%B6%E5%8F%91.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E7%94%A8%E6%88%B7%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%8B%E9%97%B4%E7%9A%84%E6%8E%A5%E5%8F%A3.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E4%B8%AD%E6%96%AD%E6%BA%90%E7%A7%8D%E7%B1%BB.png">
+<meta property="og:updated_time" content="2021-12-30T09:18:39.786Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BC%95%E5%AF%BC%E8%BF%87%E7%A8%8B.png">
+
+<link rel="canonical" href="http://akaduo2019.github.io/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>操作系统期末复习总汇 | Akaduo Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <a href="https://github.com/akaduo2019" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Akaduo Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">知识、思想、信仰</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://akaduo2019.github.io/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E7%A2%87%E7%9C%9F%E5%97%A3.jpg">
+      <meta itemprop="name" content="akaduo">
+      <meta itemprop="description" content="克服惰性">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Akaduo Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          操作系统期末复习总汇
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-29 19:55:08" itemprop="dateCreated datePublished" datetime="2021-12-29T19:55:08+08:00">2021-12-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-30 17:18:39" itemprop="dateModified" datetime="2021-12-30T17:18:39+08:00">2021-12-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/os/" itemprop="url" rel="index">
+                    <span itemprop="name">os</span>
+                  </a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1><span id="第一章-操作系统概论">第一章 操作系统概论</span></h1><h2><span id="1什么是操作系统">1.什么是操作系统</span></h2><h3><span id="12操作系统的作用和定义">1.2操作系统的作用和定义</span></h3><ul>
+<li><p>作用</p>
+<ul>
+<li><p>服务用户观点——操作系统作为用户接口和公共服务程序</p>
+</li>
+<li><p>进程交互观点——操作系统作为进程执行的控制者和协调者</p>
+</li>
+<li><p>系统实现观点——操作系统作为扩展机或虚拟机</p>
+<p>裸机提供的是机器语言接口</p>
+</li>
+<li><p>资源管理观点——操作系统作为资源的管理者和控制者</p>
+</li>
+</ul>
+</li>
+<li><p>定义</p>
+<p>操作系统是一组有效管理和控制计算机硬件和软件资源，合理组织计算机工作流程和为用户有效使用计算机提供良好运行环境的<strong>系统软件</strong>。</p>
+</li>
+</ul>
+<a id="more"></a>
+
+<h2><span id="2操作系统的演进和分类">2.操作系统的演进和分类</span></h2><h3><span id="21-操作系统的演进">2.1 操作系统的演进</span></h3><ul>
+<li><p>第一代 真空管和穿孔卡片</p>
+</li>
+<li><p>第二代 晶体管和批处理系统</p>
+</li>
+<li><p>第三代 集成电路和多道程序设计</p>
+<p>20世纪50年代，终端和通道技术取得突破性进展，使得计算机体系结构由原先以CPU为中心变成以内存为中心。</p>
+<p>通道技术、中断技术和大容量磁盘的出现促成了I/O和计算的并行，多道程序设计浮出水面</p>
+<ul>
+<li>通道技术 实现了硬件之间的并行性</li>
+<li>中断技术 实现了多道程序的切换</li>
+<li>多道程序系统<ul>
+<li>允许多个作业同时进入一个计算机系统的内存并启动交替计算的发方</li>
+<li>引入的根本目的：提高CPU的利用率</li>
+<li>现代操作系统的基石</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>第四代 微机操作系统</p>
+</li>
+<li><p>第五代 手机和嵌入式操作系统 移动计算</p>
+</li>
+</ul>
+<h3><span id="22-多道程序系统剖析">2.2 多道程序系统剖析</span></h3><ul>
+<li>单道程序OS vs 多道程序OS<ul>
+<li>单道程序OS<ul>
+<li>内存中仅有单个程序在运行，独占系统中所有资源</li>
+<li>致使系统中仍有许多资源空闲，设备利用率地，系统性能较差</li>
+</ul>
+</li>
+<li>多道程序OS<ul>
+<li>多道程序设计是指允许多个程序同时进入一个计算机系统的内存并启动进行计算的方法</li>
+<li>引入多道程序设计技术的根本目的：提高CPU的利用率</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>结论<ul>
+<li>采用多道程序设计技术有效<strong>提高了资源利用率和系统吞吐率</strong>，但这往往是以<strong>牺牲用户的响应时间为代价的</strong>。</li>
+<li>多道程序系统的核心问题：共享软硬件资源时的竞争与协作、共享与安全</li>
+</ul>
+</li>
+</ul>
+<h3><span id="23-操作系统的分类">2.3 操作系统的分类</span></h3><ul>
+<li><p>批处理操作系统</p>
+</li>
+<li><p>分时操作系统</p>
+</li>
+<li><p>实时操作系统</p>
+<p>主要特点</p>
+<ul>
+<li><p>快速处理</p>
+</li>
+<li><p>提供及时响应</p>
+</li>
+<li><p>高可靠性</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2><span id="3-操作系统的功能和特性">3. 操作系统的功能和特性</span></h2><h3><span id="31-操作系统的存储与运行">3.1 操作系统的存储与运行</span></h3><ul>
+<li><p>操作系统的引导过程</p>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BC%95%E5%AF%BC%E8%BF%87%E7%A8%8B.png" class>
+
+<p>计算机开机后操作系统<strong>最终</strong>被加载到内存RAM中。</p>
+</li>
+</ul>
+<h3><span id="32-操作系统的功能">3.2 操作系统的功能</span></h3><p>(概述，在后续章节中会详细介绍)</p>
+<ul>
+<li><p>处理器管理</p>
+<p>按照一定的算法把处理器分配给<strong>进程</strong>，并对其进行有效的管理和控制。</p>
+</li>
+<li><p>内存管理</p>
+<p>为多道程序的运行提供良好的环境，方便用户使用内存，提高内存的利用率以及能<strong>从逻辑上</strong>扩充内存。</p>
+</li>
+<li><p>设备管理</p>
+</li>
+<li><p>文件管理</p>
+<p>对计算机中的<strong>信息资源</strong>进行管理</p>
+</li>
+</ul>
+<h3><span id="33-操作系统的特征">3.3 操作系统的特征</span></h3><ul>
+<li><p>并发性</p>
+<ul>
+<li><p>两个或两个以上的活动或者事件在同一时间间隔内发生。</p>
+</li>
+<li><p>并发：两个或多个任务在同一时间<strong>间隔</strong>内发生</p>
+</li>
+<li><p>并行：两个或多个任务在同一<strong>时刻</strong>发生</p>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E5%B9%B6%E8%A1%8C%E5%B9%B6%E5%8F%91.png" class></li>
+</ul>
+</li>
+<li><p>虚拟性</p>
+<ul>
+<li><p>通过某种技术把一个物理实体变成若干个逻辑上的对应物。</p>
+</li>
+<li><p>实现方式</p>
+<ul>
+<li>时分复用技术，如CPU</li>
+<li>空分复用技术，如虚拟内存</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>共享性</p>
+<ul>
+<li><p>系统中的资源可供内存中多个并发执行的进程共同使用。、</p>
+</li>
+<li><p>共享方式</p>
+<ul>
+<li><p>透明资源共享，如磁盘、内存、CPU、打印机等</p>
+</li>
+<li><p>独占资源共享，如磁带机、共享变量、共享缓冲区等</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>异步性(不确定性)</p>
+<ul>
+<li>在多道程序环境下，程序<strong>执行过程</strong>的<strong>不确定性</strong><ul>
+<li>何时执行</li>
+<li>实行顺序</li>
+<li>完成运行所需时间</li>
+</ul>
+</li>
+<li>通常而言，操作系统的不确定性是指异步性，即执行过程的不确定性，而非程序执行结果的不确定性。</li>
+</ul>
+</li>
+<li><p>总结</p>
+<p>操作系统的并发性、共享性、异步性、虚拟性四个特征不是相互独立的，具有密切的关系：并发和共享是操作系统的两个最基本的特征，它们又是互为存在的条件。虚拟技术为共享提供了更好的条件，而并发与共享是导致异步性的根本原因。</p>
+</li>
+</ul>
+<h2><span id="4操作系统的服务和用户接口">4.操作系统的服务和用户接口</span></h2><h3><span id="41-基本服务">4.1 基本服务</span></h3><ul>
+<li>提供用户功能的系统服务<ul>
+<li>用户界面</li>
+<li>程序执行</li>
+<li>I/O操作</li>
+<li>文件系统管理</li>
+<li>通信</li>
+<li>错误检测</li>
+<li>blablabla</li>
+</ul>
+</li>
+<li>确保系统本身高效运行的服务<ul>
+<li>资源分配</li>
+<li>记账</li>
+<li>保护和安全</li>
+<li>blablabla</li>
+</ul>
+</li>
+</ul>
+<p>用户如何使用这些服务呢？通过用户接口。</p>
+<h3><span id="42-用户接口">4.2 用户接口</span></h3><img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E7%94%A8%E6%88%B7%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%8B%E9%97%B4%E7%9A%84%E6%8E%A5%E5%8F%A3.jpg" class>
+
+<ul>
+<li><p>操作接口(用户操作)</p>
+<ul>
+<li><p>CLI(Command Line Interface)</p>
+<p>操作系统提供命令解释器，获取用户输入的命令并执行它、</p>
+</li>
+<li><p>GUI(Graphic User Interface)</p>
+<p>用户友好的图形化接口</p>
+</li>
+<li><p>Touchscreen Interface</p>
+<p>触摸屏设备，手势</p>
+</li>
+</ul>
+</li>
+<li><p>程序接口(系统调用)——<strong>系统调用是应用程序获得操作系统服务的唯一途径</strong></p>
+<ul>
+<li><p>何为<strong>系统调用</strong>？system calls</p>
+<p><strong>访问和使用操作系统所提供服务的编程接口</strong>。</p>
+<ul>
+<li>系统调用的代码实现是操作系统级的</li>
+<li>一般用C或C++编写，也有用汇编指令编写的</li>
+<li>通常系统每秒执行成千上万个系统调用</li>
+</ul>
+</li>
+<li><p>系统调用分类</p>
+<p>略</p>
+</li>
+<li><p>系统调用和API库函数</p>
+<p>API指明了参数和返回值的一组函数。API是一个函数定义，它强调的是如何通过接口来获得所需服务，注意<strong>系统调用只是一种API</strong>，而API还包括各种各样的编程接口。</p>
+</li>
+<li><p>双重模式</p>
+<ul>
+<li>用户模式：执行用户代码</li>
+<li>内核模式：执行操作系统代码</li>
+<li>用硬件模式为(mode bit)来表示当前模式，0表示内核模式，1表示用户模式</li>
+</ul>
+</li>
+<li><p>模式切换</p>
+<p>当CPU执行程序中编写的由访管指令实现的系统调用时会产生异常信号，通过陷阱机制，处理器的状态由用户态转变为内核态，进入操作系统并执行相应服务例程，以获得操作系统服务。当系统调用执行完毕时，处理器再次切换状态，控制返回至发出系统调用的程序。</p>
+<p>系统调用在内核模式下运行。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2><span id="5操作系统的结构和运行模型">5.操作系统的结构和运行模型</span></h2><h3><span id="51-操作系统的结构">5.1 操作系统的结构</span></h3><p>阐述操作系统的整体结构，如功能如何分块，模块之间如何交互等。</p>
+<ul>
+<li><p>宏内核结构(又称单体式结构)</p>
+<ul>
+<li>主要设计思想和步骤：把<strong>模块</strong>作为操作系统的基本单位，按照<strong>功能</strong>需要把整个系统<strong>分解</strong>为若干模块，每个模块具有一定独立功能，若干个关联模块协作完成某个功能，明确各个模块之间的接口关系，各个模块间可以不加控制自由调用，所以又叫无序调用法；数据多数作为全程量使用；模块之间需要传递参数或返回结果时，其个数和方式也可根据需要随意约定；然后分别设计、编码、调试各个模块；最后把所有模块连接成一个完整的单体系统。</li>
+<li>优点<ul>
+<li>结构紧密，执行效率高</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>内核包含大量功能，难以设计和实现</li>
+<li>模块独立性差，可靠性低</li>
+<li>系统功能增、减十分困难</li>
+</ul>
+</li>
+<li>例子：Linux</li>
+</ul>
+</li>
+<li><p>层次式结构</p>
+<ul>
+<li>基本思路：将操作系统划分为内核和若干模块，这些模块按照功能的调用次序排列成若干层次<strong>，各层之间只能存在单向依赖或单向调用关系</strong>，即低层为高层提供服务，高层可以调用低层，反之则不能。</li>
+<li>优点<ul>
+<li>调用关系清晰(高层对低层单向依赖)</li>
+<li>低层和高层可分别实现(可扩充性)</li>
+<li>高层错误不会影响到低层(正确性)</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>部分功能很难分清谁上谁下，如处理器调度和存储管理</li>
+<li>降低了系统运行效率</li>
+</ul>
+</li>
+<li>例子：层次式操作系统鼻祖——THE操作系统</li>
+</ul>
+</li>
+<li><p>虚拟机结构</p>
+<ul>
+<li><p>设计思想：</p>
+<p>利用多重化和共享技术把一个裸机改编成若干个逻辑上的对应物；</p>
+<p>每台虚拟机包含内核态/用户态、终端、CPU、I/O设备、内存、外存等全部不见，功能和裸机相同，可以运行裸机能够运行的任何操作系统，不同虚拟机可以运行不同操作系统</p>
+</li>
+</ul>
+</li>
+<li><p>微内核结构</p>
+<ul>
+<li><p>采用客户/服务器模型</p>
+<p>内核仅实现最基本功能：虚拟存储、消息传递、进程控制、设备驱动</p>
+<p>其余更多系统功能放在内核之外：独立服务进程运行方式、等待和响应客户进程提出的请求</p>
+</li>
+<li><p><strong>优点</strong></p>
+<ul>
+<li><strong>对进程的请求提供一致性接口</strong>，不必区分内核及服务和用户及服务，所有服务均借助消息传递机制提供</li>
+<li>具有较好的<strong>可扩充性和易修改性</strong>，增加新服务或替换老功能只需增加或替换服务器</li>
+<li><strong>可移植性好</strong>，与特定CPU有关的代码均在微内核中，把系统移植到新平台所做的修改较小</li>
+<li><strong>对分布式系统提供有力支撑</strong></li>
+</ul>
+</li>
+<li><p><strong>缺点</strong></p>
+<ul>
+<li><strong>运行效率较低</strong>，进程间必须通过内核的通信机制(消息传递机制)才能进行通信</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>混合系统</p>
+<ul>
+<li>混合内核很像微内核结构，只不过它有更多的对系统性能影响很大的系统组件在内核态运行，以获得更快的执行速度。</li>
+<li>典型系统<ul>
+<li>Windows：层次式+混合内核+可加载内核模块</li>
+<li>Max OS：层次式+混合内核+可加载内核模块</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><span id="52-操作系统的运行模型">5.2 操作系统的运行模型</span></h3><ul>
+<li>OS服务例程嵌入应用程序中运行</li>
+<li>OS服务例程作为独立进程运行</li>
+</ul>
+<h3><span id="53-操作系统内核">5.3 操作系统内核</span></h3><ul>
+<li><p>内核是操作系统中的核心，它由一组程序模块组成，作为可信软件来提高进程并发执行的基本功能和基本操作，通常驻留在内核空间，运行于内核模式，具有直接访问硬件设备和所有内存空间的权限，是仅有的能够执行特权指令的程序。</p>
+</li>
+<li><p>内核的功能</p>
+<ul>
+<li><p>原语管理</p>
+<ul>
+<li><p>原语是内核中实现特定功能的不可中断过程。</p>
+<p>例如，通信原语实现进程相互传递消息，同步原语能协调进程间的制约关系，IO设备原语实现设备驱动和文件传输等。</p>
+</li>
+<li><p>原语的实现方法之一是以系统调用的方式提供原语接口，采用屏蔽中断的方式来实现，以保证原语操作不被中断的特性。</p>
+</li>
+<li><p>原语和系统调用</p>
+<p>同：</p>
+<ul>
+<li>原语和系统调用都使用访管指令(机器指令)实现，具有相同的调用形式</li>
+</ul>
+<p>异：</p>
+<ul>
+<li>但原语由内核实现，而系统调用由系统实现；</li>
+<li>原语不可被中断，而系统调用允许被中断。</li>
+</ul>
+</li>
+<li><p>原语通常供系统进程使用，系统进程向实用程序提供系统调用，而实用程序向应用程序提供高层功能</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1><span id="第二章-处理器管理">第二章 处理器管理</span></h1><h2><span id="1-相关背景">1 相关背景</span></h2><h3><span id="11-处理器模式">1.1 处理器模式</span></h3><ul>
+<li><p>特权指令和非特权指令</p>
+<ul>
+<li>指令系统是计算机所能执行的机器指令集合，其中指令分为特权指令和非特权指令。</li>
+<li>特权指令<ul>
+<li>具备<strong>改变机器状态、修改寄存器内容、启动I/O设备等</strong>特权的机器指令，如设置时钟、控制中断屏蔽位，清内存、加载程序状态字等。</li>
+<li>特权指令仅能由操作系统使用。</li>
+</ul>
+</li>
+<li>非特权指令<ul>
+<li>指令系统中除了特权指令之外的指令。</li>
+<li>非特权指令既可以被操作系统使用，也可以被应用程序使用。</li>
+</ul>
+</li>
+<li>当前程序运行时的处理器模式，决定了当前程序是否能执行特权指令。</li>
+</ul>
+</li>
+<li><p>处理器的两种模式</p>
+<ul>
+<li><p>根据运行程序对资源和机器指令的使用权限将处理器工作模式设置为：内核模式和用户模式</p>
+</li>
+<li><p>内核模式</p>
+<ul>
+<li>操作系统内核运行的状态，较高的特权级别，可以执行全部指令，直接访问硬件设备和所有内存空间，并具有改变处理器状态的能力，又称为核心态、管态。</li>
+</ul>
+</li>
+<li><p>用户模式</p>
+<ul>
+<li>用户程序运行时的状态，较低的特权等级，只能执行非特权指令，访问规定的寄存器和存储区，又称为普通态、目态。</li>
+</ul>
+</li>
+<li><p>CPU如何知道当前运行的用户程序还是操作系统？程序状态字</p>
+</li>
+</ul>
+</li>
+<li><p>程序状态字PSW</p>
+<ul>
+<li><p>PSW用来指示运行程序的状态、控制指令执行的顺序，并且保留和指示与运行程序有关的各种信息。</p>
+</li>
+<li><p>PSW由标志寄存器和程序计数器的内容组成</p>
+<ul>
+<li>标志寄存器：状态标志、控制标志和系统标志</li>
+<li>程序计数器：正在运行程序的下一条要执行指令的地址</li>
+</ul>
+</li>
+<li><p>每个处理器都设置一个PSW寄存器。每个执行中的程序都有一个与其执行相关的PSW，程序获得处理器执行，它的PSW将占有PSW寄存器。</p>
+</li>
+<li><p>系统内核程序PSW中的处理器模式位为”内核模式”</p>
+<p>用户进程PSW中的处理器模式位为”用户模式”</p>
+</li>
+</ul>
+</li>
+<li><p>处理器模式的转换</p>
+<ul>
+<li><p>用户模式-&gt;内核模式</p>
+<p>三种时机</p>
+<ul>
+<li>用户进程在执行时发生中断事件(如I/O操作完成)，运行程序被中断，转去执行中断处理程序。(中断)</li>
+<li>用户进程执行系统调用，请求操作系统服务。(异常)</li>
+<li>用户进程在执行时产生错误(甚至不可恢复的致命错误)(如发生程序性中断或目态执行特权指令)，进程被打断，转去执行故障(终止)处理程序。(异常)</li>
+</ul>
+</li>
+<li><p>内核模式-&gt;用户模式</p>
+<p>中断处理结束后，执行特权指令(如Intel x86中 iret指令)将用户进程的PSW加载到PSW寄存器，实现从内核模式返回用户模式，CPU的控制权转交给用户程序。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3><span id="12-中断技术">1.2 中断技术</span></h3><ul>
+<li><p>中断的定义</p>
+<p>中断指在进程执行过程中遇到继续处理的事件时。暂时中止现行进程在CPU上的运行，转而执行相应的事件处理程序，待处理完成后再返回断点或调度其他进程执行的过程。</p>
+</li>
+<li><p>中断的用途</p>
+<p>xxxxxxx，中断是CPU从用户模式向核心模式转换的唯一途径。</p>
+</li>
+<li><p>意义</p>
+<p>是现代操作系统实现并行性的基础</p>
+</li>
+<li><p>中断系统的构成</p>
+</li>
+<li><p>中断处理过程</p>
+</li>
+<li><p>中断源种类</p>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E4%B8%AD%E6%96%AD%E6%BA%90%E7%A7%8D%E7%B1%BB.png" class>
+
+<ul>
+<li>中断  外部中断<ul>
+<li>I/O中断</li>
+<li>时钟中断</li>
+</ul>
+</li>
+<li>异常  内部中断<ul>
+<li>陷阱和系统调用 访管中断 </li>
+<li>故障 程序性中断</li>
+<li>终止 硬件故障中断</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2><span id="2-进程及其实现">2 进程及其实现</span></h2><h3><span id="21-进程的定义">2.1 进程的定义</span></h3><ul>
+<li>进程(process）是具有独立功能的程序在某个数据集合上的<strong>一次运行活动</strong>，也是操作系统进行资源分配和保护的基本单元。</li>
+<li>程序 vs 进程<ul>
+<li>程序是存放在外存中可执行文件，是一个被动实体，被加载到内存之后可执行，此时系统将为其创建一个进程。</li>
+<li>进程是<strong>执行的程序</strong>。进程需要一定的资源，如CPU事件、内存、文件和I/O设备，以便执行任务。这些资源在创建进程或执行进程时得以分配。</li>
+</ul>
+</li>
+</ul>
+<h3><span id="22-进程状态及转换">2.2 进程状态及转换</span></h3><ul>
+<li><p>进程状态</p>
+<p><strong>就绪</strong>(ready)：进程具备运行条件，等待分配CPU。 (就绪队列)</p>
+<p><strong>运行</strong>(running)：此时进程的代码在CPU上运行 (小于等于处理器(核)数量)</p>
+<p><strong>等待</strong>(wait)：又称<strong>阻塞</strong>(blocked)、<strong>睡眠</strong>(sleep)，进程不具备运行条件，进程在等待某些事件的发生。(等待队列)     比如I/O操作结束或者收到信号 </p>
+</li>
+<li><p>进程转换</p>
+<p></p></li></ul>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/note/" rel="tag"> <i class="fa fa-tag"></i>  note</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/27/2021%E6%AF%9B%E6%A6%82%E5%A4%8D%E4%B9%A0/" rel="prev" title="2021毛概复习">
+      <i class="fa fa-chevron-left"></i> 2021毛概复习
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%A7%E9%A2%98%E8%80%83%E7%82%B9/" rel="next" title="操作系统大题考点">
+      操作系统大题考点 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="akaduo"
+      src="/images/%E7%A2%87%E7%9C%9F%E5%97%A3.jpg">
+  <p class="site-author-name" itemprop="name">akaduo</p>
+  <div class="site-description" itemprop="description">克服惰性</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/akaduo2019" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;akaduo2019" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="Rss → &#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=1360189116&site=qq&menu=yes" title="QQ → http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v=3&amp;uin=1360189116&amp;site=qq&amp;menu=yes" rel="noopener" target="_blank"><i class="fa fa-fw fa-qq"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">akaduo</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">101k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:31</span>
+</div>
+  <!--<div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>-->
+  <span class="post-meta-divider">❤</span>
+  <!--<div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
+  </div>-->
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+<script type="text/x-mathjax-config">
+    MathJax.Ajax.config.path['mhchem'] = '//cdn.jsdelivr.net/npm/mathjax-mhchem@3';
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        extensions: ['[mhchem]/mhchem.js'],
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+
+  
+
+  
+    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+  <script src="https://akaduo2019.github.io/live2d/autoload.js"></script>
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
+
