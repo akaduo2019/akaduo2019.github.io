@@ -6,7 +6,7 @@
   <link href="http://akaduo2019.github.io/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2021-12-30T13:41:40.494Z</updated>
+  <updated>2022-01-04T14:16:12.431Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>毛概小题速记</title>
+    <link href="http://akaduo2019.github.io/2022/01/04/%E6%AF%9B%E6%A6%82%E5%B0%8F%E9%A2%98%E9%80%9F%E8%AE%B0/"/>
+    <id>http://akaduo2019.github.io/2022/01/04/%E6%AF%9B%E6%A6%82%E5%B0%8F%E9%A2%98%E9%80%9F%E8%AE%B0/</id>
+    <published>2022-01-04T13:04:14.000Z</published>
+    <updated>2022-01-04T14:16:12.431Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="Mao" scheme="http://akaduo2019.github.io/categories/Mao/"/>
+    
+    
+    <category term="note" scheme="http://akaduo2019.github.io/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>毛概会议速览</title>
+    <link href="http://akaduo2019.github.io/2022/01/04/%E6%AF%9B%E6%A6%82%E4%BC%9A%E8%AE%AE%E9%80%9F%E8%A7%88/"/>
+    <id>http://akaduo2019.github.io/2022/01/04/%E6%AF%9B%E6%A6%82%E4%BC%9A%E8%AE%AE%E9%80%9F%E8%A7%88/</id>
+    <published>2022-01-04T13:03:58.000Z</published>
+    <updated>2022-01-04T14:11:16.780Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2&gt;&lt;span id=&quot;毛概会议速览&quot;&gt;毛概会议速览&lt;/span&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;遵义会议 1935.1&lt;/p&gt;
+&lt;p&gt;开始形成了以毛泽东同志为核心的党的第一代中央领导集体。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;六届六中</summary>
+        
+      
+    
+    
+    
+    <category term="Mao" scheme="http://akaduo2019.github.io/categories/Mao/"/>
+    
+    
+    <category term="note" scheme="http://akaduo2019.github.io/tags/note/"/>
+    
+  </entry>
   
   <entry>
     <title>操作系统大题考点</title>
@@ -86,7 +140,7 @@
     <link href="http://akaduo2019.github.io/2021/12/27/2021%E6%AF%9B%E6%A6%82%E5%A4%8D%E4%B9%A0/"/>
     <id>http://akaduo2019.github.io/2021/12/27/2021%E6%AF%9B%E6%A6%82%E5%A4%8D%E4%B9%A0/</id>
     <published>2021-12-27T05:34:07.000Z</published>
-    <updated>2022-01-02T12:51:18.175Z</updated>
+    <updated>2022-01-04T13:04:32.127Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;名词解释&quot;&gt;&lt;a href=&quot;#名词解释&quot; class=&quot;headerlink&quot; title=&quot;名词解释&quot;&gt;&lt;/a&gt;名词解释&lt;/h1&gt;&lt;h2 id=&quot;1-毛泽东思想&quot;&gt;&lt;a href=&quot;#1-毛泽东思想&quot; class=&quot;headerlink&quot; title=&quot;1.毛泽东思想&quot;&gt;&lt;/a&gt;1.毛泽东思想&lt;/h2&gt;&lt;p&gt;毛泽东思想是&lt;/p&gt;
@@ -477,61 +531,6 @@
     
     
     <category term="c++" scheme="http://akaduo2019.github.io/categories/c/"/>
-    
-    
-    <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>类的继承</title>
-    <link href="http://akaduo2019.github.io/2020/11/21/python%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF/"/>
-    <id>http://akaduo2019.github.io/2020/11/21/python%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF/</id>
-    <published>2020-11-21T07:54:22.123Z</published>
-    <updated>2020-10-30T11:17:54.864Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;创建子类的实例时，Python首先要完成的任务时给父类所有属性赋值。为此，子类的方法__init__()需要父类施以援手：&lt;/p&gt;
-&lt;figure class=&quot;highlight py&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://akaduo2019.github.io/categories/python/"/>
-    
-    
-    <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>字符串</title>
-    <link href="http://akaduo2019.github.io/2020/11/21/python%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    <id>http://akaduo2019.github.io/2020/11/21/python%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
-    <published>2020-11-21T07:54:22.121Z</published>
-    <updated>2020-10-30T10:35:47.059Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;一、修改字符串大小写&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;string.title()  令首字母大写&lt;/li&gt;
-&lt;li&gt;string.upper()  令字符串字母全部改为大写&lt;/li&gt;
-&lt;li&gt;string.lower() </summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://akaduo2019.github.io/categories/python/"/>
     
     
     <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>

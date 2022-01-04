@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://akaduo2019.github.io/2021/12/24/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/</loc>
+    <loc>http://akaduo2019.github.io/2022/01/04/%E6%AF%9B%E6%A6%82%E5%B0%8F%E9%A2%98%E9%80%9F%E8%AE%B0/</loc>
     
-    <lastmod>2022-01-03</lastmod>
+    <lastmod>2022-01-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://akaduo2019.github.io/2022/01/04/%E6%AF%9B%E6%A6%82%E4%BC%9A%E8%AE%AE%E9%80%9F%E8%A7%88/</loc>
+    
+    <lastmod>2022-01-04</lastmod>
     
   </url>
   
   <url>
     <loc>http://akaduo2019.github.io/2021/12/27/2021%E6%AF%9B%E6%A6%82%E5%A4%8D%E4%B9%A0/</loc>
     
-    <lastmod>2022-01-02</lastmod>
+    <lastmod>2022-01-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://akaduo2019.github.io/2021/12/24/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/</loc>
+    
+    <lastmod>2022-01-03</lastmod>
     
   </url>
   
@@ -207,6 +221,13 @@
 
   
   <url>
+    <loc>http://akaduo2019.github.io/tags/note/</loc>
+    <lastmod>2022-01-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://akaduo2019.github.io/tags/notes/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
@@ -221,7 +242,7 @@
   </url>
   
   <url>
-    <loc>http://akaduo2019.github.io/tags/note/</loc>
+    <loc>http://akaduo2019.github.io/tags/other/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -242,13 +263,6 @@
   </url>
   
   <url>
-    <loc>http://akaduo2019.github.io/tags/other/</loc>
-    <lastmod>2022-01-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://akaduo2019.github.io/tags/ProgrammingWeek/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
@@ -258,14 +272,14 @@
 
   
   <url>
-    <loc>http://akaduo2019.github.io/categories/c/</loc>
+    <loc>http://akaduo2019.github.io/categories/Mao/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://akaduo2019.github.io/categories/test/</loc>
+    <loc>http://akaduo2019.github.io/categories/c/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -279,7 +293,14 @@
   </url>
   
   <url>
-    <loc>http://akaduo2019.github.io/categories/Mao/</loc>
+    <loc>http://akaduo2019.github.io/categories/test/</loc>
+    <lastmod>2022-01-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://akaduo2019.github.io/categories/other/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -301,13 +322,6 @@
   
   <url>
     <loc>http://akaduo2019.github.io/categories/cn/</loc>
-    <lastmod>2022-01-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://akaduo2019.github.io/categories/other/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
