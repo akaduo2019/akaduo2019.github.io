@@ -6,7 +6,7 @@
   <link href="http://akaduo2019.github.io/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2022-01-04T14:16:12.431Z</updated>
+  <updated>2022-01-07T06:03:27.477Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -17,20 +17,54 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>微机原理期末复习</title>
+    <link href="http://akaduo2019.github.io/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+    <id>http://akaduo2019.github.io/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+    <published>2022-01-06T07:27:18.000Z</published>
+    <updated>2022-01-07T06:03:27.477Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;第七章-输入-输出系统&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#第七章-输入-输出系统&quot;&gt;¶&lt;/a&gt;第七章 输入/输出系统&lt;/h1&gt;
+&lt;h2 id=&quot;一、接口电路的作用&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#一、接口电路的作用&quot;&gt;¶&lt;/a&gt;一、接口电路的作用&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;数据缓冲功能&lt;/li&gt;
+&lt;li&gt;联络功能&lt;/li&gt;
+&lt;li&gt;寻址功能&lt;/li&gt;
+&lt;li&gt;数据转换功能&lt;/li&gt;
+&lt;li&gt;中断管理功能&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="ra" scheme="http://akaduo2019.github.io/categories/ra/"/>
+    
+    
+    <category term="note" scheme="http://akaduo2019.github.io/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
     <title>毛概小题速记</title>
     <link href="http://akaduo2019.github.io/2022/01/04/%E6%AF%9B%E6%A6%82%E5%B0%8F%E9%A2%98%E9%80%9F%E8%AE%B0/"/>
     <id>http://akaduo2019.github.io/2022/01/04/%E6%AF%9B%E6%A6%82%E5%B0%8F%E9%A2%98%E9%80%9F%E8%AE%B0/</id>
     <published>2022-01-04T13:04:14.000Z</published>
-    <updated>2022-01-04T14:16:12.431Z</updated>
+    <updated>2022-01-05T00:33:17.983Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;&lt;span</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;1-4章&quot;&gt;&lt;a href=&quot;#1-4章&quot; class=&quot;headerlink&quot; title=&quot;1-4章&quot;&gt;&lt;/a&gt;1-4章&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;中国革命的基本前提是认清中国国情&lt;/p&gt;
+&lt;p&gt;中国革命的首要问题是认清革命的敌人和朋友&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;人民军队的宗旨是全心全意为人民服务&lt;/p&gt;
+&lt;p&gt;人民军队的根本原则是党对军队的绝对领导&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;新民主主义革命的基本问题是农民问题&lt;/p&gt;
+&lt;p&gt;新民主主义革命的中心问题是无产阶级领导权的问题&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;新民主主义国家国体是各革命阶级联合专政&lt;/p&gt;
+&lt;p&gt;新民主主义国家政体是民主集中的人民代表大会制度&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -46,20 +80,20 @@
     <link href="http://akaduo2019.github.io/2022/01/04/%E6%AF%9B%E6%A6%82%E4%BC%9A%E8%AE%AE%E9%80%9F%E8%A7%88/"/>
     <id>http://akaduo2019.github.io/2022/01/04/%E6%AF%9B%E6%A6%82%E4%BC%9A%E8%AE%AE%E9%80%9F%E8%A7%88/</id>
     <published>2022-01-04T13:03:58.000Z</published>
-    <updated>2022-01-04T14:11:16.780Z</updated>
+    <updated>2022-01-05T00:33:40.498Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2&gt;&lt;span id=&quot;毛概会议速览&quot;&gt;毛概会议速览&lt;/span&gt;&lt;/h2&gt;&lt;ul&gt;
+    <summary type="html">&lt;h2 id=&quot;毛概会议速览&quot;&gt;&lt;a href=&quot;#毛概会议速览&quot; class=&quot;headerlink&quot; title=&quot;毛概会议速览&quot;&gt;&lt;/a&gt;毛概会议速览&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;遵义会议 1935.1&lt;/p&gt;
 &lt;p&gt;开始形成了以毛泽东同志为核心的党的第一代中央领导集体。&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;六届六中</summary>
-        
-      
+&lt;li&gt;&lt;p&gt;六届六中 1938.9.29&lt;/p&gt;
+&lt;p&gt;第一次提出马克思中国化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;七大 1945.4.23&lt;/p&gt;
+&lt;p&gt;正式把毛泽东思想写入党章&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -140,7 +174,7 @@
     <link href="http://akaduo2019.github.io/2021/12/27/2021%E6%AF%9B%E6%A6%82%E5%A4%8D%E4%B9%A0/"/>
     <id>http://akaduo2019.github.io/2021/12/27/2021%E6%AF%9B%E6%A6%82%E5%A4%8D%E4%B9%A0/</id>
     <published>2021-12-27T05:34:07.000Z</published>
-    <updated>2022-01-04T13:04:32.127Z</updated>
+    <updated>2022-01-05T00:32:26.141Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;名词解释&quot;&gt;&lt;a href=&quot;#名词解释&quot; class=&quot;headerlink&quot; title=&quot;名词解释&quot;&gt;&lt;/a&gt;名词解释&lt;/h1&gt;&lt;h2 id=&quot;1-毛泽东思想&quot;&gt;&lt;a href=&quot;#1-毛泽东思想&quot; class=&quot;headerlink&quot; title=&quot;1.毛泽东思想&quot;&gt;&lt;/a&gt;1.毛泽东思想&lt;/h2&gt;&lt;p&gt;毛泽东思想是&lt;/p&gt;
@@ -509,31 +543,6 @@
     
     
     <category term="other" scheme="http://akaduo2019.github.io/tags/other/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>c++中的string类型</title>
-    <link href="http://akaduo2019.github.io/2020/11/21/string%E7%B1%BB%E5%9E%8B/"/>
-    <id>http://akaduo2019.github.io/2020/11/21/string%E7%B1%BB%E5%9E%8B/</id>
-    <published>2020-11-21T07:54:22.126Z</published>
-    <updated>2020-09-17T11:48:42.555Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="c++" scheme="http://akaduo2019.github.io/categories/c/"/>
-    
-    
-    <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
     
   </entry>
   
