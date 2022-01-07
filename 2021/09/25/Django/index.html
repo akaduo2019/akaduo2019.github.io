@@ -47,13 +47,13 @@
   };
 </script>
 
-  <meta name="description" content="创建一个Django项目 cd 对应的python虚拟环境文件夹  workon 虚拟环境  django-admin startproject 项目名  cd 项目名文件夹  创建app  python manage.py startapp app名 或 django-admin startapp app名    实现一个请求 注册一个路由  在urls中  url(参数1，视图函数)  参数1">
+  <meta name="description" content="创建一个Django项目   cd 对应的python虚拟环境文件夹   workon 虚拟环境   django-admin startproject 项目名   cd 项目名文件夹   创建app  python manage.py startapp app名 或 django-admin startapp app名    实现一个请求   注册一个路由   在urls中   url(参数1，">
 <meta name="keywords" content="notes">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Django">
 <meta property="og:url" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;09&#x2F;25&#x2F;Django&#x2F;index.html">
 <meta property="og:site_name" content="Akaduo Blog">
-<meta property="og:description" content="创建一个Django项目 cd 对应的python虚拟环境文件夹  workon 虚拟环境  django-admin startproject 项目名  cd 项目名文件夹  创建app  python manage.py startapp app名 或 django-admin startapp app名    实现一个请求 注册一个路由  在urls中  url(参数1，视图函数)  参数1">
+<meta property="og:description" content="创建一个Django项目   cd 对应的python虚拟环境文件夹   workon 虚拟环境   django-admin startproject 项目名   cd 项目名文件夹   创建app  python manage.py startapp app名 或 django-admin startapp app名    实现一个请求   注册一个路由   在urls中   url(参数1，">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2021-10-14T08:39:43.741Z">
 <meta name="twitter:card" content="summary">
@@ -265,7 +265,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>681</span>
+              <span>689</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -284,28 +284,38 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2><span id="创建一个django项目">创建一个Django项目</span></h2><ul>
-<li><p>cd 对应的python虚拟环境文件夹</p>
-</li>
-<li><p>workon 虚拟环境</p>
-</li>
-<li><p>django-admin startproject 项目名</p>
-</li>
-<li><p>cd 项目名文件夹</p>
-</li>
-<li><p>创建app</p>
+        <h2><span id="创建一个django项目">创建一个Django项目</span></h2>
 <ul>
-<li>python manage.py startapp app名</li>
+<li>
+<p>cd 对应的python虚拟环境文件夹</p>
+</li>
+<li>
+<p>workon 虚拟环境</p>
+</li>
+<li>
+<p>django-admin startproject 项目名</p>
+</li>
+<li>
+<p>cd 项目名文件夹</p>
+</li>
+<li>
+<p>创建app</p>
+<ul>
+<li>python <a href="http://manage.py" target="_blank" rel="noopener">manage.py</a> startapp app名</li>
 <li>或 django-admin startapp app名</li>
 </ul>
 </li>
 </ul>
-<h2><span id="实现一个请求">实现一个请求</span></h2><ul>
-<li><p>注册一个路由</p>
+<h2><span id="实现一个请求">实现一个请求</span></h2>
 <ul>
-<li><p>在urls中</p>
+<li>
+<p>注册一个路由</p>
 <ul>
-<li><p>url(参数1，视图函数)</p>
+<li>
+<p>在urls中</p>
+<ul>
+<li>
+<p>url(参数1，视图函数)</p>
 <ul>
 <li>参数1:匹配规则 正则</li>
 <li>视图函数:对应views中的一个函数，注意不写函数的括号</li>
@@ -315,46 +325,56 @@
 </li>
 </ul>
 </li>
-<li><p>去views实现对应的视图函数</p>
+<li>
+<p>去views实现对应的视图函数</p>
 <ul>
 <li>第一个参数是request</li>
 <li>永远记得返回response</li>
 </ul>
 </li>
 </ul>
-<h2><span id="模板配置">模板配置</span></h2><ul>
-<li><p>在App中进行模板配置</p>
+<h2><span id="模板配置">模板配置</span></h2>
+<ul>
+<li>
+<p>在App中进行模板配置</p>
 <ul>
 <li>需要在App的根目录创建templates文件夹即可</li>
 <li>如果想让代码自动提示，只需标记文件夹为模板文件夹</li>
 </ul>
 </li>
-<li><p>在项目目录进行模板配置</p>
+<li>
+<p>在项目目录进行模板配置</p>
 <ul>
 <li>需要在项目目录创建templates文件夹并标记</li>
 <li>需要在settings中进行注册</li>
 </ul>
 </li>
-<li><p>在开发中使用第二种</p>
+<li>
+<p>在开发中使用第二种</p>
 <ul>
 <li>模板可以继承，复用</li>
 </ul>
 </li>
 </ul>
-<h2><span id="路由配置">路由配置</span></h2><ul>
-<li><p>项目如果逻辑过于复杂可以进行拆分</p>
+<h2><span id="路由配置">路由配置</span></h2>
 <ul>
-<li><p>拆分为多个App</p>
+<li>项目如果逻辑过于复杂可以进行拆分
+<ul>
+<li>
+<p>拆分为多个App</p>
 </li>
-<li><p>拆分多个urls</p>
+<li>
+<p>拆分多个urls</p>
 <ul>
-<li><p>在App中创建urls</p>
+<li>
+<p>在App中创建urls</p>
 <ul>
 <li>urlpatterns = [] 路由规则列表</li>
 <li>在根urls中进行子路由的包含</li>
 </ul>
 </li>
-<li><p>子路由使用</p>
+<li>
+<p>子路由使用</p>
 <ul>
 <li>跟路由规则 + 子路由规则</li>
 </ul>
@@ -364,49 +384,59 @@
 </ul>
 </li>
 </ul>
-<h2><span id="数据操作-增删改查">数据操作 增删改查</span></h2><ul>
-<li><p>存储</p>
+<h2><span id="数据操作-增删改查">数据操作 增删改查</span></h2>
+<ul>
+<li>
+<p>存储</p>
 <ul>
 <li>save()</li>
 </ul>
 </li>
-<li><p>查询</p>
+<li>
+<p>查询</p>
 <ul>
 <li>查所有 objects.all()</li>
 <li>查单个 objects.get(pk=xx)</li>
 </ul>
 </li>
-<li><p>更新</p>
+<li>
+<p>更新</p>
 <ul>
 <li>基于查询的</li>
 <li>查好的对象，修改属性，然后save()</li>
 </ul>
 </li>
-<li><p>删除</p>
+<li>
+<p>删除</p>
 <ul>
 <li>基于查询的</li>
 <li>调用delete()</li>
 </ul>
 </li>
 </ul>
-<h2><span id="django-shell">Django shell</span></h2><ul>
+<h2><span id="django-shell">Django shell</span></h2>
+<ul>
 <li>集成了python环境的shell终端</li>
 <li>通常在终端中做一些调试</li>
 </ul>
-<h2><span id="如何调试bug">如何调试bug</span></h2><ul>
-<li><p>看日志</p>
+<h2><span id="如何调试bug">如何调试bug</span></h2>
+<ul>
+<li>
+<p>看日志</p>
 <ul>
 <li>先看第一条</li>
 <li>再看最后一条</li>
 </ul>
 </li>
-<li><p>梳理思路</p>
+<li>
+<p>梳理思路</p>
 <ul>
 <li>程序在哪一个位置和预期出现偏差</li>
 </ul>
 </li>
 </ul>
-<h2><span id="关系型数据库表关系">关系型数据库表关系</span></h2><ul>
+<h2><span id="关系型数据库表关系">关系型数据库表关系</span></h2>
+<ul>
 <li>1:1 一对一</li>
 <li>1:M 一对多</li>
 <li>M:N 多对多</li>
@@ -546,12 +576,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">127k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:53</span>
+    <span title="站点阅读时长">1:56</span>
 </div>
   <!--<div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>-->

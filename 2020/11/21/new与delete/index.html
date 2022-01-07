@@ -47,13 +47,13 @@
   };
 </script>
 
-  <meta name="description" content="new与delte都为运算符而非库函数  new 定义符号常量 const int N=…; const int M=…;定义变量 int型指针p，二级指针q，int型i，j; 申请一个int型动态变量:p=new int; 申请N个元素的动态一维数组:p=new int[N]; 申请N行M列的动态二维数组：q=new int[N];                         for (i=">
+  <meta name="description" content="new与delte都为运算符而非库函数  new 定义符号常量 const int N=…; const int M=…; 定义变量 int型指针p，二级指针q，int型i，j; 申请一个int型动态变量:p=new int; 申请N个元素的动态一维数组:p=new int[N]; 申请N行M列的动态二维数组：q=new int[N]; for (i=0;i&amp;lt;N;i++) q[i]=new">
 <meta name="keywords" content="notes">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c++中的new与delete">
 <meta property="og:url" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2020&#x2F;11&#x2F;21&#x2F;new%E4%B8%8Edelete&#x2F;index.html">
 <meta property="og:site_name" content="Akaduo Blog">
-<meta property="og:description" content="new与delte都为运算符而非库函数  new 定义符号常量 const int N=…; const int M=…;定义变量 int型指针p，二级指针q，int型i，j; 申请一个int型动态变量:p=new int; 申请N个元素的动态一维数组:p=new int[N]; 申请N行M列的动态二维数组：q=new int[N];                         for (i=">
+<meta property="og:description" content="new与delte都为运算符而非库函数  new 定义符号常量 const int N=…; const int M=…; 定义变量 int型指针p，二级指针q，int型i，j; 申请一个int型动态变量:p=new int; 申请N个元素的动态一维数组:p=new int[N]; 申请N行M列的动态二维数组：q=new int[N]; for (i=0;i&amp;lt;N;i++) q[i]=new">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2020-09-17T11:48:37.673Z">
 <meta name="twitter:card" content="summary">
@@ -287,14 +287,23 @@
         <p>new与delte都为运算符而非库函数</p>
 <hr>
 <p>new</p>
-<p>定义符号常量 const int N=…; const int M=…;<br>定义变量 int型指针p，二级指针q，int型i，j;</p>
+<p>定义符号常量 const int N=…; const int M=…;<br>
+定义变量 int型指针p，二级指针q，int型i，j;</p>
 <p>申请一个int型动态变量:p=new int;</p>
 <p>申请N个元素的动态一维数组:p=new int[N];</p>
-<p>申请N行M列的动态二维数组：q=new int[N];<br>                         for (i=0;i&lt;N;i++)<br>                          q[i]=new int[M];<br>数组元素可用q[i][j]调用</p>
-<p>注:1.new申请的动态内存空间中存放的为随机值<br>   2.p=new int(10); 相当于 p=new int;*p=10;</p>
+<p>申请N行M列的动态二维数组：q=new int[N];<br>
+for (i=0;i&lt;N;i++)<br>
+q[i]=new int[M];<br>
+数组元素可用q[i][j]调用</p>
+<p>注:1.new申请的动态内存空间中存放的为随机值<br>
+2.p=new int(10); 相当于 p=new int;*p=10;</p>
 <hr>
 <p>delete</p>
-<p>释放一个int型的动态变量：deelte p;<br>释放N个元素的动态一维数组: delete[]p;<br>释放N行M列的动态二维数组：for(i=0;i&lt;N;i++)<br>                            delete []q[i];<br>                        delete []q;</p>
+<p>释放一个int型的动态变量：deelte p;<br>
+释放N个元素的动态一维数组: delete[]p;<br>
+释放N行M列的动态二维数组：for(i=0;i&lt;N;i++)<br>
+delete []q[i];<br>
+delete []q;</p>
 
     </div>
 
@@ -430,12 +439,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">125k</span>
+    <span title="站点总字数">127k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:53</span>
+    <span title="站点阅读时长">1:56</span>
 </div>
   <!--<div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>-->
