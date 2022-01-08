@@ -47,13 +47,13 @@
   };
 </script>
 
-  <meta name="description" content="¶第七章 输入&#x2F;输出系统 ¶一、接口电路的作用  数据缓冲功能 联络功能 寻址功能 数据转换功能 中断管理功能">
+  <meta name="description" content="第七章 输入&#x2F;输出系统一、接口电路的作用 数据缓冲功能 联络功能 寻址功能 数据转换功能 中断管理功能">
 <meta name="keywords" content="note">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微机原理期末复习">
 <meta property="og:url" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2022&#x2F;01&#x2F;06&#x2F;%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0&#x2F;index.html">
 <meta property="og:site_name" content="Akaduo Blog">
-<meta property="og:description" content="¶第七章 输入&#x2F;输出系统 ¶一、接口电路的作用  数据缓冲功能 联络功能 寻址功能 数据转换功能 中断管理功能">
+<meta property="og:description" content="第七章 输入&#x2F;输出系统一、接口电路的作用 数据缓冲功能 联络功能 寻址功能 数据转换功能 中断管理功能">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2022&#x2F;01&#x2F;06&#x2F;%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0&#x2F;%E5%9B%9B%E7%A7%8D%E4%BA%A4%E4%BA%92%E6%96%B9%E5%BC%8F%E6%AF%94%E8%BE%83.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2022&#x2F;01&#x2F;06&#x2F;%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0&#x2F;IRET.jpg">
@@ -66,7 +66,9 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2022&#x2F;01&#x2F;06&#x2F;%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0&#x2F;%E4%B8%80%E5%B8%A7%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F.jpg">
 <meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2022&#x2F;01&#x2F;06&#x2F;%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0&#x2F;RS232C.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2022&#x2F;01&#x2F;06&#x2F;%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0&#x2F;8250%E5%86%85%E9%83%A8%E5%AF%84%E5%AD%98%E5%99%A8.jpg">
-<meta property="og:updated_time" content="2022-01-07T06:18:37.539Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2022&#x2F;01&#x2F;06&#x2F;%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0&#x2F;8255A%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2022&#x2F;01&#x2F;06&#x2F;%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0&#x2F;8255A%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F.png">
+<meta property="og:updated_time" content="2022-01-08T02:02:04.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2022&#x2F;01&#x2F;06&#x2F;%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0&#x2F;%E5%9B%9B%E7%A7%8D%E4%BA%A4%E4%BA%92%E6%96%B9%E5%BC%8F%E6%AF%94%E8%BE%83.png">
 
@@ -257,7 +259,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-01-07 14:18:37" itemprop="dateModified" datetime="2022-01-07T14:18:37+08:00">2022-01-07</time>
+                <time title="修改时间：2022-01-08 10:02:04" itemprop="dateModified" datetime="2022-01-08T10:02:04+08:00">2022-01-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -277,14 +279,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.7k</span>
+              <span>7.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
+              <span>7 分钟</span>
             </span>
 
         </div>
@@ -296,9 +298,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1><span id="第七章-输入输出系统">第七章 输入/输出系统</span></h1>
-<h2><span id="一-接口电路的作用">一、接口电路的作用</span></h2>
-<ul>
+        <h1><span id="第七章-输入输出系统">第七章 输入/输出系统</span></h1><h2><span id="一-接口电路的作用">一、接口电路的作用</span></h2><ul>
 <li>数据缓冲功能</li>
 <li>联络功能</li>
 <li>寻址功能</li>
@@ -306,56 +306,44 @@
 <li>中断管理功能</li>
 </ul>
 <a id="more"></a>
-<h2><span id="二-端口的概念-分类">二、端口的概念、分类</span></h2>
-<ul>
-<li>
-<p>端口的概念</p>
-<p>输入输出接口电路中能与CPU交换信息的寄存器称为I/O端口寄存器，简称&quot;端口&quot;。</p>
+
+<h2><span id="二-端口的概念-分类">二、端口的概念、分类</span></h2><ul>
+<li><p>端口的概念</p>
+<p>输入输出接口电路中能与CPU交换信息的寄存器称为I/O端口寄存器，简称”端口”。</p>
 </li>
-<li>
-<p>端口的分类</p>
+<li><p>端口的分类</p>
 <ul>
-<li>
-<p>数据端口</p>
+<li><p>数据端口</p>
 <p>数据端口存放数据信息</p>
 </li>
-<li>
-<p>状态端口</p>
+<li><p>状态端口</p>
 <p>状态端口存放状态信息，即反应外设当前工作状态的信息，CPU可读取这些信息，以查询外设当前的工作情况。</p>
 </li>
-<li>
-<p>控制端口</p>
+<li><p>控制端口</p>
 <p>控制端口存放CPU通过接口传送给外设的控制信息，以控制外设工作。</p>
 </li>
 </ul>
 </li>
 </ul>
-<h2><span id="三-端口有两种编址方式">三、端口有两种编址方式</span></h2>
-<ul>
-<li>
-<p>端口和存储单元统一编址</p>
+<h2><span id="三-端口有两种编址方式">三、端口有两种编址方式</span></h2><ul>
+<li><p>端口和存储单元统一编址</p>
 </li>
-<li>
-<p>I/O端口独立编址</p>
+<li><p>I/O端口独立编址</p>
 <p><strong>PC系列机采用端口独立编址</strong></p>
 </li>
 </ul>
-<h2><span id="四-最常用的io指令">四、最常用的I/O指令</span></h2>
-<ul>
-<li>
-<p>直接寻址I/O指令</p>
+<h2><span id="四-最常用的io指令">四、最常用的I/O指令</span></h2><ul>
+<li><p>直接寻址I/O指令</p>
 <p>党端口地址位一字节(8bit)时可以采用直接寻址方式</p>
 <ul>
-<li>
-<p>输入指令：</p>
+<li><p>输入指令：</p>
 <ul>
 <li>IN     AL,PORT ;PORT端口内容输入AL</li>
 <li>IN     AX,PORT ;PORT端口和PORT+1端口内容输入AX</li>
 <li>IN   EAX,PROT ;PORT~PORT+3端口内容输入EAX</li>
 </ul>
 </li>
-<li>
-<p>输出指令：</p>
+<li><p>输出指令：</p>
 <ul>
 <li>OUT PORT,AL AL内容输出到PORT端口</li>
 <li>剩下同上</li>
@@ -363,19 +351,16 @@
 </li>
 </ul>
 </li>
-<li>
-<p>DX间接寻址输入输出指令</p>
+<li><p>DX间接寻址输入输出指令</p>
 <p>端口地址为两字节时，用间接寻址方式，此时最多可寻址2^16个端口，而且端口地址必须放在寄存器DX中</p>
 <ul>
-<li>输入指令：
-<ul>
+<li>输入指令：<ul>
 <li>IN     AL,DX ;从DX指向的端口中读一个字节到AL</li>
 <li>IN     AX,DX ;从DX和DX+1指向的2个端口读一个字到AX</li>
 <li>IN   EAX,DX ;从DX~DX+3指向的4个端口中读一个双字到EAX</li>
 </ul>
 </li>
-<li>输出指令：
-<ul>
+<li>输出指令：<ul>
 <li>OUT  DX,AL ;将AL内容输出到DX指向的端口</li>
 <li>剩下同上</li>
 </ul>
@@ -383,26 +368,21 @@
 </ul>
 </li>
 </ul>
-<h2><span id="五-微机系统与io端口的信息交换">五、微机系统与I/O端口的信息交换</span></h2>
-<ul>
-<li>
-<p>无条件传送</p>
-<p>假设外已准备好，即输入数据已准备好，或输出设备空闲，此时PCU可以直接用IN或OUT指令完成与接口之间的数据传送。</p>
+<h2><span id="五-微机系统与io端口的信息交换">五、微机系统与I/O端口的信息交换</span></h2><ul>
+<li><p>无条件传送</p>
+<p>假设外已准备好，即输入数据已准备好，或输出设备空闲，此时CPU可以直接用IN或OUT指令完成与接口之间的数据传送。</p>
 </li>
-<li>
-<p>查询方式</p>
+<li><p>查询方式</p>
 <p>采用查询方式接受数据前，CPU要查询输入数据是否准备好；采用查询方式输出数据前，CPU要查询输出设备是否空闲。只有确认外设已具备输入或输出条件后，才能用IN或OUT指令完成数据传送。</p>
 <p>和无条件传送方式相比，查询方式的接口电路中要设置供CPU查询的电路。</p>
 <ul>
-<li>
-<p>查询式输入的程序段：</p>
+<li><p>查询式输入的程序段：</p>
 <p>SCAN: IN AL,状态端口地址   ;读取外设状态信息</p>
 <p>​            TEST AL ,80H             ;测试外设是否准备好</p>
 <p>​            JZ SCAN                      ;外设未准备好，继续测试</p>
 <p>​            IN AL,数据端口地址   ;外设准备好，输入数据</p>
 </li>
-<li>
-<p>查询式输出的程序段：</p>
+<li><p>查询式输出的程序段：</p>
 <p>SCAN: IN AL,状态端口地址       ;读取外设状态信息</p>
 <p>​            TEST AL ,01H                 ;测试忙闲标志</p>
 <p>​            JNZ SCAN                       ;忙，转移</p>
@@ -411,124 +391,97 @@
 </li>
 </ul>
 </li>
-<li>
-<p>中断方式</p>
+<li><p>中断方式</p>
 <p>采用中断方式传送信息时，如果外设未做好数据传送准备，CPU可执行与传送数据无关的其他指令；当外设做好传送准备后，可向CPU发出中断请求，请求为止服务。若CPU响应中断请求，将暂停正在允许的程序，转入中断服务子程序，完成数据的传送。等中断服务结束后，将自动返回原来运行的程序继续执行。</p>
 </li>
-<li>
-<p>直接存储器存取(<strong>DMA</strong>)方式</p>
+<li><p>直接存储器存取(<strong>DMA</strong>)方式</p>
 </li>
 </ul>
-<h2><span id="六-直接存储器存取dma方式">六、直接存储器存取(DMA)方式</span></h2>
+<h2><span id="六-直接存储器存取dma方式">六、直接存储器存取(DMA)方式</span></h2><ul>
+<li><p>DMA(Direct Memory Access)：利用硬件实现高速外设与系统RAM(Random Access Memory，内存)之间直接进行数据交换，而不是通过CPU间接交换，这样数据的传送速度的上限就取决于存储器的工作速度。</p>
+</li>
+<li><p>DMAC(DMA控制器)：DMA控制器是实现DMA传送的核心芯片。</p>
+</li>
+<li><p>优点：传送速度快</p>
+</li>
+<li><p>缺点：硬件电路比较复杂</p>
+</li>
+<li><p>DMA传送与中断方式比较</p>
 <ul>
-<li>
-<p>DMA(Direct Memory Access)：利用硬件实现高速外设与系统RAM(Random Access Memory，内存)之间直接进行数据交换，而不是通过CPU间接交换，这样数据的传送速度的上限就取决于存储器的工作速度。</p>
+<li><p>DMA响应时间更快。CPU接到”中断请求”后要等到当前指令执行完毕才响应，而CPU接到DMAC的”总线请求”后只要当前指令的当前总线周期执行完毕就响应。</p>
 </li>
-<li>
-<p>DMAC(DMA控制器)：DMA控制器是实现DMA传送的核心芯片。</p>
-</li>
-<li>
-<p>优点：传送速度快</p>
-</li>
-<li>
-<p>缺点：硬件电路比较复杂</p>
-</li>
-<li>
-<p>DMA传送与中断方式比较</p>
-<ul>
-<li>
-<p>DMA响应时间更快。CPU接到&quot;中断请求&quot;后要等到当前指令执行完毕才响应，而CPU接到DMAC的&quot;总线请求&quot;后只要当前指令的当前总线周期执行完毕就响应。</p>
-</li>
-<li>
-<p>DMA数据传送速度更快。</p>
+<li><p>DMA数据传送速度更快。</p>
 </li>
 </ul>
 </li>
-<li>
-<p>I/O设备信息交互四种方式的比较：</p>
-<img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%9B%9B%E7%A7%8D%E4%BA%A4%E4%BA%92%E6%96%B9%E5%BC%8F%E6%AF%94%E8%BE%83.png" class>
-</li>
+<li><p>I/O设备信息交互四种方式的比较：</p>
+<img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%9B%9B%E7%A7%8D%E4%BA%A4%E4%BA%92%E6%96%B9%E5%BC%8F%E6%AF%94%E8%BE%83.png" class></li>
 </ul>
-<h1><span id="第八章-中断系统">第八章 中断系统</span></h1>
-<h2><span id="一-中断概念">一、中断概念</span></h2>
-<h2><span id="二-中断指令">二、中断指令</span></h2>
-<ul>
-<li>
-<p>关中断指令 CLI</p>
+<h1><span id="第八章-中断系统">第八章 中断系统</span></h1><h2><span id="一-中断概念">一、中断概念</span></h2><h2><span id="二-中断指令">二、中断指令</span></h2><ul>
+<li><p>关中断指令 CLI</p>
 <p>功能：F寄存器中I标志清0，CPU处于关中断状态</p>
 </li>
-<li>
-<p>开中断指令 STI</p>
+<li><p>开中断指令 STI</p>
 <p>功能：F寄存器中I标志置1，CPU处于开中断状态</p>
-<p><strong>STI，CLI只对可屏蔽中断请求有效</strong></p>
+<p> <strong>STI，CLI只对可屏蔽中断请求有效</strong></p>
 </li>
-<li>
-<p>软件中断指令 INT n</p>
-<p>功能：无条件转向n型中断服务子程序</p>
+<li><p>软件中断指令 INT n</p>
+<p>功能：无条件转向n型中断服务子程序 </p>
 <p>INT n指令的执行过程——CPU响应软件中断的过程</p>
 <ul>
-<li>
-<p>F寄存器→栈(保存INT n之前的F状态)</p>
+<li><p>F寄存器→栈(保存INT n之前的F状态)</p>
 <p>使F中的T标志置0——禁止单步操作。</p>
 <p>使F中的I标志置0——CPU处于关中断状态</p>
 </li>
-<li>
-<p>断点地址→栈</p>
+<li><p>断点地址→栈</p>
 <p>先：断点所在段的段基址(CS)→栈</p>
 <p>后：断点偏移地址(IP)→栈</p>
 </li>
-<li>
-<p>CPU从4n~4n+3单元取出n型服务程序入口地址→IP、CS，从而转入n中断服务子程序。</p>
+<li><p>CPU从4n~4n+3单元取出n型服务程序入口地址→IP、CS，从而转入n中断服务子程序。</p>
 </li>
 </ul>
 </li>
-<li>
-<p>IRET</p>
+<li><p>IRET</p>
 <p>功能：依次从栈顶弹出6个元素→IP，CS，F。</p>
 <p>IRET是中断服务子程序的出口指令。如果<strong>栈顶是INT n的断点地址</strong>，则执行IRET后，返回断点，否则不能。</p>
 <img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/IRET.jpg" class>
+
+
+
 <p>IRET和RET的区别如下：</p>
 <ul>
-<li>
-<p>IRET从栈顶弹出6个元素→IP，CS，F。</p>
+<li><p>IRET从栈顶弹出6个元素→IP，CS，F。</p>
 </li>
-<li>
-<p>远程RET，从栈顶弹出4个元素→IP，CS。</p>
+<li><p>远程RET，从栈顶弹出4个元素→IP，CS。</p>
 <p>近程RET，从栈顶弹出2个元素→IP。</p>
 </li>
 </ul>
 </li>
 </ul>
-<h2><span id="三-中断分类">三、中断分类</span></h2>
-<img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/PC%E6%9C%BA256%E7%A7%8D%E4%B8%AD%E6%96%AD.png" class>
+<h2><span id="三-中断分类">三、中断分类</span></h2><img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/PC%E6%9C%BA256%E7%A7%8D%E4%B8%AD%E6%96%AD.png" class>
+
 <ul>
-<li>
-<p>外部中断</p>
+<li><p>外部中断</p>
 <p>由外部事件所引发的中断，即由CPU以外的设备发出，并由CPU的中断请求信号引脚输入所引发的中断称为外部中断，也成为<strong>硬件中断</strong>。80x86CPU有两个引脚(INTR和NMI)可以接受哇部的中断请求信号。</p>
 <ul>
-<li>
-<p>由<strong>INTR</strong>引脚的中断请求信号引发的中断称为<strong>可屏蔽中断</strong>。</p>
+<li><p>由<strong>INTR</strong>引脚的中断请求信号引发的中断称为<strong>可屏蔽中断</strong>。</p>
 <p><strong>可屏蔽中断是通过8259中断控制器连接至CPU的INTR。</strong></p>
 </li>
-<li>
-<p>由输入<strong>NMI</strong>引脚的中断请求信号引发的中断称为<strong>非屏蔽硬件中断</strong>。</p>
+<li><p>由输入<strong>NMI</strong>引脚的中断请求信号引发的中断称为<strong>非屏蔽硬件中断</strong>。</p>
 </li>
 </ul>
 </li>
-<li>
-<p>内部中断</p>
+<li><p>内部中断</p>
 <p>由CPU内部事件，即由CPU硬件故障或程序执行的事件所引发的中断称为内部中断。内部中断可进一步分为软件中断和异常。</p>
 <ul>
-<li>
-<p>软件中断</p>
+<li><p>软件中断</p>
 <p>执行有定义的INT n指令而引发的中断称为软件中断。</p>
 <ul>
 <li>BIOS中断</li>
 <li>DOS中断</li>
 </ul>
 </li>
-<li>
-<p>异常</p>
+<li><p>异常</p>
 <p>由CPU本身故障、程序故障等引发的中断称为异常。</p>
 <ul>
 <li>故障</li>
@@ -539,81 +492,66 @@
 </ul>
 </li>
 </ul>
-<h2><span id="四-中断向量">四、中断向量</span></h2>
-<p>将中断向量之前先说说中断类型码。</p>
+<h2><span id="四-中断向量">四、中断向量</span></h2><p>将中断向量之前先说说中断类型码。</p>
 <ul>
-<li>
-<p>中断类型码</p>
+<li><p>中断类型码</p>
 <p>为了区别这些不同的中断，微型计算机给每一个中断分配了一个中断号n，即中断类型码，其取值是0~255。</p>
 <p>前32个(0~31)为系统所专用，后224个可由用户设定。</p>
-<img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E4%B8%AD%E6%96%AD%E7%B1%BB%E5%9E%8B%E7%A0%81.png" class>
-</li>
-<li>
-<p>中断向量</p>
+<img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E4%B8%AD%E6%96%AD%E7%B1%BB%E5%9E%8B%E7%A0%81.png" class></li>
+<li><p>中断向量</p>
 <p><strong>实模式</strong>下，<strong>中断向量</strong>是指<strong>中断服务子程序</strong>的<strong>入口地址</strong>。</p>
 <p>每个中断号对应的中断向量占<strong>4字节</strong>，<strong>前两字节</strong>为中断服务子程序入口的偏移地址，<strong>后两字节</strong>为中断服务子程序所在代码段的段基址。</p>
 </li>
-<li>
-<p>中断向量表</p>
+<li><p>中断向量表</p>
 <p>实模式下，系统存储地址空间种，最低的1KB可见，即00000H~003FFH单元依次存放着256个中断号所对应的中断向量，每个中断的中断向量为4字节，存放这个1024字节中断向量的存储区就构成了一张中断向量表。</p>
 <p>n型的中断向量存放在中断向量表种的4<em>n~4</em>n+3的四个单元之中。</p>
 <img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E4%B8%AD%E6%96%AD%E5%90%91%E9%87%8F%E8%A1%A8.jpg" class>
+
 <ul>
-<li>
-<p>这里知道下物理地址和逻辑地址</p>
+<li><p>这里知道下物理地址和逻辑地址</p>
 <ul>
-<li>
-<p>逻辑地址</p>
+<li><p>逻辑地址</p>
 <p>段基址：偏移地址</p>
 </li>
-<li>
-<p>物理地址</p>
-<p>*<em>物理地址(20位，实地址模式下)=段基址(20位)<em>16+偏移地址(16位)</em></em></p>
+<li><p>物理地址</p>
+<p>物理地址(20位，实地址模式下)=段基址(20位)*16+偏移地址(16位)</p>
 </li>
 </ul>
 </li>
-<li>
-<p>注意高低地址！！！</p>
+<li><p>注意高低地址！！！</p>
 </li>
 </ul>
 <p>一般的考法是给出中断向量存放的逻辑地址(什么什么的地址开始的连续的4个字节)和四个字中存放的内容，然后问你对应的中断类型码和对应的中断服务子程序的入口地址。</p>
 <p>先通过计算中断向量存放的逻辑地址算出物理地址，然后除4可以得到n，即中断类型码；再根据四个字节在存放的内容算出中断服务子程序的入口地址。</p>
 </li>
 </ul>
-<h2><span id="五-中断向量的写入">五、中断向量的写入</span></h2>
-<ul>
-<li>
-<p>中断向量表的初始化</p>
+<h2><span id="五-中断向量的写入">五、中断向量的写入</span></h2><ul>
+<li><p>中断向量表的初始化</p>
 <ul>
 <li>由BIOS设计的中断服务子程序(如 INT16H，INT 10H)，其中断向量在加电时，由BIOS负责写入中断向量表。</li>
 <li>由DOS设计的中断服务子程序(如 INT 21H)，其中断向量是在启动DOS时，由DOS负责写入中断向量表。</li>
 <li>用户程序开发的终端服务子程序，由用户程序写入其中断向量</li>
 </ul>
 </li>
-<li>
-<p>中断向量的写入</p>
+<li><p>中断向量的写入</p>
 <p>设n型中断服务子程序的名字是SERVICE，将SERVICE的入口地址写入对应的中断向量表。</p>
 <ul>
-<li>
-<p>用DOS设计两子程序，专门用于中断向量的读写</p>
+<li><p>用DOS设计两子程序，专门用于中断向量的读写</p>
 <ul>
-<li>
-<p>INT 21H的35H号子功能</p>
-<p>功能：读取中断向量</p>
+<li><p>INT 21H的35H号子功能</p>
+<p>功能：读取中断向量 </p>
 <p>入口参数：AH=35H，AL=中断类型码(即中断号)</p>
 <p>出口参数：ES：BX=中断向量</p>
 </li>
-<li>
-<p>INT 21H的25H号子功能</p>
-<p>功能：写入中断向量</p>
+<li><p>INT 21H的25H号子功能</p>
+<p>功能：写入中断向量 </p>
 <p>入口参数：AH=25H，AL=中断类型码(即中断号)</p>
 <p>​                    DS：DX=要写入的中断向量，即：</p>
 <p>​                    <strong>DS=中断服务子程序所在代码段的段基址</strong></p>
 <p>​                    <strong>DX=中断服务子程序入口的偏移地址</strong></p>
 <p>出口参数：无</p>
 </li>
-<li>
-<p>程序如下</p>
+<li><p>程序如下</p>
 <p><strong>CLI</strong></p>
 <p><strong>PUSH DS</strong></p>
 <p><strong>PUSHA</strong> ;将所有通用寄存器压入栈</p>
@@ -630,79 +568,62 @@
 </ul>
 </li>
 </ul>
-<h2><span id="六-可屏蔽中断和非可屏蔽中断">六、可屏蔽中断和非可屏蔽中断</span></h2>
-<ul>
-<li>
-<p>响应非屏蔽中断的条件</p>
+<h2><span id="六-可屏蔽中断和非可屏蔽中断">六、可屏蔽中断和非可屏蔽中断</span></h2><ul>
+<li><p>响应非屏蔽中断的条件</p>
 <ul>
 <li>有非屏蔽中断请求，没有DMA请求</li>
 <li>CPU 当前指令执行完毕</li>
 </ul>
 </li>
-<li>
-<p>响应可屏蔽中断的条件</p>
+<li><p>响应可屏蔽中断的条件</p>
 <ul>
 <li>有可屏蔽中断请求，没有DMA请求，没有非屏蔽中断请求</li>
 <li>CPU 当前指令执行完毕</li>
 <li>CPU处于开中断状态(I标=1)</li>
 </ul>
 </li>
-<li>
-<p>可屏蔽中断和非可屏蔽中断对应的中断号</p>
-<img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%8F%AF%E5%B1%8F%E8%94%BD%E4%B8%AD%E6%96%AD%E5%92%8C%E9%9D%9E%E5%8F%AF%E5%B1%8F%E8%94%BD%E4%B8%AD%E6%96%AD%E5%AF%B9%E5%BA%94%E7%9A%84%E4%B8%AD%E6%96%AD%E5%8F%B7.png" class>
-</li>
-<li>
-<p>记一下8259(可屏蔽中断)的口地址以及中断的优先级</p>
+<li><p>可屏蔽中断和非可屏蔽中断对应的中断号</p>
+<img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%8F%AF%E5%B1%8F%E8%94%BD%E4%B8%AD%E6%96%AD%E5%92%8C%E9%9D%9E%E5%8F%AF%E5%B1%8F%E8%94%BD%E4%B8%AD%E6%96%AD%E5%AF%B9%E5%BA%94%E7%9A%84%E4%B8%AD%E6%96%AD%E5%8F%B7.png" class></li>
+<li><p>记一下8259(可屏蔽中断)的口地址以及中断的优先级</p>
 <img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E5%8F%AF%E5%B1%8F%E8%94%BD%E4%B8%AD%E6%96%AD1.png" class>
 
-<img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E5%88%86%E9%85%8D%E7%BB%998259%E7%9A%84%E5%9C%B0%E5%9D%80.png" class>
-</li>
+
+
+<img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E5%88%86%E9%85%8D%E7%BB%998259%E7%9A%84%E5%9C%B0%E5%9D%80.png" class></li>
 </ul>
-<h2><span id="七-要掌握的可屏蔽中断">七、要掌握的可屏蔽中断</span></h2>
+<h2><span id="七-要掌握的可屏蔽中断">七、要掌握的可屏蔽中断</span></h2><ul>
+<li><p>用户中断</p>
 <ul>
-<li>
-<p>用户中断</p>
-<ul>
-<li>
-<p>中断源 系统ISA总线B4端子(IRQ_9)引入的中断请求信号</p>
+<li><p>中断源 系统ISA总线B4端子(IRQ_9)引入的中断请求信号</p>
 </li>
-<li>
-<p>中断向量 71H，0AH</p>
+<li><p>中断向量 71H，0AH</p>
 </li>
-<li>
-<p>用户可置换的中断向量 71H，0AH</p>
+<li><p>用户可置换的中断向量 71H，0AH</p>
 </li>
-<li>
-<p>实现流程：</p>
+<li><p>实现流程：</p>
 <ol>
-<li>
-<p>把外扩中断源请求(由低电平到高电平的越变)接入ISA总线B4端子。</p>
+<li><p>把外扩中断源请求(由低电平到高电平的越变)接入ISA总线B4端子。</p>
 </li>
-<li>
-<p>开放用户中断</p>
-<p>IN		AL,0A1H</p>
+<li><p>开放用户中断</p>
+<p>IN        AL,0A1H</p>
 <p>AND    AL,11111101H</p>
-<p>OUT	0A1H,AL               ;从8259A IMR1置0</p>
-<p>IN		AL,11111011H</p>
-<p>OUT	21H,AL                  ;主8259A IMR2置0</p>
+<p>OUT    0A1H,AL               ;从8259A IMR1置0</p>
+<p>IN        AL,11111011H</p>
+<p>OUT    21H,AL                  ;主8259A IMR2置0</p>
 </li>
-<li>
-<p>置换中断向量</p>
+<li><p>置换中断向量</p>
 <p>71H,0AH都可以上面 第五点中断向量写入 那一套流程</p>
 </li>
-<li>
-<p>用户中断服务子程序结束，向8259A写结束字</p>
+<li><p>用户中断服务子程序结束，向8259A写结束字</p>
 <ul>
-<li>
-<p>若用户中断定义为0AH型，服务程序结束只向主8259A送结束命令</p>
-<p>MOV	AL,20H</p>
-<p>OUT	20H,AL</p>
+<li><p>若用户中断定义为0AH型，服务程序结束只向主8259A送结束命令</p>
+<p>MOV    AL,20H</p>
+<p>OUT    20H,AL</p>
 </li>
-<li>
-<p>若用户中断定义为71H型，服务程序结束结束前向主、从8259A各送一中断结束命令</p>
-<p>MOV	AL,20H</p>
-<p>OUT	20H,AL</p>
-<p>OUT	0A0H,AL</p>
+<li><p>若用户中断定义为71H型，服务程序结束结束前向主、从8259A各送一中断结束命令</p>
+<p>MOV    AL,20H</p>
+<p>OUT    20H,AL</p>
+<p>OUT    0A0H,AL</p>
 </li>
 </ul>
 </li>
@@ -710,162 +631,128 @@
 </li>
 </ul>
 </li>
-<li>
-<p>日时钟中断</p>
+<li><p>日时钟中断 </p>
 <ul>
-<li>
-<p>中断源 系统8254 0#计数器</p>
+<li><p>中断源 系统8254 0#计数器</p>
 </li>
-<li>
-<p>中断向量 08H，1CH</p>
+<li><p>中断向量 08H，1CH</p>
 </li>
-<li>
-<p>用户可置换的中断向量 08H，1CH</p>
+<li><p>用户可置换的中断向量 08H，1CH</p>
 </li>
-<li>
-<p>重点掌握1CH</p>
+<li><p>重点掌握1CH</p>
 <p>1CH型服务程序结束前不需要向主8259A发送结束命令，而08H是需要的</p>
 <p>当用户程序的某项定时操作，其定时周期不等于55ms的整数倍，或小于55ms时，终端服务子程序要用08H型</p>
 </li>
 </ul>
 </li>
-<li>
-<p>键盘中断(只要掌握原理)</p>
+<li><p>键盘中断(只要掌握原理) </p>
 <ul>
-<li>
-<p>中断源 主板键盘接口电路</p>
+<li><p>中断源 主板键盘接口电路</p>
 </li>
-<li>
-<p>中断向量 09H</p>
+<li><p>中断向量 09H</p>
 </li>
-<li>
-<p>由9型服务程序写入键代码，用户用INT 16H访问键盘缓冲区</p>
+<li><p>由9型服务程序写入键代码，用户用INT 16H访问键盘缓冲区</p>
 <p>键盘缓冲区是9型硬中断和INT 16H软中断之间交换信息的缓冲区</p>
 </li>
 </ul>
 </li>
 </ul>
-<h2><span id="八-硬件中断和软件中断的比较">八、硬件中断和软件中断的比较</span></h2>
-<ul>
-<li>
-<p>相同点：</p>
+<h2><span id="八-硬件中断和软件中断的比较">八、硬件中断和软件中断的比较</span></h2><ul>
+<li><p>相同点：</p>
 <ul>
 <li>都会引起程序中止。</li>
 <li>CPU获得中断类型码n后，自动从4<em>n~4</em>n+3单元中取出该中断源的中断向量→IP，CS，从而执行该中断源的中断服务子程序。</li>
 </ul>
 </li>
-<li>
-<p>不同点</p>
+<li><p>不同点</p>
 <ul>
-<li>
-<p>引发中断的方式不同</p>
+<li><p>引发中断的方式不同</p>
 <p>硬件中断是由CPU以外的设备发出的接到引脚INTR和NMI上的中断请求信号引发的，</p>
 <p>而软件中断是由于CPU执行INT n指令而引发的。</p>
 </li>
-<li>
-<p>中断类型码的获取方式不同</p>
+<li><p>中断类型码的获取方式不同</p>
 <p>可屏蔽硬件中断，中断类型码是由中断控制器8259A提高；非屏蔽硬件中断，中断类型码自动产生(不就是02型码 就tm这个)；软件中断，中断类型码是由软件中断指令INT n本身提供的。</p>
 </li>
-<li>
-<p>CPU响应的条件不同</p>
+<li><p>CPU响应的条件不同</p>
 <p>可屏蔽硬件中断是可以被屏蔽的，只有在CPU开中断(I标志位置1)时，才能响应；</p>
 <p>非屏蔽硬件中断和软件中断不能被屏蔽。</p>
 </li>
-<li>
-<p>中断处理程序结束方式不同</p>
+<li><p>中断处理程序结束方式不同</p>
 <p>在可屏蔽硬件中断服务子程序中，中断处理结束后，首先需要向8259A发出中断结束命令，然后执行IRET指令，中断返回；</p>
 <p>而在软件中断服务子程序中，中断处理结束后只需只需IRET指令。</p>
 </li>
 </ul>
 </li>
 </ul>
-<h1><span id="第十章-串行通信-8250芯片">第十章 串行通信 (8250芯片)</span></h1>
-<h2><span id="一-基本概念">一、基本概念</span></h2>
-<ol>
-<li>
-<p>串行通信方式</p>
+<h1><span id="第十章-串行通信-8250芯片">第十章 串行通信 (8250芯片)</span></h1><h2><span id="一-基本概念">一、基本概念</span></h2><ol>
+<li><p>串行通信方式</p>
 <ul>
-<li>
-<p>串行异步通信</p>
+<li><p>串行异步通信</p>
 <p>指一个字符(一帧数据) 用起始位和停止位来完成收发同步</p>
 </li>
-<li>
-<p>串行同步通信</p>
+<li><p>串行同步通信</p>
 <p>采用同步字符来完成收发双发同步的，并要求严格的时钟同步</p>
 </li>
 </ul>
 </li>
-<li>
-<p>异步串行通信的数据传输方式及其特点</p>
+<li><p>异步串行通信的数据传输方式及其特点</p>
 <ul>
-<li>
-<p>单工通信</p>
+<li><p>单工通信</p>
 <p>单工方式只允许数据按照一个固定的方向传送。</p>
 </li>
-<li>
-<p>半双工通信</p>
+<li><p>半双工通信</p>
 <p>半双工要求收、发双方均具备接受和发送数据的能力；</p>
 <p>但由于只有一条信道，数据不能再两个方向上同时传送。</p>
 </li>
-<li>
-<p>全双工通信</p>
+<li><p>全双工通信</p>
 <p>在全双工方式中，收、发双方可以同时进行数据传送。</p>
 </li>
 </ul>
 </li>
-<li>
-<p>异步串行通信一帧数据的格式及通信速率</p>
+<li><p>异步串行通信一帧数据的格式及通信速率</p>
 <ul>
-<li>
-<p><strong>一帧数据的格式</strong></p>
+<li><p><strong>一帧数据的格式</strong></p>
 <p>一帧数据包括起始位、数据位、奇偶校验位和停止位4部分，收、发双方预置的帧数据格式必须一致。</p>
 <img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/%E4%B8%80%E5%B8%A7%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F.jpg" class>
+
 <ul>
-<li>
-<p>起始位</p>
+<li><p>起始位</p>
 <p>传输线上若<strong>没有数据传输时</strong>，<strong>起始位</strong>处于<strong>逻辑1</strong>状态。</p>
 <p>一帧字符<strong>开始</strong>，首先<strong>发送</strong>起始位，<strong>起始位</strong>是一位<strong>逻辑0</strong>。</p>
 <p>接收设备检测到逻辑0信号后，开始接收数据。起始位的作用时使，收、发双方在传输数据位前协调同步。</p>
 </li>
-<li>
-<p>数据位</p>
+<li><p>数据位</p>
 <p>起始位之后是数据位，数据位从最低为开始发送，数据的个数为5~8位。</p>
 <p><strong>需要注意的是，数据位从最低位开始发送，所以实际做题时，要把数据部分倒过来看。</strong></p>
 </li>
-<li>
-<p>奇偶校验位</p>
+<li><p>奇偶校验位</p>
 <p>数据位发送完毕后，发送奇偶校验位。通信双方约定采用一致的奇偶校验方式，</p>
 <p>如果是<strong>偶</strong>校验传输，则<strong>数据位和奇偶校验位逻辑1的总个数应为偶数个</strong>；</p>
 <p>如果是<strong>奇</strong>校验传输，则<strong>数据位和奇偶校验位逻辑1的总个数应为奇数个</strong>；</p>
 <p>也可进行无校验传输。</p>
 </li>
-<li>
-<p>停止位</p>
+<li><p>停止位</p>
 <p>在奇偶校验位之后发送的是停止位。<strong>停止位</strong>可以是1位、1.5位或2位的<strong>逻辑1信号</strong>。</p>
 <p>在传送完成一个字符(一帧数据)，即发送完规定的停止位之后，到开始传送下一个字符(下一帧数据)之前，可以有任意的空闲间隔，这个空闲间隔用逻辑1信号表示。由于这种通信方式中两个字符的间隔是任意的，因此被称为串行异步通信方式。</p>
 </li>
 </ul>
 </li>
-<li>
-<p><strong>通信速率</strong></p>
+<li><p><strong>通信速率</strong></p>
 <p>数据信号速率，即传码率，波特率，每秒传送码元个数，$N_{bd}$，单位为波特Baud；</p>
 <p><strong>数据通信速率</strong>，即传信率，每秒传送二进制码元个数，$R=N_{bd}log_2M$，单位为比特每秒bit/s。</p>
 </li>
 </ul>
 </li>
-<li>
-<p>为实现通信，收发双方一帧数据的<strong>格式</strong>和<strong>通信速率</strong>要保持<strong>一致</strong>。</p>
+<li><p>为实现通信，收发双方一帧数据的<strong>格式</strong>和<strong>通信速率</strong>要保持<strong>一致</strong>。</p>
 </li>
-<li>
-<p>RS-232C信号采用负逻辑。</p>
+<li><p>RS-232C信号采用负逻辑。</p>
 <ul>
-<li>
-<p>区别于TTL电平，即+5V等价于逻辑1，0V等价于逻辑0，</p>
-<p>RS-232C规定-15V<sub>-3V等价于逻辑1，+3V</sub>+15V等价于逻辑0。</p>
+<li><p>区别于TTL电平，即+5V等价于逻辑1，0V等价于逻辑0，</p>
+<p>RS-232C规定-15V<del>-3V等价于逻辑1，+3V</del>+15V等价于逻辑0。</p>
 </li>
-<li>
-<p>当计算机与外设进行通信时，由于TTL电平为正逻辑，因此必须有相应的电平转换电路。通常采用的是MC1488和MC1489电平转换。</p>
+<li><p>当计算机与外设进行通信时，由于TTL电平为正逻辑，因此必须有相应的电平转换电路。通常采用的是MC1488和MC1489电平转换。</p>
 <img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/RS232C.png" class>
+
 <p>MC1488可接收TTL电平，输出RS-232C电平。MC1489可输入RS-232电平，输出TTL电平。</p>
 </li>
 </ul>
@@ -873,11 +760,135 @@
 </ol>
 </li>
 </ul>
-<h2><span id="二-8250芯片">二、8250芯片</span></h2>
-<p>8250内部寄存器的功能。</p>
+<h2><span id="二-8250芯片">二、8250芯片</span></h2><p>8250内部寄存器的功能。</p>
 <p>懒得抄了，看书吧。P346</p>
 <img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/8250%E5%86%85%E9%83%A8%E5%AF%84%E5%AD%98%E5%99%A8.jpg" class>
-<h2><span id="三-8250的编程">三、8250的编程</span></h2>
+
+<h2><span id="三-8250的编程">三、8250的编程</span></h2><ul>
+<li><p>8250的初始化</p>
+<p>先看清楚微机用主串口COM1进行通信，还是用辅助串口COM2进行通信，主串口则是与3F相关的寄存器。辅串口则是与2F相关的寄存器。</p>
+<p>记住<strong>B98B9C</strong>的顺序。</p>
+<ol>
+<li><p>设置通信线控制寄存器(3FBH/2FBH)寻址位D7为1，设置1的意思是接下来要访问除数寄存器。</p>
+</li>
+<li><p>然后就是访问除数寄存器，先写高八位(3F9H/2F9H)，再写低八位(3F8H/2F8H)。</p>
+<p>一般题目里可能只给通信速率(波特率)，可以通过公式：除数=1843200/(16*波特率)</p>
+<p>计算出除数。</p>
+</li>
+<li><p>写一帧帧数据格式，将通信线控制寄存器(3FBH/2FBH)寻址D7为0，访问非除数寄存器；以及根据题目要求写剩下的D6~D0。</p>
+</li>
+<li><p>设置中断允许寄存器(3F9H/2F9H)</p>
+<p>查询方式全0即可，如果说需要用中断方式，那就看一下是发送中断还是接受中断，相应位置1.</p>
+</li>
+<li><p>设置MODEM控制寄存器</p>
+<p>只看D4和D3位。</p>
+<p>如果需要内环自检，D4置1，不需要就置0；</p>
+<p>如果中断方式D3置1，查询方式D3置0；</p>
+</li>
+</ol>
+</li>
+<li><p>8250的应用编程</p>
+<p>8250查询方式下接收和发送程序的编程。</p>
+<ul>
+<li>在发送数据前，读通信线状态寄存器(3FDH/2FDH)获取发送保持寄存器D5或移位寄存器D6是否空闲；</li>
+<li>在接收数据前，读通信线状态寄存器(3FDH/2FDH)获取接收缓冲寄存器D0是否已经接收到1帧数据。</li>
+</ul>
+</li>
+<li><p>8250采用中断方式交换信息，应采取以下措施：</p>
+<ul>
+<li>中断允许寄存器相应位置1</li>
+<li>MODEM控制寄存器D3=1,打通8250的中断请求信号通道</li>
+<li>8259A响应中断屏蔽位开放(主8259A IR3辅串口,IR4主串口)</li>
+<li>CPU处于开中断(STI)</li>
+</ul>
+</li>
+<li><p>掌握有无联络线的自发自收、点全双工、点单工连线方式。p351</p>
+</li>
+</ul>
+<h1><span id="第十章-并行io接口">第十章 并行I/O接口</span></h1><h2><span id="一-8255a定时器计数器">一、8255A定时器/计数器</span></h2><ul>
+<li><p>内部结构、端口地址以及与系统总线的连接</p>
+<ul>
+<li><p>数据总线缓冲器：双向三态8位缓存器，直接与系统总线相连。</p>
+</li>
+<li><p>读写控制逻辑模块：A1/A0负责端口选择，CS/RD/WR 负责读写操作。</p>
+<ul>
+<li><p>A1A0=00，选中A口数据寄存器；</p>
+</li>
+<li><p>A1A0=01，选中B口数据寄存器；</p>
+</li>
+<li><p>A1A0=10，选中C口数据寄存器；</p>
+</li>
+<li><p>A1A0=11，选中8255A控制寄存器；</p>
+</li>
+<li><p>CS=0,RD=0,WR=1,代表从端口读数据</p>
+</li>
+<li><p>CS=0,RD=1,WR=0,代表向端口写数据</p>
+<img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/8255A%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C.png" class></li>
+</ul>
+</li>
+<li><p>A组和B组控制模块：管理A/B口及C口的高/低4位。</p>
+</li>
+<li><p>I/O端口：3个8位的端口寄存器，即A口/B口/C口</p>
+</li>
+<li><p>外部引脚p364</p>
+</li>
+</ul>
+</li>
+<li><p>8255A控制字</p>
+<p>8255A控制字有两个：方式选择控制器和C口按位置0/置1控制字。两个控制字共用一个端口地址，用特征位D7来区分。若D7=1，该方式控制字位方式选择控制字；若D7=0，该控制字为C口按位置0/置1控制字。<strong>8255A的控制字须写入控制寄存器</strong>。</p>
+<p>两种控制字结构详见附录即可。</p>
+</li>
+<li><p>8255A三种工作方式(方式0~方式2)的工作特点和I/O过程</p>
+<img src="/2022/01/06/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/8255A%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F.png" class>
+
+<ul>
+<li><p>方式0：基本型输入输出方式</p>
+<p>当某端口定义为基本输入时，相当于一个输入缓冲器，即对某端口执行一条IN指令，就把输入数据 →CPU；</p>
+<p>当某端口定义为基本输出时，相当于是一个输出锁存器，即CPU对某端口口执行一条OUT指令把数据锁存在端口；</p>
+<p>总结：基本型输入/输出时，8255A和外设之间没有联络信号！</p>
+</li>
+<li><p>方式1：选通型输入输出方式</p>
+</li>
+<li><p>方式2：双向数据传输方式</p>
+</li>
+</ul>
+</li>
+<li><p>8255A初始化编程</p>
+<ul>
+<li><p>首先把方式选择控制字写入控制口，确定所用端口的工作方式</p>
+</li>
+<li><p>如果端口选择为方式1或方式2，还要进一步明确,</p>
+<p>CPU和8255A之间是用查询方式还是用中断方式交换信息，以此来组织C口置0/置1控制子，写入8255A控制口，使相应的中断允许标志(INTE)置0或置1，从而达到禁止或开放中断的目的。</p>
+</li>
+<li><p>完成初始化编程后，</p>
+<ul>
+<li>如果数据口(A,B或C)工作在方式0，直接采用IN/OUT指令对其进行读写。</li>
+<li>如果数据口(A或B)工作在方式1，<ul>
+<li>如果采用查询方式，且A或B定义为<strong>输入口</strong>，先用IN指令读入C口内容，查询其中的IBF=1时，表示CPU可以继续用<strong>IN</strong>指令从A或B口读入外设送来的数据。</li>
+<li>如果采用查询方式，且A或B定义为<strong>输出口</strong>，先用IN指令读入C口内容，查询其中的OBF=1时，表示CPU可以继续用<strong>OUT</strong>指令向A或B口写数据以送给外设。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>注意一个小点，如果端口地址没超过8位就不要用DX间址了，会多此一举。</strong></p>
+</li>
+<li><p>中断向量的置换</p>
+</li>
+</ul>
+<h1><span id="第十一章-8254定时器计数器">第十一章 8254定时器/计数器</span></h1><ul>
+<li><p>基本结构</p>
+<ul>
+<li><p>三个16位计数器</p>
+<p>三个计数器结构完全相同；</p>
+<p>每个计数器对外有三个引脚：GTATEi为门控信号输入端，CLKi为技术脉冲输入端，OUTi为输出信号端。</p>
+<p>初始化编程时，程序员向计数初值寄存器写入计数初值(只要不写入新的初值，该值时钟保持不变)将自动送入16位减1计数器。</p>
+<p>当GATEi=1时，每一个CLKi信号的下降沿使减1计数器减1，当计数器值减到某个规定数值时(取决于设定的工作方式)，OUTi端产生输出信号。</p>
+<p>计数器初值计算公式为：$N=f_{CLK_i}/f_{OUT_i}$</p>
+</li>
+</ul>
+</li>
+</ul>
 
     </div>
 
@@ -1010,12 +1021,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">127k</span>
+    <span title="站点总字数">129k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:56</span>
+    <span title="站点阅读时长">1:57</span>
 </div>
   <!--<div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>-->
