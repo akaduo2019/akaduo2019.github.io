@@ -285,7 +285,6 @@
 
       
         <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s1;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s2</span><span class="params">(<span class="string">"student"</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; s1; <span class="comment">//可用getline(cin,s1)读入待空格的串</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s2.length() &lt;&lt;<span class="built_in">endl</span>;<span class="comment">//string 串名.length() 求串长</span></span><br><span class="line"></span><br><span class="line">s2.insert(<span class="number">7</span>,<span class="string">"&amp;Teacher"</span>);<span class="comment">//向串s2下标为7处中插入 &amp;Teacher</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s2&lt;&lt; <span class="built_in">endl</span>;<span class="comment">//输出结果为student&amp;Teacher</span></span><br><span class="line"></span><br><span class="line">s2.replace(<span class="number">2</span>,<span class="number">4</span>,<span class="string">"ar"</span>);<span class="comment">//将串s2的 以下标2处为起始位置,长度为4的子串  替换成ar</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s2&lt;&lt; <span class="built_in">endl</span>;<span class="comment">//输出结果为start&amp;Teacher</span></span><br><span class="line"></span><br><span class="line">s1=s2.substr(<span class="number">6</span>,<span class="number">7</span>);<span class="comment">//提取串s2中 从下标6开始，长度为7的子串 ，并赋值给s1</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s1 &lt;&lt; <span class="built_in">endl</span>;<span class="comment">//输出结果为Teacher</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> pos =s2.<span class="built_in">find</span>(s1);<span class="comment">//在串s2中寻找s1串是否存在,若存在则返回s1串的第一个字符在s3中的下标</span></span><br><span class="line"></span><br><span class="line">s2.erase(<span class="number">5</span>,<span class="number">8</span>);<span class="comment">//删除串s2的从5下标开始的长度为8的子串</span></span><br></pre></td></tr></table></figure>
-
 <hr>
 <blockquote>
 <p>c_str()函数返回一个指向正规C字符串的指针, 内容与本string串相同.</p>
@@ -294,11 +293,11 @@
 <p>注意:一定要使用strcpy()函数 等来操作方法c_str()返回的指针</p>
 <p>1、比如:最好不要这样:</p>
 <p>char* c;</p>
-<p>string s=”1234”;</p>
+<p>string s=“1234”;</p>
 <p>c = s.c_str(); //c最后指向的内容是垃圾，因为s对象被析构，所以不能直接利用c_str返回的字符串，要利用strcpy等函数进行复制后再使用</p>
 <p>2、其内容被处理应该这样用:</p>
 <p>char c[20];</p>
-<p>string s=”1234”;</p>
+<p>string s=“1234”;</p>
 <p>strcpy(c,s.c_str());</p>
 <p>这样才不会出错，c_str()返回的是一个临时指针，不能对其进行操作。</p>
 <p>3、再举个例子c_str() 以 char* 形式传回 string 内含字符串如果一个函数要求char*参数，可以使用c_str()方法:</p>
