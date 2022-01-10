@@ -286,13 +286,6 @@
   </url>
   
   <url>
-    <loc>http://akaduo2019.github.io/categories/python/</loc>
-    <lastmod>2022-01-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://akaduo2019.github.io/categories/c/</loc>
     <lastmod>2022-01-10</lastmod>
     <changefreq>daily</changefreq>
@@ -301,6 +294,13 @@
   
   <url>
     <loc>http://akaduo2019.github.io/categories/test/</loc>
+    <lastmod>2022-01-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://akaduo2019.github.io/categories/python/</loc>
     <lastmod>2022-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
