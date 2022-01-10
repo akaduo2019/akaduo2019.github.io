@@ -47,13 +47,13 @@
   };
 </script>
 
-  <meta name="description" content="[TOC] 第一章 操作系统概论1.什么是操作系统操作系统的作用和定义（p11）(要点1) 作用  服务用户观点——操作系统作为用户接口和公共服务程序  进程交互观点——操作系统作为进程执行的控制者和协调者  系统实现观点——操作系统作为扩展机或虚拟机 裸机提供的是机器语言接口  资源管理观点——操作系统作为资源的管理者和控制者    定义 操作系统是一组有效管理和控制计算机硬件和软件资源，合理组">
+  <meta name="description" content="第一章 操作系统概论1 什么是操作系统操作系统的作用和定义（p11）(要点1) 作用  服务用户观点——操作系统作为用户接口和公共服务程序  进程交互观点——操作系统作为进程执行的控制者和协调者  系统实现观点——操作系统作为扩展机或虚拟机 裸机提供的是机器语言接口  资源管理观点——操作系统作为资源的管理者和控制者    定义 操作系统是一组有效管理和控制计算机硬件和软件资源，合理组织计算机工作">
 <meta name="keywords" content="note">
 <meta property="og:type" content="article">
 <meta property="og:title" content="操作系统期末复习总汇">
 <meta property="og:url" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;index.html">
 <meta property="og:site_name" content="Akaduo Blog">
-<meta property="og:description" content="[TOC] 第一章 操作系统概论1.什么是操作系统操作系统的作用和定义（p11）(要点1) 作用  服务用户观点——操作系统作为用户接口和公共服务程序  进程交互观点——操作系统作为进程执行的控制者和协调者  系统实现观点——操作系统作为扩展机或虚拟机 裸机提供的是机器语言接口  资源管理观点——操作系统作为资源的管理者和控制者    定义 操作系统是一组有效管理和控制计算机硬件和软件资源，合理组">
+<meta property="og:description" content="第一章 操作系统概论1 什么是操作系统操作系统的作用和定义（p11）(要点1) 作用  服务用户观点——操作系统作为用户接口和公共服务程序  进程交互观点——操作系统作为进程执行的控制者和协调者  系统实现观点——操作系统作为扩展机或虚拟机 裸机提供的是机器语言接口  资源管理观点——操作系统作为资源的管理者和控制者    定义 操作系统是一组有效管理和控制计算机硬件和软件资源，合理组织计算机工作">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E5%B9%B6%E8%A1%8C%E5%B9%B6%E5%8F%91.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E7%94%A8%E6%88%B7%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%8B%E9%97%B4%E7%9A%84%E6%8E%A5%E5%8F%A3.jpg">
@@ -82,7 +82,22 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A81.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;MMU%E5%8A%9F%E8%83%BD%E6%89%A9%E5%85%85.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E7%BC%BA%E9%A1%B5%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86%E7%AE%97%E6%B3%95%E6%B5%81%E7%A8%8B.png">
-<meta property="og:updated_time" content="2022-01-09T07:03:50.560Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;IO%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B1%82%E6%AC%A1.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E6%A0%BC%E5%BC%8F%E5%8C%96.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E6%96%87%E4%BB%B6%E7%9A%84%E7%B1%BB%E5%9E%8B.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E6%96%87%E4%BB%B6%E8%AE%B0%E5%BD%95%E7%9A%84%E6%88%90%E7%BB%84%E4%B8%8E%E5%88%86%E8%A7%A3.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E5%88%86%E5%8C%BA%E5%92%8C%E7%9B%AE%E5%BD%95.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E7%B4%A2%E5%BC%95%E8%8A%82%E7%82%B9.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E5%8D%95%E7%BA%A7%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E4%B8%A4%E7%BA%A7%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E6%A0%91%E5%BD%A2%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%9A%84%E6%A3%80%E7%B4%A2.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%9A%84%E6%A3%80%E7%B4%A22.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%9A%84%E5%AE%9E%E7%8E%B0.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%BB%93%E6%9E%84.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E6%96%87%E4%BB%B6%E7%89%A9%E7%90%86%E7%BB%93%E6%9E%84%E5%B0%8F%E6%80%BB%E7%BB%93.png">
+<meta property="og:updated_time" content="2022-01-10T16:46:54.639Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;akaduo2019.github.io&#x2F;2021&#x2F;12&#x2F;29&#x2F;%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87&#x2F;%E5%B9%B6%E8%A1%8C%E5%B9%B6%E5%8F%91.png">
 
@@ -273,7 +288,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-01-09 15:03:50" itemprop="dateModified" datetime="2022-01-09T15:03:50+08:00">2022-01-09</time>
+                <time title="修改时间：2022-01-11 00:46:54" itemprop="dateModified" datetime="2022-01-11T00:46:54+08:00">2022-01-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -293,14 +308,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>15k</span>
+              <span>21k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>14 分钟</span>
+              <span>19 分钟</span>
             </span>
 
         </div>
@@ -312,8 +327,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>[TOC]</p>
-<h1><span id="第一章-操作系统概论">第一章 操作系统概论</span></h1><h2><span id="1什么是操作系统">1.什么是操作系统</span></h2><h3><span id="操作系统的作用和定义p11要点1">操作系统的作用和定义（p11）(要点1)</span></h3><ul>
+        <h1><span id="第一章-操作系统概论">第一章 操作系统概论</span></h1><h2><span id="1-什么是操作系统">1 什么是操作系统</span></h2><h3><span id="操作系统的作用和定义p11要点1">操作系统的作用和定义（p11）(要点1)</span></h3><ul>
 <li><p>作用</p>
 <ul>
 <li><p>服务用户观点——操作系统作为用户接口和公共服务程序</p>
@@ -333,7 +347,7 @@
 </ul>
 <a id="more"></a>
 
-<h2><span id="2操作系统的演进和分类">2.操作系统的演进和分类</span></h2><h3><span id="操作系统的演进p16">操作系统的演进（p16）</span></h3><ul>
+<h2><span id="2-操作系统的演进和分类">2 操作系统的演进和分类</span></h2><h3><span id="操作系统的演进p16">操作系统的演进（p16）</span></h3><ul>
 <li><p>第一代 真空管和穿孔卡片</p>
 </li>
 <li><p>第二代 晶体管和批处理系统</p>
@@ -394,7 +408,7 @@
 </ul>
 </li>
 </ul>
-<h2><span id="3-操作系统的功能和特性">3. 操作系统的功能和特性</span></h2><h3><span id="计算机系统的组成与运行ppt-p51">计算机系统的组成与运行（PPT p51）</span></h3><h3><span id="操作系统的功能p12">操作系统的功能（p12）</span></h3><p>(概述，在后续章节中会详细介绍)</p>
+<h2><span id="3-操作系统的功能和特性">3 操作系统的功能和特性</span></h2><h3><span id="计算机系统的组成与运行ppt-p51">计算机系统的组成与运行（PPT p51）</span></h3><h3><span id="操作系统的功能p12">操作系统的功能（p12）</span></h3><p>(概述，在后续章节中会详细介绍)</p>
 <ul>
 <li><p>处理器管理</p>
 <p>按照一定的算法把处理器分配给<strong>进程</strong>，并对其进行有效的管理和控制。</p>
@@ -460,7 +474,7 @@
 <p>操作系统的并发性、共享性、异步性、虚拟性四个特征不是相互独立的，具有密切的关系：并发和共享是操作系统的两个最基本的特征，它们又是互为存在的条件。虚拟技术为共享提供了更好的条件，而并发与共享是导致异步性的根本原因。</p>
 </li>
 </ul>
-<h2><span id="4操作系统的服务和用户接口">4.操作系统的服务和用户接口</span></h2><h3><span id="基本服务p23">基本服务（p23）</span></h3><ul>
+<h2><span id="4-操作系统的服务和用户接口">4 操作系统的服务和用户接口</span></h2><h3><span id="基本服务p23">基本服务（p23）</span></h3><ul>
 <li>提供用户功能的系统服务</li>
 <li>确保系统本身高效运行的服务</li>
 </ul>
@@ -511,7 +525,7 @@
 </ul>
 </li>
 </ul>
-<h2><span id="5操作系统的结构和运行模型">5.操作系统的结构和运行模型</span></h2><h3><span id="操作系统的结构p35要点4">操作系统的结构（p35）(要点4)</span></h3><p>阐述操作系统的整体结构，如功能如何分块，模块之间如何交互等。</p>
+<h2><span id="5-操作系统的结构和运行模型">5 操作系统的结构和运行模型</span></h2><h3><span id="操作系统的结构p35要点4">操作系统的结构（p35）(要点4)</span></h3><p>阐述操作系统的整体结构，如功能如何分块，模块之间如何交互等。</p>
 <ul>
 <li><p>宏内核结构(又称单体式结构)</p>
 <ul>
@@ -786,7 +800,7 @@
 </li>
 </ul>
 <h3><span id="进程控制概述p81">进程控制概述（p81）</span></h3><p>操作系统通过原语来完成进程管理，包括进程控制、进程调度、进程的同步和互斥、进程的通信。</p>
-<h2><span id="3-线程及其实现">3 线程及其实现</span></h2><h2><span id="线程概述p83要点13">线程概述（p83）(要点13)</span></h2><ul>
+<h2><span id="3-线程及其实现">3 线程及其实现</span></h2><h3><span id="线程概述p83要点13">线程概述（p83）(要点13)</span></h3><ul>
 <li><p>线程的引入</p>
 <ul>
 <li><p>引入多线程的动机</p>
@@ -1268,7 +1282,7 @@
 <li>程序链接</li>
 <li>程序装载</li>
 </ul>
-<h2><span id="地址重定位">地址重定位</span></h2><p><strong>逻辑地址转化为物理地址</strong>的过程称为地址映射或称<strong>地址重定位</strong>或称地址转换。</p>
+<h3><span id="地址重定位">地址重定位</span></h3><p><strong>逻辑地址转化为物理地址</strong>的过程称为地址映射或称<strong>地址重定位</strong>或称地址转换。</p>
 <ul>
 <li><p>静态地址重定位</p>
 <p>由装载程序在将可执行代码装入内存时一次性完成重定位，将其中所有逻辑地址修改成物理地址。</p>
@@ -1409,6 +1423,7 @@
 </ul>
 <h2><span id="5虚拟存储管理-考点713">5虚拟存储管理 (考点7/13)</span></h2><h3><span id="概念和关键技术p215">概念和关键技术（p215）</span></h3><img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A81.png" class>
 
+<p>部分交换和部分覆盖</p>
 <h3><span id="请求分页及硬件支持p217">请求分页及硬件支持（p217）</span></h3><ul>
 <li><p>何为请求分页？</p>
 <p>在进程的执行过程中，页面仅在需要时被载入内存；那些从未被访问的页面将永远不会调入内存。</p>
@@ -1472,7 +1487,7 @@
 </ul>
 </li>
 </ul>
-<h3><span id="页面置换算法p224~227考点813">页面置换算法（p224~227）(考点8/13)</span></h3><ul>
+<h3><span id="页面置换算法又称页面淘汰算法p224~227考点813">页面置换算法——又称页面淘汰算法（p224~227）(考点8/13)</span></h3><ul>
 <li><p>最佳页面置换算法OPT</p>
 <p>从页面访问序列中选择永不使用或是在最长时间内不再被访问(即句现在最长时间才会被访问)的页面淘汰出内存。</p>
 </li>
@@ -1485,7 +1500,539 @@
 <p>使用一个特殊队列实现，队列存放当前内存中的页号，队列头指向最久未访问的页，队列尾指向最近访问的页，每执行一次页面访问就做一次队列调整：如果页面在内存中，则将该页调整至队列尾；如果发生缺页，则淘汰队列头指向的那一页。</p>
 </li>
 </ul>
-<h3><span id="抖动问题及解决方案ppt-p127">抖动问题及解决方案（PPT p127）</span></h3>
+<h3><span id="抖动问题及解决方案ppt-p127">抖动问题及解决方案（PPT p127）</span></h3><ul>
+<li>抖动：刚被淘汰的页面立即又要调用，而调入不久随即被淘汰，淘汰不久再被调入，如此反复，使得整个系统的页面调度非常频繁，以致大部分时间都花在来回调度页面上，而不是执行计算任务，这种现象叫做”抖动”或”颠簸”。</li>
+<li>成因：<ul>
+<li>并发进程数量过多</li>
+<li>进程页框分配不合理</li>
+</ul>
+</li>
+<li>解决方案：<ul>
+<li>基于工作集策略的解决方案</li>
+<li>基于缺页中断率的解决方案：测量和控制缺页中断率，动态调节分配给进程的页框数，以防止抖动</li>
+<li>终极解决方案：增加物理内存</li>
+</ul>
+</li>
+</ul>
+<h1><span id="第五章-设备管理">第五章 设备管理</span></h1><h2><span id="1-io硬件原理">1 I/O硬件原理</span></h2><h3><span id="io硬件组成p255">I/O硬件组成（p255）</span></h3><ul>
+<li><p>设备分类</p>
+<ul>
+<li>存储型设备 磁盘<ul>
+<li>磁盘、磁带等。</li>
+<li>大容量存储和快速检索为目标。</li>
+</ul>
+</li>
+<li>I/O型设备 终端<ul>
+<li>显示器、打印机、键盘、鼠标、通信设备等。</li>
+<li>人机交互或计算机间通信。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>设备连接计算机的基本要素</p>
+<ul>
+<li><p>总线</p>
+<p>一组线路和一组定义在线路上传输数据的协议。</p>
+</li>
+<li><p>端口</p>
+<p>设备与计算机的连接点。</p>
+</li>
+<li><p>控制器</p>
+</li>
+<li><p>用来操作端口、总线或设备的一组电子器件。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3><span id="io控制方式p256">I/O控制方式（p256）</span></h3><p>I/O控制方式，即CPU对I/O操作的控制方式。</p>
+<ul>
+<li><p>轮询，又称程序I/O控制方式</p>
+</li>
+<li><p>中断——中断机制的引入</p>
+</li>
+<li><p>DMA——DMA控制器、数据传输单位扩大</p>
+<p>内存与外设直接进行数据交换</p>
+</li>
+<li><p>通道——通道、I/O操作和数据传送的独立</p>
+<p>通道又称输入输出处理器，是独立于CPU的专门实现输入输出工作的处理器；</p>
+<p>通道以内存为中心，控制设备和内存之间进行数据传输，把CPU从琐碎的输入输出操作中解放出来；</p>
+<p>通道一般用于具有较多高速外设的大型计算机系统。</p>
+</li>
+</ul>
+<h2><span id="2-io软件原理">2 I/O软件原理</span></h2><h3><span id="io设计目标和原则p260">I/O设计目标和原则（p260）</span></h3><ul>
+<li>设计目标：<ul>
+<li><strong>高效率</strong>：核心效率问题是<strong>磁盘的I/O效率</strong>。</li>
+<li><strong>通用性</strong>：<strong>采用层次化的方法设计I/O软件系统，屏蔽低层硬件细节</strong>。</li>
+</ul>
+</li>
+</ul>
+<p>I/O软件系统的层次：</p>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/IO%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B1%82%E6%AC%A1.png" class>
+
+<h3><span id="io中断处理程序p260">I/O中断处理程序（p260）</span></h3><ul>
+<li>I/O中断处理程序是设备驱动程序的组成部分，位于操作系统低层</li>
+<li>功能：处理I/O中断，报告错误，唤醒驱动程序等</li>
+</ul>
+<h3><span id="io设备驱动程序p261">I/O设备驱动程序（p261）</span></h3><ul>
+<li><p>该层包含与设备密切相关的代码，每种设备类型都应该有对应的设备驱动程序；</p>
+<p>设备驱动负责I/O设备的初始化，执行I/O设备的驱动例程，执行中断处理例程。</p>
+</li>
+</ul>
+<h3><span id="独立于设备的io软件p262">独立于设备的I/O软件（p262）</span></h3><ul>
+<li><p><strong>执行适用于所有设备的常用I/O功能，并向用户层软件提供一致性接口</strong></p>
+</li>
+<li><p>功能：</p>
+<p>设备命名和设备保护</p>
+<p>提供独立于设备的块大小</p>
+<p>缓冲区管理——<strong>缓冲技术</strong></p>
+<p><strong>设备分配</strong>和<strong>状态跟踪</strong></p>
+<p>错误报告</p>
+</li>
+</ul>
+<h3><span id="用户空间的io软件p263">用户空间的I/O软件（p263）</span></h3><ul>
+<li><strong>实现与用户交互的接口</strong>，用户可以直接调用在用户层提供的与I/O操作有关的库函数，如I/O系统调用、I/O格式化、<strong>SPOOLing</strong>等</li>
+<li>库函数</li>
+<li>SPOOLing软件</li>
+</ul>
+<p>(独立于设备的I/O软件)缓冲技术、设备分配  和  (用户空间的I/O软件)SPOOLing技术：</p>
+<ul>
+<li><p>缓冲技术</p>
+<ul>
+<li>缓冲区是系统在<strong>内存中</strong>开辟的一个专门区域，用于临时存放I/O操作的数据</li>
+<li>缓冲区的主要用途是处理生产者设备和消费者设备之间<strong>数据流速度不匹配</strong>的问题</li>
+</ul>
+</li>
+<li><p>设备分配及调度</p>
+<p>设备分配方式——依赖于设备的物理特性</p>
+<ul>
+<li><p>独占分配方式——大多数低俗设备都适合采用这种分配方式</p>
+<p>将一个设备分配给某个进程后便已知由该进程独占，直至该进程完成或释放该设备，系统才能将该设备分配给其他进程使用。</p>
+</li>
+<li><p>共享分配方式</p>
+<p>对于高速共享设备(如磁盘)一般不进行分配，主要工作是驱动调度</p>
+</li>
+<li><p>虚拟分配方式——如SPOOling技术</p>
+<p>在分配时并不是真实的物理设备，而只是在高速磁盘中为进程分配的存储区，实现对慢速独占设备的模拟分配和共享。</p>
+</li>
+</ul>
+</li>
+<li><p>SPOOLing技术，即假的脱机技术。</p>
+<p>操作系统中采用的一项将独占设备改造成共享设备的技术。</p>
+<p>借助于高速随机外存(<strong>磁盘</strong>)的支持。</p>
+</li>
+</ul>
+<ul>
+<li>I/O请求生命周期</li>
+</ul>
+<p>课本P264 图5-1</p>
+<h2><span id="3-磁盘管理">3 磁盘管理</span></h2><p>磁盘是可共享设备，但每一时刻至多只能有一个进程启动它。</p>
+<h3><span id="磁盘参数">磁盘参数</span></h3><ul>
+<li><p>磁盘块定位三要素</p>
+<ul>
+<li><p>柱面号</p>
+<p>指盘面上的磁道号，磁道号由外向里，不同盘面上具有相同编号的磁道属于同一柱面；</p>
+</li>
+<li><p>磁头号</p>
+<p>指出读写磁头所在的盘面，磁头号从上到下的盘面次序从0开始编号；</p>
+</li>
+<li><p>扇区号</p>
+<p>按磁盘旋转方向从0开始给各扇区编号</p>
+</li>
+</ul>
+</li>
+<li><p>磁盘恒定角速度和恒定线速度</p>
+<ul>
+<li><p>恒定角速度</p>
+<p>所有磁道的扇区数相等，内部磁道到外部磁道的比特密度不断降低</p>
+<p>磁盘转速恒定</p>
+<p>用于磁盘</p>
+</li>
+<li><p>恒定线速度</p>
+<p>每个磁道的比特密度均匀</p>
+<p>外磁道扇区比内磁道多，可存放更多的数据</p>
+<p>为保持传输数据率的恒定，随着柱面的改变转速要不断变化</p>
+<p>用于CD-ROM和DVD-ROM驱动器</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3><span id="磁盘格式化">磁盘格式化</span></h3><ul>
+<li><p>低级格式化</p>
+<ul>
+<li>又称<strong>物理格式化</strong></li>
+<li>将盘片划出磁道、扇区</li>
+<li>为每个扇区使用特殊的数据结构进行填充，包括一个头部、数据区域和一个尾部</li>
+</ul>
+</li>
+<li><p>高级格式化</p>
+<ul>
+<li>又称<strong>逻辑格式化</strong></li>
+<li>划分由相邻柱面组成的多个分区</li>
+<li>为分区构建文件系统，在磁盘上初始化文件系统数据结构，如空闲、已分配分区表、一个空目录。</li>
+</ul>
+</li>
+</ul>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E6%A0%BC%E5%BC%8F%E5%8C%96.png" class>
+
+<ul>
+<li><p>磁盘的性能指标</p>
+<p>查找一个物理块的顺序是：柱面号、磁头号、扇区号，其中柱面号和磁头号都是为了确定磁道。</p>
+<ul>
+<li><p>寻道时间$T_s$</p>
+<p>将磁头定位到正确磁道(柱面)上所花的时间，与盘片直径和传动臂速度相关，一般会直接给出。</p>
+</li>
+<li><p>旋转延迟$T_r$</p>
+<p>指定扇区旋转到磁头下面所经历的平均延迟时间：$T_r=1/2*r$，r为磁盘的旋转速度。</p>
+</li>
+<li><p>传输时间$T_t$</p>
+<p>传输扇区内数据的时间，同样取决于磁盘的旋转速度。</p>
+<p>$T_t=b/(r*N)$，b为要传送的字节数，N为一个磁道中的字节数，r为转速，N×r是磁盘的数据传输速率。</p>
+</li>
+<li><p>磁盘完成一次I/O的平均访问时间=寻道时间+旋转延迟+传输时间</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3><span id="移动臂调度算法p270~274考点1013">移动臂调度算法（p270~274）(考点10/13)</span></h3><p>又叫磁盘调度技术。</p>
+<ul>
+<li>看大题考点部分<ul>
+<li>先来先去</li>
+<li>最短寻道时间优先</li>
+<li>扫描</li>
+<li>循环扫描</li>
+<li>电梯</li>
+</ul>
+</li>
+</ul>
+<h3><span id="独立磁盘冗余阵列ppt-p82">独立磁盘冗余阵列（PPT p82）</span></h3><p>直到RAID0是无冗余的磁盘阵列，无冗余就是没校验位，无容错能力，系统可靠性差，但架不住速度快。</p>
+<h1><span id="第六章-文件管理">第六章 文件管理</span></h1><h2><span id="1-文件">1 文件</span></h2><h3><span id="基本概念p297">基本概念（p297）</span></h3><ul>
+<li><p>怎么看文件？</p>
+<ul>
+<li><p>用户观点——文件逻辑结构</p>
+<p>文件是一些具有结构的信息集合，如一篇文章分成很多段落、一个程序分成很多函数。</p>
+</li>
+<li><p>系统观点——文件物理结构</p>
+<p><strong>文件就是一组存放在扇区里的数据，不关心它的内容和格式。</strong></p>
+</li>
+</ul>
+</li>
+<li><p>文件系统是指文件、管理文件的软件及数据结构的总体。</p>
+</li>
+<li><p>文件系统的功能</p>
+<p>主要目的是实现<strong>对文件的”按名存取”</strong>:</p>
+<ul>
+<li>文件的命名</li>
+<li>实现文件从逻辑结构和物理结构映射</li>
+<li>统一管理文件存储空间，实施存储空间的分配与回收</li>
+<li>实现文件信息的共享，并提供文件保护和保密机制</li>
+<li>向用户提供一个方便使用的接口</li>
+</ul>
+</li>
+</ul>
+<h3><span id="文件类型和属性p299">文件类型和属性（p299）</span></h3><ul>
+<li><p>文件的类型</p>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E6%96%87%E4%BB%B6%E7%9A%84%E7%B1%BB%E5%9E%8B.png" class></li>
+<li><p>文件的属性</p>
+<ul>
+<li>文件名——<strong>按名存取</strong></li>
+<li>类型</li>
+<li>大小</li>
+<li>位置</li>
+<li>创建时间、修改时间</li>
+<li>文件所有者ID</li>
+<li>存取权限</li>
+</ul>
+</li>
+</ul>
+<h3><span id="文件的逻辑结构p305">文件的逻辑结构（p305）</span></h3><img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84.png" class>
+
+<ul>
+<li><p>流式文件</p>
+<p>文件中的信息仅仅是一串顺序的字符集合，没有明显的结构。操作系统所见到的只是字节流，其文件内容的任何含义<strong>在用户程序中解释</strong>。</p>
+</li>
+<li><p>记录式文件</p>
+<p>文件的信息单位是逻辑记录，一个逻辑记录包含了若个数据项，记录分为：<strong>定长</strong>记录和<strong>变长</strong>记录</p>
+<ul>
+<li><p>记录的成组与分解</p>
+<p>磁盘空间分配、内存和磁盘之间的I/O传输以块(簇)为单位的，逻辑记录的大小和物理块不相等。</p>
+<ul>
+<li>成组：将若干逻辑记录打包成组后再装入物理块的过程。</li>
+<li>分解：把一个物理块里的逻辑记录分离出来的过程。</li>
+</ul>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E6%96%87%E4%BB%B6%E8%AE%B0%E5%BD%95%E7%9A%84%E6%88%90%E7%BB%84%E4%B8%8E%E5%88%86%E8%A7%A3.png" class></li>
+</ul>
+</li>
+</ul>
+<h3><span id="文件的物理结构p308-见最后第二点">文件的物理结构（p308） 见最后第二点</span></h3><h3><span id="文件的存取方法p300或叫文件的访问方法">文件的存取方法（p300）或叫文件的访问方法</span></h3><ul>
+<li><p>顺序存取(访问)——磁带模型</p>
+</li>
+<li><p>直接存取——磁盘模型</p>
+<p>若文件的<strong>逻辑记录长度固定</strong>，那么允许在访问文件信息时可按任意顺序进行快速读取和写入。</p>
+</li>
+<li><p>索引存取</p>
+<p>基于索引文件的存取方法；</p>
+<p>文件记录按键值排序。</p>
+</li>
+</ul>
+<h3><span id="文件的访问控制">文件的访问控制</span></h3><p>文件的访问控制一般有：读r、写w、执行x——4、2、1</p>
+<p>owner、group、others</p>
+<h2><span id="2-文件目录">2 文件目录</span></h2><h3><span id="概述">概述</span></h3><ul>
+<li><p>分区：将一个磁盘分若干分区，安装了文件系统的分区称为卷，每个磁盘至少一个卷</p>
+</li>
+<li><p>目录：存储一个分区中的文件信息</p>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E5%88%86%E5%8C%BA%E5%92%8C%E7%9B%AE%E5%BD%95.png" class></li>
+<li><p>目录管理的功能</p>
+<ul>
+<li>允许文件重名</li>
+<li>按名存取</li>
+<li>提高检索速度</li>
+<li>文件共享</li>
+</ul>
+</li>
+<li><p>文件目录实现的关键</p>
+<ul>
+<li>目录项与文件物理地址的关联方法：<ul>
+<li>目录项的构成</li>
+<li>文件的物理结构</li>
+</ul>
+</li>
+<li>在目录中”按名”搜索的效率：<ul>
+<li>目录的结构</li>
+<li>目录检索和实现</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>目录文件</p>
+<ul>
+<li>文件目录也用文件形式保存在磁盘上，被称为目录文件，包含该目录的所有文件和子目录的目录项；</li>
+<li>目录文件具有固定格式，由系统生成并管理，用户不能直接访问目录；</li>
+<li>目录文件不能为空，至少包括两个目录项，即当前目录项”.”和父目录项”..”。</li>
+</ul>
+</li>
+<li><p>目录项</p>
+<p><strong>俩个体系</strong>下的目录项</p>
+<ul>
+<li>文件控制块(FCB)</li>
+<li>文件名&amp;索引节点(inode)编号</li>
+</ul>
+</li>
+</ul>
+<h3><span id="fcb和inode">FCB和inode</span></h3><ul>
+<li><p>文件控制块FCB</p>
+<p>每一条目录项中有一个FCB。</p>
+<ul>
+<li>操作系统为每个文件建立的包含文件全部属性信息的唯一数据结构，其目的时为方便操作系统对文件的管理控制和存取。</li>
+<li>文件被创建时，系统为其建立一个FCB，用来记录文件的信息</li>
+<li>在该体系下，文件=FCB+文件体；</li>
+<li>每当存取文件时，先找其FB，将其读入内存，再从中找到文件首块物理位置或索引表，随后存取文件信息。</li>
+</ul>
+</li>
+<li><p>引入索引节点inode</p>
+<ul>
+<li><p>目录项由文件名和inode号组成。</p>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E7%B4%A2%E5%BC%95%E8%8A%82%E7%82%B9.png" class>
+
+<ul>
+<li>文件=目录项+inode+文件体</li>
+</ul>
+</li>
+<li><p>Linux的inode包含信息</p>
+<ul>
+<li>文件类型</li>
+<li>文件的ACL</li>
+<li>文件的硬连接数量</li>
+<li>文件主的用户ID</li>
+<li>文件的所属组ID</li>
+<li>文件字节数</li>
+<li>文件最后访问的日期和时间atime</li>
+<li>文件最后修改的日期和时间mtime</li>
+<li>文件状态最后修改的日期和时间ctime</li>
+<li><strong>含15个盘块地址的数组</strong></li>
+</ul>
+</li>
+<li><p>Linux读取硬盘的基本单位是块(block)，连续八个扇区(sector)组成一个bolck，一个block大小为4KB</p>
+</li>
+</ul>
+</li>
+<li><p>目录结构</p>
+<ul>
+<li><p>单级目录结构</p>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E5%8D%95%E7%BA%A7%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" class></li>
+<li><p>两级</p>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E4%B8%A4%E7%BA%A7%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" class></li>
+<li><p>树形</p>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E6%A0%91%E5%BD%A2%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" class></li>
+</ul>
+</li>
+<li><p>文件目录的检索</p>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%9A%84%E6%A3%80%E7%B4%A2.png" class>
+
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%9A%84%E6%A3%80%E7%B4%A22.png" class></li>
+<li><p>文件目录的实现</p>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%9A%84%E5%AE%9E%E7%8E%B0.png" class></li>
+<li><p>文件的共享</p>
+<p>文件共享是指多个用户共同使用同一个文件。在Linux中，可通过链接实现文件共享。</p>
+<p>看大题部分</p>
+<ul>
+<li><p>硬链接——基于索引节点的链接 ln myfile.txt my-hard-link</p>
+<p>实现原理：</p>
+<ul>
+<li><strong>多个文件名</strong>链接到<strong>同一个索引节点</strong>。</li>
+<li>索引节点的引用计数记录在索引结点的链接计数中，若其减至0，则文件被删除</li>
+</ul>
+<p>优点：</p>
+<ul>
+<li>实现简单，访问速度快，能实现文件的异名共享。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li><strong>只</strong>允许在<strong>同一个文件系统</strong>范围内进行，不允许跨文件系统；</li>
+<li><strong>文件拥有者不能删除被他人共享的文件</strong>。</li>
+</ul>
+</li>
+<li><p>软连接——基于符号的链接 ln -s myfile.txt my-soft-link</p>
+<p>实现原理：</p>
+<ul>
+<li>特殊类型的文件，其<strong>内容是另一个目录或文件路径的链接</strong></li>
+<li>建立符号链接文件，并不影响原文件——它们是独立的文件</li>
+</ul>
+<p>优点:</p>
+<ul>
+<li>文件所有者能删除被他人共享的文件</li>
+<li>给出何时的文件路径名，即可链接网络中任何地方计算机中的文件</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>当其他用户读共享文件时，需要根据文件路径名的各个分量逐个查找，访问开销大</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2><span id="3-文件系统">3 文件系统</span></h2><h3><span id="文件系统组成ppt-p62">文件系统组成（PPT p62）</span></h3><p>文件系统的组成部分：</p>
+<ul>
+<li><p>逻辑文件系统</p>
+<p>管理文件系统的元数据信息，如文件控制块FCB、目录结构、文件保护等</p>
+</li>
+<li><p>文件组织模块</p>
+<p>实现<strong>文件逻辑块号向物理块号的转换</strong>以及空闲空间管理。</p>
+</li>
+<li><p>基本文件系统</p>
+<p>以<strong>磁盘地址标识</strong>要读写的物理块，向设备驱动程序发送读写命令，读取和写入磁盘物理块。</p>
+</li>
+</ul>
+<h3><span id="通用数据结构ppt-p64">通用数据结构（PPT p64）</span></h3><ul>
+<li><p>磁盘管理结构</p>
+<ul>
+<li><p>引导块 boot block</p>
+<p>卷的第一块，包含引导操作系统所需的信息</p>
+</li>
+<li><p>超级块 superblock</p>
+<p>包括卷(或分区)的详细信息，分区的块的数量、块的大小、空闲块的数量和指针，空闲FCB数量和FCB指针等</p>
+</li>
+<li><p>目录结构</p>
+<p>用于组织文件</p>
+</li>
+<li><p>文件控制块/inode</p>
+<p>包含该文件的详细些信息</p>
+</li>
+</ul>
+</li>
+<li><p>内存管理结构</p>
+<ul>
+<li><p>进程打开文件表</p>
+<p>进程PCB的一个数据域，记录进程所有打开文件的集合。该域每条记录指向系统打开文件表中的一个表项。</p>
+</li>
+<li><p>系统打开文件表</p>
+<p>记录系统所有打开文件的当前位置、引用计数、指向活动inode表对应表项的指针</p>
+</li>
+<li><p>活动inode表</p>
+<p>存放最近打开文件的inode</p>
+</li>
+</ul>
+<p>系统打开文件表和活动inode表是所有进程共享的。</p>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%BB%93%E6%9E%84.png" class></li>
+</ul>
+<h3><span id="文件的物理结构">文件的物理结构</span></h3><ul>
+<li><p>顺序文件——连续分配</p>
+<ul>
+<li>分配原理<ul>
+<li>文件中逻辑上连续的信息存储在磁盘上也保持连续的结构</li>
+<li><strong>文件目录</strong>记录<strong>文件第一块的块号和块数</strong></li>
+<li>逻辑结构和物理结构相同</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>简单，只需要记录文件的起始块号和长度</li>
+<li>寻道时间最少</li>
+<li>支持直接存取</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>存在外部碎片</li>
+<li>必须实现直到文件的长度，且不适合文件的增长</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>链接文件——链接分配，属于离散分配</p>
+<ul>
+<li><p>分配原理</p>
+<ul>
+<li>通过盘块上的指针实现同一文件多个离散物理盘块的链接；</li>
+<li><strong>文件目录</strong>记录了<strong>文件第一块和最后以块的块号</strong>；</li>
+<li>各块之间通过指针连接。</li>
+</ul>
+</li>
+<li><p>优点</p>
+<ul>
+<li>消除了外部碎片，外存利用率高</li>
+<li>按需分配，无需事先知道文件长度</li>
+<li>支持文件动态增长，方便文件增删改查</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>指针占用盘块额外空间</li>
+<li>只适合顺序访问，对随机存取及其低效</li>
+<li>存在断链可能，可靠性差</li>
+</ul>
+<p>为了提高检索速度和减少指针占用的存储空间，可将几个盘块组成一个簇，以簇为单位进行盘块分配。这种方法会产生内部碎片，对小文件特别明显。</p>
+</li>
+</ul>
+</li>
+<li><p>索引文件</p>
+<ul>
+<li>分配原理<ul>
+<li>将文件占用的所有物理块号按逻辑顺序保存在一张索引表中，存有索引表的物理块称为索引块</li>
+<li>目录项指出索引块块号</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>随机访问</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>索引块占用磁盘空间</li>
+</ul>
+</li>
+<li><strong>多级索引大题！！！</strong></li>
+</ul>
+</li>
+</ul>
+<img src="/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/%E6%96%87%E4%BB%B6%E7%89%A9%E7%90%86%E7%BB%93%E6%9E%84%E5%B0%8F%E6%80%BB%E7%BB%93.png" class>
+
+<h3><span id="空闲空间管理ppt-p88">空闲空间管理（PPT p88）</span></h3><ul>
+<li><strong>位示图</strong>(大题)<ul>
+<li>原理：每一个磁盘块用一个位来标识，如果磁盘块空闲，位位0；如果已分配，位为1。</li>
+<li>优点是非常高效</li>
+<li>具体实现看大体部分</li>
+</ul>
+</li>
+<li>空闲盘块链表</li>
+</ul>
+
     </div>
 
     
@@ -1620,12 +2167,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">131k</span>
+    <span title="站点总字数">137k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:59</span>
+    <span title="站点阅读时长">2:04</span>
 </div>
   <!--<div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>-->
