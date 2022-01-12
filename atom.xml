@@ -6,7 +6,7 @@
   <link href="http://akaduo2019.github.io/atom.xml" rel="self"/>
   
   <link href="http://akaduo2019.github.io/"/>
-  <updated>2022-01-08T08:27:52.597Z</updated>
+  <updated>2022-01-12T15:28:30.908Z</updated>
   <id>http://akaduo2019.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>市场营销</title>
+    <link href="http://akaduo2019.github.io/2022/01/12/%E5%B8%82%E5%9C%BA%E8%90%A5%E9%94%80/"/>
+    <id>http://akaduo2019.github.io/2022/01/12/%E5%B8%82%E5%9C%BA%E8%90%A5%E9%94%80/</id>
+    <published>2022-01-12T13:41:04.000Z</published>
+    <updated>2022-01-12T15:28:30.908Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="杂项" scheme="http://akaduo2019.github.io/categories/%E6%9D%82%E9%A1%B9/"/>
+    
+    
+    <category term="note" scheme="http://akaduo2019.github.io/tags/note/"/>
+    
+  </entry>
   
   <entry>
     <title>微机原理期末复习</title>
@@ -133,7 +158,7 @@
     <link href="http://akaduo2019.github.io/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/"/>
     <id>http://akaduo2019.github.io/2021/12/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E6%80%BB%E6%B1%87/</id>
     <published>2021-12-29T11:55:08.000Z</published>
-    <updated>2022-01-11T00:57:20.756Z</updated>
+    <updated>2022-01-11T01:44:44.498Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;第一章-操作系统概论&quot;&gt;&lt;a href=&quot;#第一章-操作系统概论&quot; class=&quot;headerlink&quot; title=&quot;第一章 操作系统概论&quot;&gt;&lt;/a&gt;第一章 操作系统概论&lt;/h1&gt;&lt;h2 id=&quot;1-什么是操作系统&quot;&gt;&lt;a href=&quot;#1-什么是操作系统&quot; class=&quot;headerlink&quot; title=&quot;1 什么是操作系统&quot;&gt;&lt;/a&gt;1 什么是操作系统&lt;/h2&gt;&lt;h3 id=&quot;操作系统的作用和定义（p11）-要点1&quot;&gt;&lt;a href=&quot;#操作系统的作用和定义（p11）-要点1&quot; class=&quot;headerlink&quot; title=&quot;操作系统的作用和定义（p11）(要点1)&quot;&gt;&lt;/a&gt;操作系统的作用和定义（p11）(要点1)&lt;/h3&gt;&lt;ul&gt;
@@ -510,34 +535,6 @@
     
     
     <category term="notes" scheme="http://akaduo2019.github.io/tags/notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>中缀表达式转后缀表达式</title>
-    <link href="http://akaduo2019.github.io/2020/11/21/%E4%B8%AD%E7%BC%80to%E5%90%8E%E7%BC%80/"/>
-    <id>http://akaduo2019.github.io/2020/11/21/%E4%B8%AD%E7%BC%80to%E5%90%8E%E7%BC%80/</id>
-    <published>2020-11-21T07:54:22.128Z</published>
-    <updated>2020-10-22T14:27:51.548Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;将中缀表达式转换为后缀表达式:&lt;br&gt;Ⅰ.从左向右遍历&lt;/p&gt;
-&lt;p&gt;Ⅱ.遇到运算数直接输出&lt;/p&gt;
-&lt;p&gt;Ⅲ.遇到左括号，直接压入堆栈（入栈前，左括号优先级最高，入栈后，优先级降到最低，确保其他符号正常入栈）&lt;/p&gt;
-&lt;p&gt;Ⅳ.遇到右括号，不但弹出栈顶运算符并输出，直到遇</summary>
-        
-      
-    
-    
-    
-    <category term="other" scheme="http://akaduo2019.github.io/categories/other/"/>
-    
-    
-    <category term="other" scheme="http://akaduo2019.github.io/tags/other/"/>
     
   </entry>
   
