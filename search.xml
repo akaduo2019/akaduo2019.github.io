@@ -1,160 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>C++中的for循环的语法</title>
-    <url>/2020/11/21/C++%E4%B8%AD%E7%9A%84for%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<p>C++ 中 for 循环的语法：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ( init; condition; increment )</span><br><span class="line">&#123;</span><br><span class="line">   statement(s);</span><br></pre></td></tr></table></figure>
-
-<p>下面是 for 循环的控制流：</p>
-<p>init 会首先被执行，且只会执行一次。这一步允许您声明并初始化任何循环控制变量。您也可以不在这里写任何语句，只要有一个分号出现即可。<br>接下来，会判断 condition。如果为真，则执行循环主体。如果为假，则不执行循环主体，且控制流会跳转到紧接着 for 循环的下一条语句。<br>在执行完 for 循环主体后，控制流会跳回上面的 increment 语句。该语句允许您更新循环控制变量。该语句可以留空，只要在条件后有一个分号出现即可。<br>条件再次被判断。如果为真，则执行循环，这个过程会不断重复（循环主体，然后增加步值，再然后重新判断条件）。在条件变为假时，for 循环终止。</p>
-]]></content>
-      <categories>
-        <category>c++</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Django</title>
-    <url>/2021/09/25/Django/</url>
-    <content><![CDATA[<h2><span id="创建一个django项目">创建一个Django项目</span></h2><ul>
-<li><p>cd 对应的python虚拟环境文件夹</p>
-</li>
-<li><p>workon 虚拟环境</p>
-</li>
-<li><p>django-admin startproject 项目名</p>
-</li>
-<li><p>cd 项目名文件夹</p>
-</li>
-<li><p>创建app</p>
-<ul>
-<li>python manage.py startapp app名</li>
-<li>或 django-admin startapp app名</li>
-</ul>
-</li>
-</ul>
-<h2><span id="实现一个请求">实现一个请求</span></h2><ul>
-<li><p>注册一个路由</p>
-<ul>
-<li><p>在urls中</p>
-<ul>
-<li><p>url(参数1，视图函数)</p>
-<ul>
-<li>参数1:匹配规则 正则</li>
-<li>视图函数:对应views中的一个函数，注意不写函数的括号</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>去views实现对应的视图函数</p>
-<ul>
-<li>第一个参数是request</li>
-<li>永远记得返回response</li>
-</ul>
-</li>
-</ul>
-<h2><span id="模板配置">模板配置</span></h2><ul>
-<li><p>在App中进行模板配置</p>
-<ul>
-<li>需要在App的根目录创建templates文件夹即可</li>
-<li>如果想让代码自动提示，只需标记文件夹为模板文件夹</li>
-</ul>
-</li>
-<li><p>在项目目录进行模板配置</p>
-<ul>
-<li>需要在项目目录创建templates文件夹并标记</li>
-<li>需要在settings中进行注册</li>
-</ul>
-</li>
-<li><p>在开发中使用第二种</p>
-<ul>
-<li>模板可以继承，复用</li>
-</ul>
-</li>
-</ul>
-<h2><span id="路由配置">路由配置</span></h2><ul>
-<li><p>项目如果逻辑过于复杂可以进行拆分</p>
-<ul>
-<li><p>拆分为多个App</p>
-</li>
-<li><p>拆分多个urls</p>
-<ul>
-<li><p>在App中创建urls</p>
-<ul>
-<li>urlpatterns = [] 路由规则列表</li>
-<li>在根urls中进行子路由的包含</li>
-</ul>
-</li>
-<li><p>子路由使用</p>
-<ul>
-<li>跟路由规则 + 子路由规则</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2><span id="数据操作-增删改查">数据操作 增删改查</span></h2><ul>
-<li><p>存储</p>
-<ul>
-<li>save()</li>
-</ul>
-</li>
-<li><p>查询</p>
-<ul>
-<li>查所有 objects.all()</li>
-<li>查单个 objects.get(pk=xx)</li>
-</ul>
-</li>
-<li><p>更新</p>
-<ul>
-<li>基于查询的</li>
-<li>查好的对象，修改属性，然后save()</li>
-</ul>
-</li>
-<li><p>删除</p>
-<ul>
-<li>基于查询的</li>
-<li>调用delete()</li>
-</ul>
-</li>
-</ul>
-<h2><span id="django-shell">Django shell</span></h2><ul>
-<li>集成了python环境的shell终端</li>
-<li>通常在终端中做一些调试</li>
-</ul>
-<h2><span id="如何调试bug">如何调试bug</span></h2><ul>
-<li><p>看日志</p>
-<ul>
-<li>先看第一条</li>
-<li>再看最后一条</li>
-</ul>
-</li>
-<li><p>梳理思路</p>
-<ul>
-<li>程序在哪一个位置和预期出现偏差</li>
-</ul>
-</li>
-</ul>
-<h2><span id="关系型数据库表关系">关系型数据库表关系</span></h2><ul>
-<li>1:1 一对一</li>
-<li>1:M 一对多</li>
-<li>M:N 多对多</li>
-</ul>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2021毛概复习</title>
     <url>/2021/12/27/2021%E6%AF%9B%E6%A6%82%E5%A4%8D%E4%B9%A0/</url>
     <content><![CDATA[<h1><span id="名词解释">名词解释</span></h1><h2><span id="1毛泽东思想">1.毛泽东思想</span></h2><p>毛泽东思想是</p>
@@ -348,11 +194,187 @@
       </tags>
   </entry>
   <entry>
+    <title>C++中的for循环的语法</title>
+    <url>/2020/11/21/C++%E4%B8%AD%E7%9A%84for%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<p>C++ 中 for 循环的语法：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ( init; condition; increment )</span><br><span class="line">&#123;</span><br><span class="line">   statement(s);</span><br></pre></td></tr></table></figure>
+
+<p>下面是 for 循环的控制流：</p>
+<p>init 会首先被执行，且只会执行一次。这一步允许您声明并初始化任何循环控制变量。您也可以不在这里写任何语句，只要有一个分号出现即可。<br>接下来，会判断 condition。如果为真，则执行循环主体。如果为假，则不执行循环主体，且控制流会跳转到紧接着 for 循环的下一条语句。<br>在执行完 for 循环主体后，控制流会跳回上面的 increment 语句。该语句允许您更新循环控制变量。该语句可以留空，只要在条件后有一个分号出现即可。<br>条件再次被判断。如果为真，则执行循环，这个过程会不断重复（循环主体，然后增加步值，再然后重新判断条件）。在条件变为假时，for 循环终止。</p>
+]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Django</title>
+    <url>/2021/09/25/Django/</url>
+    <content><![CDATA[<h2><span id="创建一个django项目">创建一个Django项目</span></h2><ul>
+<li><p>cd 对应的python虚拟环境文件夹</p>
+</li>
+<li><p>workon 虚拟环境</p>
+</li>
+<li><p>django-admin startproject 项目名</p>
+</li>
+<li><p>cd 项目名文件夹</p>
+</li>
+<li><p>创建app</p>
+<ul>
+<li>python manage.py startapp app名</li>
+<li>或 django-admin startapp app名</li>
+</ul>
+</li>
+</ul>
+<h2><span id="实现一个请求">实现一个请求</span></h2><ul>
+<li><p>注册一个路由</p>
+<ul>
+<li><p>在urls中</p>
+<ul>
+<li><p>url(参数1，视图函数)</p>
+<ul>
+<li>参数1:匹配规则 正则</li>
+<li>视图函数:对应views中的一个函数，注意不写函数的括号</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>去views实现对应的视图函数</p>
+<ul>
+<li>第一个参数是request</li>
+<li>永远记得返回response</li>
+</ul>
+</li>
+</ul>
+<h2><span id="模板配置">模板配置</span></h2><ul>
+<li><p>在App中进行模板配置</p>
+<ul>
+<li>需要在App的根目录创建templates文件夹即可</li>
+<li>如果想让代码自动提示，只需标记文件夹为模板文件夹</li>
+</ul>
+</li>
+<li><p>在项目目录进行模板配置</p>
+<ul>
+<li>需要在项目目录创建templates文件夹并标记</li>
+<li>需要在settings中进行注册</li>
+</ul>
+</li>
+<li><p>在开发中使用第二种</p>
+<ul>
+<li>模板可以继承，复用</li>
+</ul>
+</li>
+</ul>
+<h2><span id="路由配置">路由配置</span></h2><ul>
+<li><p>项目如果逻辑过于复杂可以进行拆分</p>
+<ul>
+<li><p>拆分为多个App</p>
+</li>
+<li><p>拆分多个urls</p>
+<ul>
+<li><p>在App中创建urls</p>
+<ul>
+<li>urlpatterns = [] 路由规则列表</li>
+<li>在根urls中进行子路由的包含</li>
+</ul>
+</li>
+<li><p>子路由使用</p>
+<ul>
+<li>跟路由规则 + 子路由规则</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2><span id="数据操作-增删改查">数据操作 增删改查</span></h2><ul>
+<li><p>存储</p>
+<ul>
+<li>save()</li>
+</ul>
+</li>
+<li><p>查询</p>
+<ul>
+<li>查所有 objects.all()</li>
+<li>查单个 objects.get(pk=xx)</li>
+</ul>
+</li>
+<li><p>更新</p>
+<ul>
+<li>基于查询的</li>
+<li>查好的对象，修改属性，然后save()</li>
+</ul>
+</li>
+<li><p>删除</p>
+<ul>
+<li>基于查询的</li>
+<li>调用delete()</li>
+</ul>
+</li>
+</ul>
+<h2><span id="django-shell">Django shell</span></h2><ul>
+<li>集成了python环境的shell终端</li>
+<li>通常在终端中做一些调试</li>
+</ul>
+<h2><span id="如何调试bug">如何调试bug</span></h2><ul>
+<li><p>看日志</p>
+<ul>
+<li>先看第一条</li>
+<li>再看最后一条</li>
+</ul>
+</li>
+<li><p>梳理思路</p>
+<ul>
+<li>程序在哪一个位置和预期出现偏差</li>
+</ul>
+</li>
+</ul>
+<h2><span id="关系型数据库表关系">关系型数据库表关系</span></h2><ul>
+<li>1:1 一对一</li>
+<li>1:M 一对多</li>
+<li>M:N 多对多</li>
+</ul>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>const与指针</title>
     <url>/2020/08/30/const%E4%B8%8E%E6%8C%87%E9%92%88/</url>
     <content><![CDATA[<p>1.常指针<br>语法: void(基类型名) *const 指针名=地址值;</p>
 <p>2.指向常量的指针<br>语法：void const <em>指针名; || const void</em>指针名;</p>
 <p>3.指向常量的常指针<br>语法: const void *const 指针名=地址值;</p>
+]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>c++中的new与delete</title>
+    <url>/2020/11/21/new%E4%B8%8Edelete/</url>
+    <content><![CDATA[<p>new与delte都为运算符而非库函数</p>
+<hr>
+<p>new</p>
+<p>定义符号常量 const int N=…; const int M=…;<br>定义变量 int型指针p，二级指针q，int型i，j;</p>
+<p>申请一个int型动态变量:p=new int;</p>
+<p>申请N个元素的动态一维数组:p=new int[N];</p>
+<p>申请N行M列的动态二维数组：q=new int[N];<br>                         for (i=0;i&lt;N;i++)<br>                          q[i]=new int[M];<br>数组元素可用q[i][j]调用</p>
+<p>注:1.new申请的动态内存空间中存放的为随机值<br>   2.p=new int(10); 相当于 p=new int;*p=10;</p>
+<hr>
+<p>delete</p>
+<p>释放一个int型的动态变量：deelte p;<br>释放N个元素的动态一维数组: delete[]p;<br>释放N行M列的动态二维数组：for(i=0;i&lt;N;i++)<br>                            delete []q[i];<br>                        delete []q;</p>
 ]]></content>
       <categories>
         <category>c++</category>
@@ -373,22 +395,28 @@
       </tags>
   </entry>
   <entry>
-    <title>c++中的new与delete</title>
-    <url>/2020/11/21/new%E4%B8%8Edelete/</url>
-    <content><![CDATA[<p>new与delte都为运算符而非库函数</p>
-<hr>
-<p>new</p>
-<p>定义符号常量 const int N=…; const int M=…;<br>定义变量 int型指针p，二级指针q，int型i，j;</p>
-<p>申请一个int型动态变量:p=new int;</p>
-<p>申请N个元素的动态一维数组:p=new int[N];</p>
-<p>申请N行M列的动态二维数组：q=new int[N];<br>                         for (i=0;i&lt;N;i++)<br>                          q[i]=new int[M];<br>数组元素可用q[i][j]调用</p>
-<p>注:1.new申请的动态内存空间中存放的为随机值<br>   2.p=new int(10); 相当于 p=new int;*p=10;</p>
-<hr>
-<p>delete</p>
-<p>释放一个int型的动态变量：deelte p;<br>释放N个元素的动态一维数组: delete[]p;<br>释放N行M列的动态二维数组：for(i=0;i&lt;N;i++)<br>                            delete []q[i];<br>                        delete []q;</p>
+    <title>pycharm shortcuts</title>
+    <url>/2021/10/11/pycharm%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<ul>
+<li><p>control + shift + enter</p>
+<ul>
+<li>万能键</li>
+</ul>
+</li>
+<li><p>control + P</p>
+<ul>
+<li>参数提示</li>
+</ul>
+</li>
+<li><p>shift+F6</p>
+<ul>
+<li>重构式重命名</li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
-        <category>c++</category>
+        <category>python</category>
       </categories>
       <tags>
         <tag>notes</tag>
@@ -436,25 +464,21 @@
       </tags>
   </entry>
   <entry>
-    <title>pycharm shortcuts</title>
-    <url>/2021/10/11/pycharm%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-    <content><![CDATA[<ul>
-<li><p>control + shift + enter</p>
-<ul>
-<li>万能键</li>
-</ul>
-</li>
-<li><p>control + P</p>
-<ul>
-<li>参数提示</li>
-</ul>
-</li>
-<li><p>shift+F6</p>
-<ul>
-<li>重构式重命名</li>
-</ul>
-</li>
-</ul>
+    <title>字符串</title>
+    <url>/2020/11/21/python%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    <content><![CDATA[<p>一、修改字符串大小写</p>
+<ol>
+<li>string.title()  令首字母大写</li>
+<li>string.upper()  令字符串字母全部改为大写</li>
+<li>string.lower()  令字符串字母全部改为小写</li>
+</ol>
+<hr>
+<p>二、删除空白(泛指任何非打印字符,如空格、制表符和换行符)</p>
+<ol>
+<li>string.rstrip() 删除字符串末尾空白</li>
+<li>string.lstrip() 删除字符串开头空白</li>
+<li>string.strip()  同时删除字符串两端的空白<br>注:但这种删除只是暂时的，接下来再次访问sting的值时会发现仍包含多余空白。若需要永久删除整个字符串中的空白，必须将删除操作的结果存回变量中<br>如:string=string.rstrip()</li>
+</ol>
 ]]></content>
       <categories>
         <category>python</category>
@@ -481,6 +505,37 @@
 ]]></content>
       <categories>
         <category>python</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>c++中的string类型</title>
+    <url>/2020/11/21/string%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">string</span> s1;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s2</span><span class="params">(<span class="string">"student"</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; s1; <span class="comment">//可用getline(cin,s1)读入待空格的串</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s2.length() &lt;&lt;<span class="built_in">endl</span>;<span class="comment">//string 串名.length() 求串长</span></span><br><span class="line"></span><br><span class="line">s2.insert(<span class="number">7</span>,<span class="string">"&amp;Teacher"</span>);<span class="comment">//向串s2下标为7处中插入 &amp;Teacher</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s2&lt;&lt; <span class="built_in">endl</span>;<span class="comment">//输出结果为student&amp;Teacher</span></span><br><span class="line"></span><br><span class="line">s2.replace(<span class="number">2</span>,<span class="number">4</span>,<span class="string">"ar"</span>);<span class="comment">//将串s2的 以下标2处为起始位置,长度为4的子串  替换成ar</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s2&lt;&lt; <span class="built_in">endl</span>;<span class="comment">//输出结果为start&amp;Teacher</span></span><br><span class="line"></span><br><span class="line">s1=s2.substr(<span class="number">6</span>,<span class="number">7</span>);<span class="comment">//提取串s2中 从下标6开始，长度为7的子串 ，并赋值给s1</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s1 &lt;&lt; <span class="built_in">endl</span>;<span class="comment">//输出结果为Teacher</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> pos =s2.<span class="built_in">find</span>(s1);<span class="comment">//在串s2中寻找s1串是否存在,若存在则返回s1串的第一个字符在s3中的下标</span></span><br><span class="line"></span><br><span class="line">s2.erase(<span class="number">5</span>,<span class="number">8</span>);<span class="comment">//删除串s2的从5下标开始的长度为8的子串</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>c_str()函数返回一个指向正规C字符串的指针, 内容与本string串相同.</p>
+</blockquote>
+<p>这是为了与c语言兼容，在c语言中没有string类型，故必须通过string类对象的成员函数c_str()把string 对象转换成c中的字符串样式。</p>
+<p>注意:一定要使用strcpy()函数 等来操作方法c_str()返回的指针</p>
+<p>1、比如:最好不要这样:</p>
+<p>char* c;</p>
+<p>string s=”1234”;</p>
+<p>c = s.c_str(); //c最后指向的内容是垃圾，因为s对象被析构，所以不能直接利用c_str返回的字符串，要利用strcpy等函数进行复制后再使用</p>
+<p>2、其内容被处理应该这样用:</p>
+<p>char c[20];</p>
+<p>string s=”1234”;</p>
+<p>strcpy(c,s.c_str());</p>
+<p>这样才不会出错，c_str()返回的是一个临时指针，不能对其进行操作。</p>
+<p>3、再举个例子c_str() 以 char* 形式传回 string 内含字符串如果一个函数要求char*参数，可以使用c_str()方法:</p>
+<p>string s = “Hello World!”;</p>
+<p>printf(“%s”, s.c_str()); //输出 “Hello World!”</p>
+]]></content>
+      <categories>
+        <category>c++</category>
       </categories>
       <tags>
         <tag>notes</tag>
@@ -574,73 +629,6 @@
       </categories>
       <tags>
         <tag>other</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>c++中的string类型</title>
-    <url>/2020/11/21/string%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">string</span> s1;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s2</span><span class="params">(<span class="string">"student"</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; s1; <span class="comment">//可用getline(cin,s1)读入待空格的串</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s2.length() &lt;&lt;<span class="built_in">endl</span>;<span class="comment">//string 串名.length() 求串长</span></span><br><span class="line"></span><br><span class="line">s2.insert(<span class="number">7</span>,<span class="string">"&amp;Teacher"</span>);<span class="comment">//向串s2下标为7处中插入 &amp;Teacher</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s2&lt;&lt; <span class="built_in">endl</span>;<span class="comment">//输出结果为student&amp;Teacher</span></span><br><span class="line"></span><br><span class="line">s2.replace(<span class="number">2</span>,<span class="number">4</span>,<span class="string">"ar"</span>);<span class="comment">//将串s2的 以下标2处为起始位置,长度为4的子串  替换成ar</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s2&lt;&lt; <span class="built_in">endl</span>;<span class="comment">//输出结果为start&amp;Teacher</span></span><br><span class="line"></span><br><span class="line">s1=s2.substr(<span class="number">6</span>,<span class="number">7</span>);<span class="comment">//提取串s2中 从下标6开始，长度为7的子串 ，并赋值给s1</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s1 &lt;&lt; <span class="built_in">endl</span>;<span class="comment">//输出结果为Teacher</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> pos =s2.<span class="built_in">find</span>(s1);<span class="comment">//在串s2中寻找s1串是否存在,若存在则返回s1串的第一个字符在s3中的下标</span></span><br><span class="line"></span><br><span class="line">s2.erase(<span class="number">5</span>,<span class="number">8</span>);<span class="comment">//删除串s2的从5下标开始的长度为8的子串</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<blockquote>
-<p>c_str()函数返回一个指向正规C字符串的指针, 内容与本string串相同.</p>
-</blockquote>
-<p>这是为了与c语言兼容，在c语言中没有string类型，故必须通过string类对象的成员函数c_str()把string 对象转换成c中的字符串样式。</p>
-<p>注意:一定要使用strcpy()函数 等来操作方法c_str()返回的指针</p>
-<p>1、比如:最好不要这样:</p>
-<p>char* c;</p>
-<p>string s=”1234”;</p>
-<p>c = s.c_str(); //c最后指向的内容是垃圾，因为s对象被析构，所以不能直接利用c_str返回的字符串，要利用strcpy等函数进行复制后再使用</p>
-<p>2、其内容被处理应该这样用:</p>
-<p>char c[20];</p>
-<p>string s=”1234”;</p>
-<p>strcpy(c,s.c_str());</p>
-<p>这样才不会出错，c_str()返回的是一个临时指针，不能对其进行操作。</p>
-<p>3、再举个例子c_str() 以 char* 形式传回 string 内含字符串如果一个函数要求char*参数，可以使用c_str()方法:</p>
-<p>string s = “Hello World!”;</p>
-<p>printf(“%s”, s.c_str()); //输出 “Hello World!”</p>
-]]></content>
-      <categories>
-        <category>c++</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>字符串</title>
-    <url>/2020/11/21/python%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
-    <content><![CDATA[<p>一、修改字符串大小写</p>
-<ol>
-<li>string.title()  令首字母大写</li>
-<li>string.upper()  令字符串字母全部改为大写</li>
-<li>string.lower()  令字符串字母全部改为小写</li>
-</ol>
-<hr>
-<p>二、删除空白(泛指任何非打印字符,如空格、制表符和换行符)</p>
-<ol>
-<li>string.rstrip() 删除字符串末尾空白</li>
-<li>string.lstrip() 删除字符串开头空白</li>
-<li>string.strip()  同时删除字符串两端的空白<br>注:但这种删除只是暂时的，接下来再次访问sting的值时会发现仍包含多余空白。若需要永久删除整个字符串中的空白，必须将删除操作的结果存回变量中<br>如:string=string.rstrip()</li>
-</ol>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>临时对象的产生</title>
-    <url>/2020/11/21/%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<p>1.以值的方式给函数传参；//以引用的方式传递时不会产生临时对象<br>  2.类型转换；<br>  3.函数需要返回一个对象时;</p>
-]]></content>
-      <categories>
-        <category>c++</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
       </tags>
   </entry>
   <entry>
@@ -758,6 +746,13 @@
 <li>直复营销</li>
 <li>公共关系</li>
 </ul>
+<h1><span id="15参与决策的角色">15.参与决策的角色</span></h1><ul>
+<li>发起者</li>
+<li>影响者：即其看法或建议对最终决策具有一定影响的人。</li>
+<li>决策者：即对是否买、为何买、如何买、何出买等购买决策做出完全或部分最后决定的人。</li>
+<li>购买者</li>
+<li>使用者：即实际消费或使用产品或服务的人。</li>
+</ul>
 <p>​</p>
 ]]></content>
       <categories>
@@ -765,6 +760,18 @@
       </categories>
       <tags>
         <tag>note</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>临时对象的产生</title>
+    <url>/2020/11/21/%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<p>1.以值的方式给函数传参；//以引用的方式传递时不会产生临时对象<br>  2.类型转换；<br>  3.函数需要返回一个对象时;</p>
+]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
       </tags>
   </entry>
   <entry>
@@ -1710,21 +1717,6 @@
       </categories>
       <tags>
         <tag>note</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>无题</title>
-    <url>/2020/11/21/%E6%97%A0%E9%A2%981/</url>
-    <content><![CDATA[<p>在定义一个派生类对象时，构造函数的调用顺序如下：<br>1、虚基类的构造函数<br>2、非虚基类的构造函数<br>3、派生类对象成员的构造函数(按定义顺序)<br>4、派生类构造函数</p>
-<hr>
-<p>析构函数的调用次序正好与构造函数的调用次序相反</p>
-<hr>
-]]></content>
-      <categories>
-        <category>c++</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
       </tags>
   </entry>
   <entry>
@@ -3465,6 +3457,21 @@
       </tags>
   </entry>
   <entry>
+    <title>无题</title>
+    <url>/2020/11/21/%E6%97%A0%E9%A2%981/</url>
+    <content><![CDATA[<p>在定义一个派生类对象时，构造函数的调用顺序如下：<br>1、虚基类的构造函数<br>2、非虚基类的构造函数<br>3、派生类对象成员的构造函数(按定义顺序)<br>4、派生类构造函数</p>
+<hr>
+<p>析构函数的调用次序正好与构造函数的调用次序相反</p>
+<hr>
+]]></content>
+      <categories>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>毛概小题速记</title>
     <url>/2022/01/04/%E6%AF%9B%E6%A6%82%E5%B0%8F%E9%A2%98%E9%80%9F%E8%AE%B0/</url>
     <content><![CDATA[<h1><span id="1-4章">1-4章</span></h1><ul>
@@ -3565,18 +3572,14 @@
       </tags>
   </entry>
   <entry>
-    <title>求主析取范式和主合取范式</title>
-    <url>/2020/11/21/%E7%A6%BB%E6%95%A3%E5%AE%9E%E9%AA%8C1/</url>
-    <content><![CDATA[<p>编程实现用真值表法求取含n个变元的合式公式所对应的主析取范式和主合取范式。<br>要求：<br>能够列出合式公式的真值表并给出相应主析取和主合取范式。</p>
-<a id="more"></a>
-
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#对用户输入值进行处理</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pretreatment</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#Ⅰ将用户输入值分割为一个个字符并以列表形式储存；</span></span><br><span class="line">    in_put = input(<span class="string">"或运算为 |  , 与运算为 &amp;   ,单条件为 -&gt;  ,双条件我 &lt;=&gt; ,非运算为 ! ,变元采用大写\n请输入表达式，并以回车结束\n"</span>)</span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> in_put:</span><br><span class="line">        infix.append(value)</span><br><span class="line">    <span class="comment">#Ⅱ将双条件 &lt;= &gt; 视为 &lt; ；将条件-&gt;视为 -</span></span><br><span class="line">    <span class="keyword">while</span> <span class="string">'='</span> <span class="keyword">in</span> infix:</span><br><span class="line">        infix.remove(<span class="string">'='</span>)</span><br><span class="line">    <span class="keyword">while</span> <span class="string">'&gt;'</span> <span class="keyword">in</span> infix:</span><br><span class="line">        infix.remove(<span class="string">'&gt;'</span>)</span><br><span class="line">    <span class="comment">#Ⅲ 将合式中的变元储存到列表alpha中</span></span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> infix:</span><br><span class="line">        <span class="keyword">if</span> value &lt;= <span class="string">'Z'</span> <span class="keyword">and</span> value &gt;= <span class="string">'A'</span>:</span><br><span class="line">            <span class="keyword">if</span> value <span class="keyword">not</span> <span class="keyword">in</span> alpha:</span><br><span class="line">                alpha.append(value)</span><br><span class="line"><span class="comment">#中缀表达式转化为后缀表达式的函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">infix_to_suffix</span><span class="params">(_infix)</span>:</span></span><br><span class="line">    <span class="comment"># 清空stack</span></span><br><span class="line">    stack.clear()</span><br><span class="line">    <span class="comment"># 从左向右遍历</span></span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> _infix:</span><br><span class="line">        <span class="comment"># 当遇到运算数时直接输出</span></span><br><span class="line">        <span class="keyword">if</span> value &lt;= <span class="string">'Z'</span> <span class="keyword">and</span> value &gt;= <span class="string">'A'</span>:</span><br><span class="line">            suffix.append(value)</span><br><span class="line">        <span class="comment"># 遇到左括号为最高优先级，直接压入堆栈，注意入栈后左括号优先级将为最低，确保其他符号正常入栈</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'('</span>:</span><br><span class="line">            stack.append(value)</span><br><span class="line">        <span class="comment"># 遇到右括号，不断弹出栈顶运算符并输出，直到遇到左括号，左括号弹出但不输出</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">')'</span>:</span><br><span class="line">            <span class="keyword">while</span> stack[<span class="number">-1</span>] != <span class="string">'('</span>:</span><br><span class="line">                suffix.append(stack.pop())</span><br><span class="line">            <span class="comment"># 弹出左括号</span></span><br><span class="line">            stack.pop()</span><br><span class="line">        <span class="comment"># 若该运算符与栈顶元素比较，其优先级低于等于栈顶元素，应将栈顶运算符弹出并输出，然后与新的栈顶元素符比较；</span></span><br><span class="line">        <span class="comment"># 若栈为空或与栈顶元素比较，优先级高于栈顶元素，则应压入堆栈；</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'|'</span> <span class="keyword">or</span> value ==<span class="string">'&amp;'</span> <span class="keyword">or</span> value ==<span class="string">'-'</span> <span class="keyword">or</span> value ==<span class="string">'&lt;'</span>:</span><br><span class="line">            <span class="keyword">if</span> stack:</span><br><span class="line">                <span class="keyword">if</span> stack[<span class="number">-1</span>]==<span class="string">'('</span>:</span><br><span class="line">                    stack.append(value)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    suffix.append(stack.pop())</span><br><span class="line">                    <span class="keyword">if</span> stack:</span><br><span class="line">                        <span class="keyword">while</span> stack[<span class="number">-1</span>] != <span class="string">'('</span>:</span><br><span class="line">                            suffix.append(stack.pop())</span><br><span class="line">                            <span class="keyword">if</span> <span class="keyword">not</span> stack:</span><br><span class="line">                                <span class="keyword">break</span></span><br><span class="line">                    stack.append(value)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(value)</span><br><span class="line">        <span class="comment"># 遇到运算符：非</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'!'</span>:</span><br><span class="line">            <span class="comment">#栈不为空</span></span><br><span class="line">            <span class="keyword">if</span> stack:</span><br><span class="line">                <span class="comment">#如果栈顶元素也为 非，那么此时运算符优先级低于或等于栈顶元素优先级，应将栈顶运算符弹出并输出，然后比较新的栈顶运算符</span></span><br><span class="line">                <span class="keyword">if</span> stack[<span class="number">-1</span>] == <span class="string">'!'</span>:</span><br><span class="line">                    suffix.append(stack.pop())</span><br><span class="line">                    <span class="comment"># 当栈不为空且栈顶元素仍为 非 ，则继续比较</span></span><br><span class="line">                    <span class="keyword">while</span> stack <span class="keyword">and</span> stack[<span class="number">-1</span>] == <span class="string">'!'</span>:</span><br><span class="line">                        suffix.append(stack.pop())</span><br><span class="line">                    <span class="comment">#弹出到栈顶元素不为非或者栈为空时，将该运算符 非 压入堆栈</span></span><br><span class="line">                    stack.append(value)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    stack.append(value)</span><br><span class="line">            <span class="comment">#栈为空，直接压入堆栈</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(value)</span><br><span class="line">    <span class="comment">#最后按顺序弹出栈内值并输出</span></span><br><span class="line">    <span class="keyword">while</span> stack:</span><br><span class="line">        suffix.append(stack.pop())</span><br><span class="line"><span class="comment">#后缀表达式对应的真值的计算</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate</span><span class="params">()</span>:</span></span><br><span class="line">    stack.clear()</span><br><span class="line">    <span class="comment">#从左向右遍历</span></span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> suffix:</span><br><span class="line">        <span class="comment">#遇到运算数，将运算数对应的真值压入堆栈</span></span><br><span class="line">        <span class="keyword">if</span> value &gt;= <span class="string">'A'</span> <span class="keyword">and</span> value &lt;= <span class="string">'Z'</span>:</span><br><span class="line">             stack.append(truth_table[value])</span><br><span class="line">        <span class="comment">#遇到运算符&amp;</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'&amp;'</span>:</span><br><span class="line">            number_1 = stack.pop()</span><br><span class="line">            number_2 = stack.pop()</span><br><span class="line">            <span class="keyword">if</span> number_1 == <span class="number">1</span> <span class="keyword">and</span> number_2 == <span class="number">1</span>:</span><br><span class="line">                stack.append(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(<span class="number">0</span>)</span><br><span class="line">        <span class="comment">#遇到运算符|</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'|'</span>:</span><br><span class="line">            number_1 = stack.pop()</span><br><span class="line">            number_2 = stack.pop()</span><br><span class="line">            <span class="keyword">if</span> number_1 == <span class="number">0</span> <span class="keyword">and</span> number_2 == <span class="number">0</span>:</span><br><span class="line">                stack.append(<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(<span class="number">1</span>)</span><br><span class="line">        <span class="comment">#遇到运算符-&gt;</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'-'</span>:</span><br><span class="line">            number_1 = stack.pop()</span><br><span class="line">            number_2 = stack.pop()</span><br><span class="line">            <span class="keyword">if</span> number_1 == <span class="number">0</span> <span class="keyword">and</span> number_2 == <span class="number">1</span>:</span><br><span class="line">                stack.append(<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(<span class="number">1</span>)</span><br><span class="line">        <span class="comment">#遇到运算符&lt;=&gt;</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'&lt;'</span>:</span><br><span class="line">            number_1 = stack.pop()</span><br><span class="line">            number_2 = stack.pop()</span><br><span class="line">            <span class="keyword">if</span> number_1 == number_2 :</span><br><span class="line">                stack.append(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(<span class="number">0</span>)</span><br><span class="line">        <span class="comment">#遇到运算符！</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'!'</span>:</span><br><span class="line">            number = stack.pop()</span><br><span class="line">            <span class="keyword">if</span> number == <span class="number">1</span>:</span><br><span class="line">                stack.append(<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">elif</span> number == <span class="number">0</span>:</span><br><span class="line">                stack.append(<span class="number">1</span>)</span><br><span class="line">    <span class="comment">#返回栈顶元素值，即结果</span></span><br><span class="line">    <span class="keyword">return</span> stack[<span class="number">-1</span>]</span><br><span class="line"><span class="comment">#递归方法实现真值表的全排列</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">recursive</span><span class="params">(num)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> num == len(alpha):</span><br><span class="line">        ans = calculate()</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(alpha)):</span><br><span class="line">            <span class="keyword">if</span> truth_table[alpha[i]] == <span class="number">1</span>:</span><br><span class="line">                print(<span class="string">"T\t"</span>,end=<span class="string">''</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                print(<span class="string">"F\t"</span>,end=<span class="string">''</span>)</span><br><span class="line">        <span class="keyword">if</span> ans == <span class="number">1</span>:</span><br><span class="line">            print(<span class="string">"T\n"</span>)</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(alpha)):</span><br><span class="line">                true.append(truth_table[alpha[i]])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"F\n"</span>)</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(alpha)):</span><br><span class="line">                false.append(truth_table[alpha[i]])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        truth_table[alpha[num]] = <span class="number">1</span></span><br><span class="line">        recursive(num+<span class="number">1</span>)</span><br><span class="line">        truth_table[alpha[num]] = <span class="number">0</span></span><br><span class="line">        recursive(num+<span class="number">1</span>)</span><br><span class="line"><span class="comment">#求取主析取范式</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">turn_to_pdnf</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">if</span> true:</span><br><span class="line">        print(<span class="string">"主析取范式为："</span>)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(true),len(alpha)):</span><br><span class="line">            j = i % len(alpha)</span><br><span class="line">            print(<span class="string">'('</span>, end=<span class="string">''</span>)</span><br><span class="line">            <span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">0</span>,len(alpha)):</span><br><span class="line">                print(transform_1(true[i+k])+alpha[j+k],end=<span class="string">''</span>)</span><br><span class="line">                <span class="keyword">if</span> k&lt;len(alpha)<span class="number">-1</span>:</span><br><span class="line">                    print(<span class="string">'∧'</span>,end=<span class="string">''</span>)</span><br><span class="line">            print(<span class="string">')'</span>,end=<span class="string">''</span>)</span><br><span class="line">            <span class="keyword">if</span> i &lt; len(true)-len(alpha) <span class="keyword">and</span> len(true) != len(alpha):</span><br><span class="line">                print(<span class="string">"∨"</span>,end=<span class="string">''</span>)</span><br><span class="line">        print(<span class="string">""</span>)</span><br><span class="line"><span class="comment">#求取主合取范式</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">turn_to_pcnf</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">if</span> false:</span><br><span class="line">        print(<span class="string">"主合取范式为："</span>)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(false), len(alpha)):</span><br><span class="line">            j = i % len(alpha)</span><br><span class="line">            print(<span class="string">'('</span>, end=<span class="string">''</span>)</span><br><span class="line">            <span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">0</span>, len(alpha)):</span><br><span class="line">                print(transform_2(false[i + k]) + alpha[j + k], end=<span class="string">''</span>)</span><br><span class="line">                <span class="keyword">if</span> k &lt; len(alpha) - <span class="number">1</span>:</span><br><span class="line">                    print(<span class="string">'∨'</span>, end=<span class="string">''</span>)</span><br><span class="line">            print(<span class="string">')'</span>, end=<span class="string">''</span>)</span><br><span class="line">            <span class="keyword">if</span> i &lt; len(false)-len(alpha) <span class="keyword">and</span> len(false) != len(alpha):</span><br><span class="line">                print(<span class="string">'∧'</span>, end=<span class="string">''</span>)</span><br><span class="line">        print(<span class="string">""</span>)</span><br><span class="line"><span class="comment">#析取中非的符号转换</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transform_1</span><span class="params">(value)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> value == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'¬'</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">""</span></span><br><span class="line"><span class="comment">#合取中非的符号转换</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transform_2</span><span class="params">(value)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> value == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span>  <span class="string">'¬'</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span>  <span class="string">""</span></span><br><span class="line"><span class="comment"># 储存中缀表达式</span></span><br><span class="line">infix = []</span><br><span class="line"><span class="comment"># 储存变元</span></span><br><span class="line">alpha = []</span><br><span class="line"><span class="comment"># 存放转化后的后缀表达式</span></span><br><span class="line">suffix = []</span><br><span class="line"><span class="comment"># 用作中间运算的堆栈</span></span><br><span class="line">stack = []</span><br><span class="line"><span class="comment"># 映射:字典truth_table:key为alpha中的元素，value为0或1</span></span><br><span class="line">truth_table = &#123;&#125;</span><br><span class="line"><span class="comment"># 存放合式为真的情况，用于主析取范式</span></span><br><span class="line">true = []</span><br><span class="line"><span class="comment"># 存放合式为假的情况，用于主合取范式</span></span><br><span class="line">false = []</span><br><span class="line"></span><br><span class="line">pretreatment()</span><br><span class="line">infix_to_suffix(infix)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(alpha)):</span><br><span class="line">    print(alpha[i]+<span class="string">"\t"</span>,end=<span class="string">''</span>)</span><br><span class="line">print(<span class="string">"表达式真值"</span>)</span><br><span class="line">recursive(<span class="number">0</span>)</span><br><span class="line">turn_to_pdnf()</span><br><span class="line">turn_to_pcnf()</span><br></pre></td></tr></table></figure>
-]]></content>
+    <title>置顶测试</title>
+    <url>/2020/11/21/%E7%BD%AE%E9%A1%B6%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>python</category>
+        <category>test</category>
       </categories>
       <tags>
-        <tag>experiment</tag>
+        <tag>test</tag>
       </tags>
   </entry>
   <entry>
@@ -3586,6 +3589,21 @@
 <a id="more"></a>
 
 <figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 存放集合上的所有可能元素</span></span><br><span class="line">A = []</span><br><span class="line"><span class="comment"># 存放整除关系</span></span><br><span class="line">R = []</span><br><span class="line"><span class="comment"># 存放最终的盖住关系</span></span><br><span class="line">COV = []</span><br><span class="line"><span class="comment"># 存放哈斯图的所有元素</span></span><br><span class="line">HASS = []</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将该整除关系中的所有元素提取出来</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_element</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, int(message)+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> int(message) % i == <span class="number">0</span>:</span><br><span class="line">            A.append(str(i))</span><br><span class="line">    print(message + <span class="string">"的所有因子的集合:"</span>)</span><br><span class="line">    print(A)</span><br><span class="line"><span class="comment"># 生成序偶，存放于整除关系中</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_order_pair</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> A:</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> A:</span><br><span class="line">            <span class="keyword">if</span> int(j) % int(i) == <span class="number">0</span> :</span><br><span class="line">                R.append(i)</span><br><span class="line">                R.append(j)</span><br><span class="line">    print(<span class="string">"偏序关系≤ = "</span>, end=<span class="string">''</span>)</span><br><span class="line">    print(R)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 求取盖住关系</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_COVA</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 存放恒等关系IA</span></span><br><span class="line">    IA = []</span><br><span class="line">    <span class="comment"># 存放传递关系T</span></span><br><span class="line">    T = []</span><br><span class="line">    <span class="comment"># 输入部分，调用预处理函数</span></span><br><span class="line">    buffer_A = A</span><br><span class="line">    buffer_R = R</span><br><span class="line">    <span class="comment"># 删去偏序关系中的恒等关系IA</span></span><br><span class="line">    <span class="comment"># 确立A中的恒等关系IA</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> buffer_A:</span><br><span class="line">        IA.append(element)</span><br><span class="line">        IA.append(element)</span><br><span class="line">    <span class="comment"># 遍历偏序关系R中的所有元素，若有恒等关系则删去</span></span><br><span class="line">    <span class="comment"># 外层循环为IA，内层循环为R</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(IA)):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, len(buffer_R), <span class="number">2</span>):</span><br><span class="line">            <span class="keyword">if</span> IA[i] == buffer_R[j] <span class="keyword">and</span> IA[i] == buffer_R[j + <span class="number">1</span>]:</span><br><span class="line">                <span class="keyword">del</span> buffer_R[j]</span><br><span class="line">                <span class="comment"># 在删去元素处填入一个空格，防止列表下标发生改变</span></span><br><span class="line">                buffer_R.insert(j, <span class="string">' '</span>)</span><br><span class="line">                <span class="keyword">del</span> R[j + <span class="number">1</span>]</span><br><span class="line">                buffer_R.insert(j + <span class="number">1</span>, <span class="string">' '</span>)</span><br><span class="line">    <span class="comment"># 在偏序关系中的恒等关系删除完毕后，将所有空格删去</span></span><br><span class="line">    <span class="keyword">while</span> <span class="string">' '</span> <span class="keyword">in</span> buffer_R:</span><br><span class="line">        buffer_R.remove(<span class="string">' '</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 删除偏序关系关系中的传递关系(此时的偏序关系中已经删去了恒等关系)</span></span><br><span class="line">    <span class="comment"># 得到R中传递关系T</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(buffer_R), <span class="number">2</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, len(buffer_R), <span class="number">2</span>):</span><br><span class="line">            <span class="keyword">if</span> i != j:</span><br><span class="line">                <span class="keyword">if</span> buffer_R[i + <span class="number">1</span>] == buffer_R[j]:</span><br><span class="line">                    <span class="comment"># 判断序偶是否重复存入传递关系T中</span></span><br><span class="line">                    <span class="keyword">if</span> <span class="keyword">not</span> T:</span><br><span class="line">                        flag = <span class="literal">True</span></span><br><span class="line">                        <span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">0</span>, len(T), <span class="number">2</span>):</span><br><span class="line">                            <span class="keyword">if</span> buffer_R[i] == T[k] <span class="keyword">and</span> buffer_R[j + <span class="number">1</span>] == T[k + <span class="number">1</span>]:</span><br><span class="line">                                flag = <span class="literal">False</span></span><br><span class="line">                                <span class="keyword">break</span></span><br><span class="line">                        <span class="keyword">if</span> flag:</span><br><span class="line">                            T.append(buffer_R[i])</span><br><span class="line">                            T.append(buffer_R[j + <span class="number">1</span>])</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        T.append(buffer_R[i])</span><br><span class="line">                        T.append(buffer_R[j + <span class="number">1</span>])</span><br><span class="line">    <span class="comment"># 删去R中的传递关系T</span></span><br><span class="line">    <span class="comment"># 外层循环为T，内层循环为R</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(T), <span class="number">2</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, len(buffer_R), <span class="number">2</span>):</span><br><span class="line">            <span class="keyword">if</span> T[i] == buffer_R[j] <span class="keyword">and</span> T[i + <span class="number">1</span>] == buffer_R[j + <span class="number">1</span>]:</span><br><span class="line">                <span class="keyword">del</span> buffer_R[j]</span><br><span class="line">                buffer_R.insert(j, <span class="string">' '</span>)</span><br><span class="line">                <span class="keyword">del</span> buffer_R[j + <span class="number">1</span>]</span><br><span class="line">                buffer_R.insert(j + <span class="number">1</span>, <span class="string">' '</span>)</span><br><span class="line">    <span class="comment"># 删去多余空格</span></span><br><span class="line">    <span class="keyword">while</span> <span class="string">' '</span> <span class="keyword">in</span> buffer_R:</span><br><span class="line">        buffer_R.remove(<span class="string">' '</span>)</span><br><span class="line">    <span class="comment"># 盖住关系(没有符号，只有元素)</span></span><br><span class="line">    COV.append(buffer_R)</span><br><span class="line">    <span class="comment"># 得到最终的盖住关系COV</span></span><br><span class="line">    buffer = <span class="string">''</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(buffer_R), <span class="number">2</span>):</span><br><span class="line">        <span class="keyword">if</span> i == <span class="number">0</span>:</span><br><span class="line">            buffer = buffer + <span class="string">'&#123;&lt;'</span> + buffer_R[i] + <span class="string">','</span> + buffer_R[i + <span class="number">1</span>] + <span class="string">'&gt;,'</span></span><br><span class="line">        <span class="keyword">elif</span> i == len(buffer_R) - <span class="number">2</span>:</span><br><span class="line">            buffer = buffer + <span class="string">'&lt;'</span> + buffer_R[i] + <span class="string">','</span> + buffer_R[i + <span class="number">1</span>] + <span class="string">'&gt;&#125;'</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            buffer = buffer + <span class="string">'&lt;'</span> + buffer_R[i] + <span class="string">','</span> + buffer_R[i + <span class="number">1</span>] + <span class="string">'&gt;,'</span></span><br><span class="line">    <span class="comment"># 得到处理的盖住关系</span></span><br><span class="line">    COV.append(buffer)</span><br><span class="line">    print(<span class="string">"盖住关系COVA = "</span>, end=<span class="string">''</span>)</span><br><span class="line">    print(COV[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 由于整除关系对应的偏序集都为格，所以只需要判定有补格。其中全下界一定为1，而全上界对应的是输入的正整数。</span></span><br><span class="line"><span class="comment"># 如果每个元素都能找到另一个元素，使他们的最小公倍数为输入的正整数，即全上界；使他们的最大公因数为1，则判定为有补格</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 求最大公因数的函数，返回最大公因数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hcf</span><span class="params">(x, y)</span>:</span></span><br><span class="line">    <span class="comment"># 获取最小值</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; y:</span><br><span class="line">        smaller = y</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        smaller = x</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, smaller + <span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> ((x % i == <span class="number">0</span>) <span class="keyword">and</span> (y % i == <span class="number">0</span>)):</span><br><span class="line">            hcf = i</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> hcf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 求最小公倍数的函数，返回最小公倍数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lcm</span><span class="params">(x, y)</span>:</span></span><br><span class="line">    <span class="comment">#  获取最大的数</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; y:</span><br><span class="line">        greater = x</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        greater = y</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">True</span>):</span><br><span class="line">        <span class="keyword">if</span> ((greater % x == <span class="number">0</span>) <span class="keyword">and</span> (greater % y == <span class="number">0</span>)):</span><br><span class="line">            lcm = greater</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        greater += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> lcm</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断有补格</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">judge_youbuge</span><span class="params">()</span>:</span></span><br><span class="line">    flags = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(A)):</span><br><span class="line">        flag = <span class="literal">False</span></span><br><span class="line">        flags.append(flag)</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, len(A)):</span><br><span class="line">            <span class="keyword">if</span> A[i] != A[j]:</span><br><span class="line">                <span class="keyword">if</span> lcm(int(A[i]), int(A[j])) == int(message) <span class="keyword">and</span> hcf(int(A[i]), int(A[j])) == <span class="number">1</span>:</span><br><span class="line">                    flags[i] = <span class="literal">True</span></span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">    all_flag = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(A)):</span><br><span class="line">        <span class="keyword">if</span> flags[i] == <span class="literal">False</span>:</span><br><span class="line">            all_flag = <span class="literal">False</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> all_flag:</span><br><span class="line">        print(<span class="string">"该整除关系对应的偏序集为有补格"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">"该整除关系对应的偏序集非有补格"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    message = input(<span class="string">"请输入一个正整数，验证其上的整除关系及其是否为有补格\n"</span>)</span><br><span class="line">    get_element()</span><br><span class="line">    create_order_pair()</span><br><span class="line">    get_COVA()</span><br><span class="line">    judge_youbuge()</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>experiment</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>求主析取范式和主合取范式</title>
+    <url>/2020/11/21/%E7%A6%BB%E6%95%A3%E5%AE%9E%E9%AA%8C1/</url>
+    <content><![CDATA[<p>编程实现用真值表法求取含n个变元的合式公式所对应的主析取范式和主合取范式。<br>要求：<br>能够列出合式公式的真值表并给出相应主析取和主合取范式。</p>
+<a id="more"></a>
+
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#对用户输入值进行处理</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pretreatment</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#Ⅰ将用户输入值分割为一个个字符并以列表形式储存；</span></span><br><span class="line">    in_put = input(<span class="string">"或运算为 |  , 与运算为 &amp;   ,单条件为 -&gt;  ,双条件我 &lt;=&gt; ,非运算为 ! ,变元采用大写\n请输入表达式，并以回车结束\n"</span>)</span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> in_put:</span><br><span class="line">        infix.append(value)</span><br><span class="line">    <span class="comment">#Ⅱ将双条件 &lt;= &gt; 视为 &lt; ；将条件-&gt;视为 -</span></span><br><span class="line">    <span class="keyword">while</span> <span class="string">'='</span> <span class="keyword">in</span> infix:</span><br><span class="line">        infix.remove(<span class="string">'='</span>)</span><br><span class="line">    <span class="keyword">while</span> <span class="string">'&gt;'</span> <span class="keyword">in</span> infix:</span><br><span class="line">        infix.remove(<span class="string">'&gt;'</span>)</span><br><span class="line">    <span class="comment">#Ⅲ 将合式中的变元储存到列表alpha中</span></span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> infix:</span><br><span class="line">        <span class="keyword">if</span> value &lt;= <span class="string">'Z'</span> <span class="keyword">and</span> value &gt;= <span class="string">'A'</span>:</span><br><span class="line">            <span class="keyword">if</span> value <span class="keyword">not</span> <span class="keyword">in</span> alpha:</span><br><span class="line">                alpha.append(value)</span><br><span class="line"><span class="comment">#中缀表达式转化为后缀表达式的函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">infix_to_suffix</span><span class="params">(_infix)</span>:</span></span><br><span class="line">    <span class="comment"># 清空stack</span></span><br><span class="line">    stack.clear()</span><br><span class="line">    <span class="comment"># 从左向右遍历</span></span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> _infix:</span><br><span class="line">        <span class="comment"># 当遇到运算数时直接输出</span></span><br><span class="line">        <span class="keyword">if</span> value &lt;= <span class="string">'Z'</span> <span class="keyword">and</span> value &gt;= <span class="string">'A'</span>:</span><br><span class="line">            suffix.append(value)</span><br><span class="line">        <span class="comment"># 遇到左括号为最高优先级，直接压入堆栈，注意入栈后左括号优先级将为最低，确保其他符号正常入栈</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'('</span>:</span><br><span class="line">            stack.append(value)</span><br><span class="line">        <span class="comment"># 遇到右括号，不断弹出栈顶运算符并输出，直到遇到左括号，左括号弹出但不输出</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">')'</span>:</span><br><span class="line">            <span class="keyword">while</span> stack[<span class="number">-1</span>] != <span class="string">'('</span>:</span><br><span class="line">                suffix.append(stack.pop())</span><br><span class="line">            <span class="comment"># 弹出左括号</span></span><br><span class="line">            stack.pop()</span><br><span class="line">        <span class="comment"># 若该运算符与栈顶元素比较，其优先级低于等于栈顶元素，应将栈顶运算符弹出并输出，然后与新的栈顶元素符比较；</span></span><br><span class="line">        <span class="comment"># 若栈为空或与栈顶元素比较，优先级高于栈顶元素，则应压入堆栈；</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'|'</span> <span class="keyword">or</span> value ==<span class="string">'&amp;'</span> <span class="keyword">or</span> value ==<span class="string">'-'</span> <span class="keyword">or</span> value ==<span class="string">'&lt;'</span>:</span><br><span class="line">            <span class="keyword">if</span> stack:</span><br><span class="line">                <span class="keyword">if</span> stack[<span class="number">-1</span>]==<span class="string">'('</span>:</span><br><span class="line">                    stack.append(value)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    suffix.append(stack.pop())</span><br><span class="line">                    <span class="keyword">if</span> stack:</span><br><span class="line">                        <span class="keyword">while</span> stack[<span class="number">-1</span>] != <span class="string">'('</span>:</span><br><span class="line">                            suffix.append(stack.pop())</span><br><span class="line">                            <span class="keyword">if</span> <span class="keyword">not</span> stack:</span><br><span class="line">                                <span class="keyword">break</span></span><br><span class="line">                    stack.append(value)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(value)</span><br><span class="line">        <span class="comment"># 遇到运算符：非</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'!'</span>:</span><br><span class="line">            <span class="comment">#栈不为空</span></span><br><span class="line">            <span class="keyword">if</span> stack:</span><br><span class="line">                <span class="comment">#如果栈顶元素也为 非，那么此时运算符优先级低于或等于栈顶元素优先级，应将栈顶运算符弹出并输出，然后比较新的栈顶运算符</span></span><br><span class="line">                <span class="keyword">if</span> stack[<span class="number">-1</span>] == <span class="string">'!'</span>:</span><br><span class="line">                    suffix.append(stack.pop())</span><br><span class="line">                    <span class="comment"># 当栈不为空且栈顶元素仍为 非 ，则继续比较</span></span><br><span class="line">                    <span class="keyword">while</span> stack <span class="keyword">and</span> stack[<span class="number">-1</span>] == <span class="string">'!'</span>:</span><br><span class="line">                        suffix.append(stack.pop())</span><br><span class="line">                    <span class="comment">#弹出到栈顶元素不为非或者栈为空时，将该运算符 非 压入堆栈</span></span><br><span class="line">                    stack.append(value)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    stack.append(value)</span><br><span class="line">            <span class="comment">#栈为空，直接压入堆栈</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(value)</span><br><span class="line">    <span class="comment">#最后按顺序弹出栈内值并输出</span></span><br><span class="line">    <span class="keyword">while</span> stack:</span><br><span class="line">        suffix.append(stack.pop())</span><br><span class="line"><span class="comment">#后缀表达式对应的真值的计算</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate</span><span class="params">()</span>:</span></span><br><span class="line">    stack.clear()</span><br><span class="line">    <span class="comment">#从左向右遍历</span></span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> suffix:</span><br><span class="line">        <span class="comment">#遇到运算数，将运算数对应的真值压入堆栈</span></span><br><span class="line">        <span class="keyword">if</span> value &gt;= <span class="string">'A'</span> <span class="keyword">and</span> value &lt;= <span class="string">'Z'</span>:</span><br><span class="line">             stack.append(truth_table[value])</span><br><span class="line">        <span class="comment">#遇到运算符&amp;</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'&amp;'</span>:</span><br><span class="line">            number_1 = stack.pop()</span><br><span class="line">            number_2 = stack.pop()</span><br><span class="line">            <span class="keyword">if</span> number_1 == <span class="number">1</span> <span class="keyword">and</span> number_2 == <span class="number">1</span>:</span><br><span class="line">                stack.append(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(<span class="number">0</span>)</span><br><span class="line">        <span class="comment">#遇到运算符|</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'|'</span>:</span><br><span class="line">            number_1 = stack.pop()</span><br><span class="line">            number_2 = stack.pop()</span><br><span class="line">            <span class="keyword">if</span> number_1 == <span class="number">0</span> <span class="keyword">and</span> number_2 == <span class="number">0</span>:</span><br><span class="line">                stack.append(<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(<span class="number">1</span>)</span><br><span class="line">        <span class="comment">#遇到运算符-&gt;</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'-'</span>:</span><br><span class="line">            number_1 = stack.pop()</span><br><span class="line">            number_2 = stack.pop()</span><br><span class="line">            <span class="keyword">if</span> number_1 == <span class="number">0</span> <span class="keyword">and</span> number_2 == <span class="number">1</span>:</span><br><span class="line">                stack.append(<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(<span class="number">1</span>)</span><br><span class="line">        <span class="comment">#遇到运算符&lt;=&gt;</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'&lt;'</span>:</span><br><span class="line">            number_1 = stack.pop()</span><br><span class="line">            number_2 = stack.pop()</span><br><span class="line">            <span class="keyword">if</span> number_1 == number_2 :</span><br><span class="line">                stack.append(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append(<span class="number">0</span>)</span><br><span class="line">        <span class="comment">#遇到运算符！</span></span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">'!'</span>:</span><br><span class="line">            number = stack.pop()</span><br><span class="line">            <span class="keyword">if</span> number == <span class="number">1</span>:</span><br><span class="line">                stack.append(<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">elif</span> number == <span class="number">0</span>:</span><br><span class="line">                stack.append(<span class="number">1</span>)</span><br><span class="line">    <span class="comment">#返回栈顶元素值，即结果</span></span><br><span class="line">    <span class="keyword">return</span> stack[<span class="number">-1</span>]</span><br><span class="line"><span class="comment">#递归方法实现真值表的全排列</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">recursive</span><span class="params">(num)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> num == len(alpha):</span><br><span class="line">        ans = calculate()</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(alpha)):</span><br><span class="line">            <span class="keyword">if</span> truth_table[alpha[i]] == <span class="number">1</span>:</span><br><span class="line">                print(<span class="string">"T\t"</span>,end=<span class="string">''</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                print(<span class="string">"F\t"</span>,end=<span class="string">''</span>)</span><br><span class="line">        <span class="keyword">if</span> ans == <span class="number">1</span>:</span><br><span class="line">            print(<span class="string">"T\n"</span>)</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(alpha)):</span><br><span class="line">                true.append(truth_table[alpha[i]])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"F\n"</span>)</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(alpha)):</span><br><span class="line">                false.append(truth_table[alpha[i]])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        truth_table[alpha[num]] = <span class="number">1</span></span><br><span class="line">        recursive(num+<span class="number">1</span>)</span><br><span class="line">        truth_table[alpha[num]] = <span class="number">0</span></span><br><span class="line">        recursive(num+<span class="number">1</span>)</span><br><span class="line"><span class="comment">#求取主析取范式</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">turn_to_pdnf</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">if</span> true:</span><br><span class="line">        print(<span class="string">"主析取范式为："</span>)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(true),len(alpha)):</span><br><span class="line">            j = i % len(alpha)</span><br><span class="line">            print(<span class="string">'('</span>, end=<span class="string">''</span>)</span><br><span class="line">            <span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">0</span>,len(alpha)):</span><br><span class="line">                print(transform_1(true[i+k])+alpha[j+k],end=<span class="string">''</span>)</span><br><span class="line">                <span class="keyword">if</span> k&lt;len(alpha)<span class="number">-1</span>:</span><br><span class="line">                    print(<span class="string">'∧'</span>,end=<span class="string">''</span>)</span><br><span class="line">            print(<span class="string">')'</span>,end=<span class="string">''</span>)</span><br><span class="line">            <span class="keyword">if</span> i &lt; len(true)-len(alpha) <span class="keyword">and</span> len(true) != len(alpha):</span><br><span class="line">                print(<span class="string">"∨"</span>,end=<span class="string">''</span>)</span><br><span class="line">        print(<span class="string">""</span>)</span><br><span class="line"><span class="comment">#求取主合取范式</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">turn_to_pcnf</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">if</span> false:</span><br><span class="line">        print(<span class="string">"主合取范式为："</span>)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(false), len(alpha)):</span><br><span class="line">            j = i % len(alpha)</span><br><span class="line">            print(<span class="string">'('</span>, end=<span class="string">''</span>)</span><br><span class="line">            <span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">0</span>, len(alpha)):</span><br><span class="line">                print(transform_2(false[i + k]) + alpha[j + k], end=<span class="string">''</span>)</span><br><span class="line">                <span class="keyword">if</span> k &lt; len(alpha) - <span class="number">1</span>:</span><br><span class="line">                    print(<span class="string">'∨'</span>, end=<span class="string">''</span>)</span><br><span class="line">            print(<span class="string">')'</span>, end=<span class="string">''</span>)</span><br><span class="line">            <span class="keyword">if</span> i &lt; len(false)-len(alpha) <span class="keyword">and</span> len(false) != len(alpha):</span><br><span class="line">                print(<span class="string">'∧'</span>, end=<span class="string">''</span>)</span><br><span class="line">        print(<span class="string">""</span>)</span><br><span class="line"><span class="comment">#析取中非的符号转换</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transform_1</span><span class="params">(value)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> value == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'¬'</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">""</span></span><br><span class="line"><span class="comment">#合取中非的符号转换</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transform_2</span><span class="params">(value)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> value == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span>  <span class="string">'¬'</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span>  <span class="string">""</span></span><br><span class="line"><span class="comment"># 储存中缀表达式</span></span><br><span class="line">infix = []</span><br><span class="line"><span class="comment"># 储存变元</span></span><br><span class="line">alpha = []</span><br><span class="line"><span class="comment"># 存放转化后的后缀表达式</span></span><br><span class="line">suffix = []</span><br><span class="line"><span class="comment"># 用作中间运算的堆栈</span></span><br><span class="line">stack = []</span><br><span class="line"><span class="comment"># 映射:字典truth_table:key为alpha中的元素，value为0或1</span></span><br><span class="line">truth_table = &#123;&#125;</span><br><span class="line"><span class="comment"># 存放合式为真的情况，用于主析取范式</span></span><br><span class="line">true = []</span><br><span class="line"><span class="comment"># 存放合式为假的情况，用于主合取范式</span></span><br><span class="line">false = []</span><br><span class="line"></span><br><span class="line">pretreatment()</span><br><span class="line">infix_to_suffix(infix)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(alpha)):</span><br><span class="line">    print(alpha[i]+<span class="string">"\t"</span>,end=<span class="string">''</span>)</span><br><span class="line">print(<span class="string">"表达式真值"</span>)</span><br><span class="line">recursive(<span class="number">0</span>)</span><br><span class="line">turn_to_pdnf()</span><br><span class="line">turn_to_pcnf()</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>python</category>
@@ -3607,17 +3625,6 @@
       </categories>
       <tags>
         <tag>experiment</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>置顶测试</title>
-    <url>/2020/11/21/%E7%BD%AE%E9%A1%B6%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>test</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
       </tags>
   </entry>
   <entry>
